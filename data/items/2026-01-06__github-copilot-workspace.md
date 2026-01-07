@@ -1,3 +1,7 @@
+---
+title: GitHub Copilot Workspaceが一般公開 - AIネイティブな開発環境
+---
+
 # GitHub Copilot Workspaceが一般公開 - AIネイティブな開発環境
 
 ## 要点

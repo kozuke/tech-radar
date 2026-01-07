@@ -48,6 +48,11 @@ jobs:
           mkdir -p site/public/data
           cp -r data/* site/public/data/
 
+      - name: Copy articles to site
+        run: |
+          # 記事MDをVitePressで表示できるようにコピー
+          cp data/items/*.md site/articles/ 2>/dev/null || true
+
       - name: Build site
         working-directory: site
         run: npm run build

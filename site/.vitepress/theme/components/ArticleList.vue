@@ -161,7 +161,7 @@ const getArticlePath = (article: Article) => {
     <div v-else>
       <div v-for="article in filteredArticles" :key="article.id" class="article-card">
         <h3>
-          <a :href="article.url" target="_blank" rel="noopener noreferrer">
+          <a :href="`/tech-radar/articles/${article.id}.html`">
             {{ article.title }}
           </a>
         </h3>
@@ -173,6 +173,9 @@ const getArticlePath = (article: Article) => {
           <span class="source">
             📰 {{ formatSource(article.source) }}
           </span>
+          <a :href="article.url" target="_blank" rel="noopener noreferrer" class="original-link">
+            🔗 元記事
+          </a>
         </div>
 
         <div class="tags">

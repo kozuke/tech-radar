@@ -75,6 +75,24 @@
   border-radius: 4px;
 }
 
+.article-meta .original-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  background: var(--vp-c-brand-soft);
+  border-radius: 4px;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.article-meta .original-link:hover {
+  background: var(--vp-c-brand-1);
+  color: white;
+}
+
 /* タグスタイル */
 .tags {
   display: flex;
