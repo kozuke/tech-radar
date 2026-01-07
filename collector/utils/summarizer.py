@@ -5,7 +5,7 @@ LLM要約ユーティリティ
 
 import os
 import requests
-from typing import Optional
+from typing import Optional, List, Dict
 from pathlib import Path
 import logging
 
@@ -16,9 +16,9 @@ OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 DEFAULT_MODEL = "google/gemini-2.0-flash-001"  # 無料枠対応モデル
 
 
-def load_prompt_template() -> str:
+def load_prompt_template(template_name: str = "summary") -> str:
     """プロンプトテンプレートを読み込む"""
-    prompt_path = Path(__file__).parent.parent / "prompts" / "summary.md"
+    prompt_path = Path(__file__).parent.parent / "prompts" / f"{template_name}.md"
     if prompt_path.exists():
         return prompt_path.read_text(encoding="utf-8")
     else:
@@ -124,4 +124,101 @@ def summarize_article(
         return None
     except Exception as e:
         logger.error(f"Unexpected error summarizing {title}: {e}")
+        return None
+
+
+def summarize_daily_digest(
+    articles: List[Dict],
+    date: str,
+    api_key: Optional[str] = None,
+    model: str = DEFAULT_MODEL,
+) -> Optional[str]:
+    """
+    複数の記事をまとめて日次ダイジェストとして要約する
+
+    Args:
+        articles: 記事情報のリスト（各記事は title, url, content, source, tags を含む）
+        date: 日付（YYYY-MM-DD形式）
+        api_key: OpenRouter APIキー
+        model: 使用するモデル
+
+    Returns:
+        日次ダイジェストのMarkdown、または失敗時はNone
+    """
+    api_key = api_key or os.environ.get("OPENROUTER_API_KEY")
+    if not api_key:
+        logger.error("OPENROUTER_API_KEY is not set")
+        return None
+
+    if not articles:
+        logger.warning("No articles provided for daily digest")
+        return None
+
+    prompt_template = load_prompt_template("daily_digest")
+
+    # 記事一覧を構築
+    articles_text = ""
+    for i, article in enumerate(articles, 1):
+        articles_text += f"""
+---
+### 記事 {i}
+- **タイトル**: {article.get('title', 'Untitled')}
+- **URL**: {article.get('url', '')}
+- **ソース**: {article.get('source', '')}
+- **タグ**: {', '.join(article.get('tags', []))}
+
+**本文**:
+{article.get('content', '')[:3000]}  <!-- 長すぎる場合は切り詰め -->
+"""
+
+    user_message = f"""
+以下の{len(articles)}件の技術記事を日次ダイジェストとしてまとめてください。
+
+## 日付
+{date}
+
+## 記事一覧
+{articles_text}
+"""
+
+    try:
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/tech-radar",
+            "X-Title": "Tech Radar",
+        }
+
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": prompt_template},
+                {"role": "user", "content": user_message},
+            ],
+            "max_tokens": 4000,
+            "temperature": 0.3,
+        }
+
+        response = requests.post(
+            OPENROUTER_API_URL,
+            headers=headers,
+            json=payload,
+            timeout=120,  # 複数記事なのでタイムアウトを延長
+        )
+        response.raise_for_status()
+
+        result = response.json()
+        summary = result["choices"][0]["message"]["content"]
+
+        logger.info(f"Successfully created daily digest for {date} with {len(articles)} articles")
+        return summary
+
+    except requests.RequestException as e:
+        logger.error(f"API request failed for daily digest: {e}")
+        return None
+    except (KeyError, IndexError) as e:
+        logger.error(f"Failed to parse API response for daily digest: {e}")
+        return None
+    except Exception as e:
+        logger.error(f"Unexpected error creating daily digest: {e}")
         return None

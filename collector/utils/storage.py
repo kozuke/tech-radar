@@ -188,3 +188,131 @@ def save_article(
         save_index(index, data_dir)
 
     return item_entry
+
+
+def save_daily_digest(
+    date: str,
+    articles: List[Dict],
+    summary_content: str,
+    data_dir: Optional[Path] = None,
+) -> Optional[Dict]:
+    """
+    日次ダイジェストを保存してインデックスを更新する
+
+    Args:
+        date: 日付 (YYYY-MM-DD)
+        articles: 含まれる記事のメタデータリスト
+        summary_content: ダイジェスト内容
+
+    Returns:
+        作成されたアイテムデータ、または失敗時はNone
+    """
+    data_dir = data_dir or DEFAULT_DATA_DIR
+    items_dir = data_dir / "items"
+    items_dir.mkdir(parents=True, exist_ok=True)
+
+    item_id = f"{date}__daily-digest"
+    title = f"Tech Radar Daily Digest - {date}"
+
+    # 全記事のタグを集約
+    all_tags = set()
+    for article in articles:
+        all_tags.update(article.get("tags", []))
+    tags = sorted(list(all_tags))
+
+    # 全記事のソースを集約
+    sources = list(set(article.get("source", "") for article in articles if article.get("source")))
+
+    # 含まれるURLのリスト
+    urls = [article.get("url", "") for article in articles if article.get("url")]
+
+    # Markdownファイルを保存
+    md_filename = f"{item_id}.md"
+    md_path = items_dir / md_filename
+
+    try:
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write(summary_content)
+        logger.info(f"Saved daily digest: {md_filename}")
+    except Exception as e:
+        logger.error(f"Failed to save daily digest {md_filename}: {e}")
+        return None
+
+    # メタデータJSONを保存
+    meta = {
+        "id": item_id,
+        "date": date,
+        "title": title,
+        "type": "daily_digest",
+        "article_count": len(articles),
+        "urls": urls,
+        "tags": tags,
+        "sources": sources,
+        "created_at": datetime.utcnow().isoformat() + "Z",
+    }
+
+    meta_filename = f"{item_id}.meta.json"
+    meta_path = items_dir / meta_filename
+
+    try:
+        with open(meta_path, "w", encoding="utf-8") as f:
+            json.dump(meta, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logger.error(f"Failed to save meta {meta_filename}: {e}")
+
+    # インデックスを更新
+    index = load_index(data_dir)
+    item_entry = {
+        "id": item_id,
+        "date": date,
+        "title": title,
+        "type": "daily_digest",
+        "article_count": len(articles),
+        "urls": urls,
+        "tags": tags,
+        "sources": sources,
+        "summary_path": f"data/items/{md_filename}",
+    }
+
+    # 既存のアイテムを更新または追加
+    items = index.get("items", [])
+    
+    # 同じ日のダイジェストがあれば更新、なければ追加
+    existing_idx = None
+    for i, item in enumerate(items):
+        if item.get("id") == item_id:
+            existing_idx = i
+            break
+    
+    if existing_idx is not None:
+        items[existing_idx] = item_entry
+    else:
+        items.insert(0, item_entry)
+    
+    index["items"] = items
+    save_index(index, data_dir)
+
+    return item_entry
+
+
+def get_existing_urls_for_date(date: str, data_dir: Optional[Path] = None) -> set:
+    """
+    指定日のダイジェストに含まれている既存URLを取得する
+    
+    Args:
+        date: 日付 (YYYY-MM-DD)
+        data_dir: データディレクトリ
+        
+    Returns:
+        既存URLのセット
+    """
+    data_dir = data_dir or DEFAULT_DATA_DIR
+    index = load_index(data_dir)
+    
+    item_id = f"{date}__daily-digest"
+    
+    for item in index.get("items", []):
+        if item.get("id") == item_id:
+            return set(item.get("urls", []))
+    
+    return set()

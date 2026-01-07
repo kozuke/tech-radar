@@ -1,0 +1,86 @@
+# Tech Radar - 記事削除ワークフロー
+# 古い記事や特定パターンの記事を削除する
+
+name: Cleanup Articles
+
+on:
+  # 手動実行のみ
+  workflow_dispatch:
+    inputs:
+      older_than:
+        description: '何日より古い記事を削除するか（例: 30）'
+        required: false
+        default: ''
+        type: string
+      pattern:
+        description: '削除対象の正規表現パターン（タイトル、URL、タグ、ソース、IDを検索）'
+        required: false
+        default: ''
+        type: string
+      article_id:
+        description: '削除対象の記事ID（部分一致）'
+        required: false
+        default: ''
+        type: string
+      dry_run:
+        description: 'ドライラン（削除しない）'
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate inputs
+        run: |
+          if [[ -z "${{ github.event.inputs.older_than }}" && -z "${{ github.event.inputs.pattern }}" && -z "${{ github.event.inputs.article_id }}" ]]; then
+            echo "Error: At least one of 'older_than', 'pattern', or 'article_id' must be specified"
+            exit 1
+          fi
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run cleanup
+        run: |
+          cd collector
+          python delete.py \
+            ${{ github.event.inputs.older_than && format('--older-than {0}', github.event.inputs.older_than) || '' }} \
+            ${{ github.event.inputs.pattern && format('--pattern "{0}"', github.event.inputs.pattern) || '' }} \
+            ${{ github.event.inputs.article_id && format('--id "{0}"', github.event.inputs.article_id) || '' }} \
+            ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }} \
+            --verbose
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet data/; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.has_changes == 'true' && github.event.inputs.dry_run != 'true'
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "chore: cleanup articles $(date +'%Y-%m-%d %H:%M')"
+          git push

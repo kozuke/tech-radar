@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Tech Radar Collector
-技術記事を収集し、要約を生成してdata/に保存する
+技術記事を収集し、日次ダイジェストを生成してdata/に保存する
 """
 
 import argparse
@@ -12,8 +12,12 @@ from datetime import datetime
 from typing import List, Dict
 
 from utils.fetcher import fetch_rss_entries, extract_article_content
-from utils.summarizer import summarize_article
-from utils.storage import is_url_exists, save_article, load_index, save_index
+from utils.summarizer import summarize_daily_digest
+from utils.storage import (
+    load_index,
+    save_daily_digest,
+    get_existing_urls_for_date,
+)
 
 # ロギング設定
 logging.basicConfig(
@@ -43,29 +47,34 @@ def load_sources() -> List[Dict]:
         return []
 
 
-def process_rss_source(source: Dict, max_items: int = 5, dry_run: bool = False) -> int:
+def collect_rss_articles(
+    source: Dict,
+    max_items: int = 5,
+    existing_urls: set = None,
+) -> List[Dict]:
     """
-    RSSソースを処理する
+    RSSソースから記事を収集する（要約はしない）
 
     Args:
         source: ソース定義
         max_items: 処理する最大件数
-        dry_run: Trueの場合は保存しない
+        existing_urls: 既存のURLセット（重複チェック用）
 
     Returns:
-        処理した記事数
+        収集した記事のリスト（本文含む）
     """
     name = source.get("name", "unknown")
     url = source.get("url", "")
     tags = source.get("tags", [])
+    existing_urls = existing_urls or set()
 
-    logger.info(f"Processing RSS source: {name}")
+    logger.info(f"Collecting from RSS source: {name}")
 
     entries = fetch_rss_entries(url, limit=max_items * 2)  # 重複を考慮して多めに取得
 
-    processed = 0
+    articles = []
     for entry in entries:
-        if processed >= max_items:
+        if len(articles) >= max_items:
             break
 
         article_url = entry.get("url", "")
@@ -73,17 +82,12 @@ def process_rss_source(source: Dict, max_items: int = 5, dry_run: bool = False) 
             continue
 
         # 重複チェック
-        if is_url_exists(article_url, DATA_DIR):
+        if article_url in existing_urls:
             logger.debug(f"Skipping existing article: {article_url}")
             continue
 
         title = entry.get("title", "Untitled")
-        logger.info(f"Processing: {title}")
-
-        if dry_run:
-            logger.info(f"[DRY RUN] Would process: {title}")
-            processed += 1
-            continue
+        logger.info(f"Fetching content: {title}")
 
         # 本文抽出
         content = extract_article_content(article_url)
@@ -91,48 +95,35 @@ def process_rss_source(source: Dict, max_items: int = 5, dry_run: bool = False) 
             logger.warning(f"Failed to extract content: {article_url}")
             continue
 
-        # 要約生成
-        today = datetime.now().strftime("%Y-%m-%d")
-        summary = summarize_article(
-            title=title,
-            url=article_url,
-            content=content,
-            date=today,
-        )
+        articles.append({
+            "title": title,
+            "url": article_url,
+            "content": content,
+            "source": f"rss:{name}",
+            "tags": tags,
+        })
 
-        if not summary:
-            logger.warning(f"Failed to summarize: {title}")
-            continue
+        # URLを既存リストに追加（同一実行内での重複防止）
+        existing_urls.add(article_url)
 
-        # 保存
-        result = save_article(
-            date=today,
-            title=title,
-            url=article_url,
-            tags=tags,
-            source=f"rss:{name}",
-            summary_content=summary,
-            data_dir=DATA_DIR,
-        )
-
-        if result:
-            processed += 1
-            logger.info(f"Saved: {title}")
-
-    return processed
+    return articles
 
 
-def process_keyword_source(source: Dict, max_items: int = 5, dry_run: bool = False) -> int:
+def collect_keyword_articles(
+    source: Dict,
+    max_items: int = 5,
+    existing_urls: set = None,
+) -> List[Dict]:
     """
-    キーワード検索ソースを処理する（将来の拡張用）
+    キーワード検索ソースから記事を収集する（将来の拡張用）
 
     Args:
         source: ソース定義
         max_items: 処理する最大件数
-        dry_run: Trueの場合は保存しない
+        existing_urls: 既存のURLセット
 
     Returns:
-        処理した記事数
+        収集した記事のリスト
     """
     name = source.get("name", "unknown")
     query = source.get("query", "")
@@ -140,7 +131,7 @@ def process_keyword_source(source: Dict, max_items: int = 5, dry_run: bool = Fal
     logger.info(f"Keyword source '{name}' with query '{query}' - not implemented yet")
 
     # TODO: SerpApi等を使った検索実装
-    return 0
+    return []
 
 
 def run_collection(
@@ -150,6 +141,9 @@ def run_collection(
 ) -> Dict:
     """
     メイン収集処理
+    1. 全ソースから記事を収集
+    2. 収集した記事をまとめて日次ダイジェストとして要約
+    3. 1つのMarkdownファイルとして保存
 
     Args:
         max_items_per_source: ソースごとの最大処理件数
@@ -164,8 +158,16 @@ def run_collection(
         logger.error("No sources configured")
         return {"total": 0, "success": 0, "failed": 0}
 
-    stats = {"total": 0, "success": 0, "failed": 0, "sources": {}}
+    today = datetime.now().strftime("%Y-%m-%d")
+    
+    # 今日のダイジェストに既に含まれているURLを取得
+    existing_urls = get_existing_urls_for_date(today, DATA_DIR)
+    logger.info(f"Found {len(existing_urls)} existing URLs for {today}")
 
+    stats = {"total": 0, "success": 0, "failed": 0, "sources": {}}
+    all_articles = []
+
+    # 全ソースから記事を収集
     for source in sources:
         source_name = source.get("name", "unknown")
         source_type = source.get("type", "")
@@ -176,20 +178,65 @@ def run_collection(
 
         try:
             if source_type == "rss":
-                count = process_rss_source(source, max_items_per_source, dry_run)
+                articles = collect_rss_articles(
+                    source, max_items_per_source, existing_urls
+                )
             elif source_type == "keyword":
-                count = process_keyword_source(source, max_items_per_source, dry_run)
+                articles = collect_keyword_articles(
+                    source, max_items_per_source, existing_urls
+                )
             else:
                 logger.warning(f"Unknown source type: {source_type}")
                 continue
 
-            stats["sources"][source_name] = count
-            stats["success"] += count
-            stats["total"] += count
+            stats["sources"][source_name] = len(articles)
+            stats["total"] += len(articles)
+            all_articles.extend(articles)
 
         except Exception as e:
-            logger.error(f"Error processing source {source_name}: {e}")
+            logger.error(f"Error collecting from source {source_name}: {e}")
             stats["failed"] += 1
+
+    # 記事が収集できなかった場合
+    if not all_articles:
+        logger.info("No new articles collected")
+        return stats
+
+    logger.info(f"Collected {len(all_articles)} articles total")
+
+    if dry_run:
+        logger.info("[DRY RUN] Would create daily digest with:")
+        for article in all_articles:
+            logger.info(f"  - {article['title']} ({article['source']})")
+        stats["success"] = len(all_articles)
+        return stats
+
+    # 日次ダイジェストを生成
+    logger.info("Generating daily digest summary...")
+    digest_content = summarize_daily_digest(
+        articles=all_articles,
+        date=today,
+    )
+
+    if not digest_content:
+        logger.error("Failed to generate daily digest")
+        stats["failed"] = len(all_articles)
+        return stats
+
+    # 保存
+    result = save_daily_digest(
+        date=today,
+        articles=all_articles,
+        summary_content=digest_content,
+        data_dir=DATA_DIR,
+    )
+
+    if result:
+        stats["success"] = len(all_articles)
+        logger.info(f"Successfully saved daily digest for {today}")
+    else:
+        stats["failed"] = len(all_articles)
+        logger.error("Failed to save daily digest")
 
     return stats
 
@@ -243,7 +290,8 @@ def main():
 
     logger.info("=" * 50)
     logger.info("Collection completed!")
-    logger.info(f"Total articles processed: {stats['success']}")
+    logger.info(f"Total articles collected: {stats['total']}")
+    logger.info(f"Successfully processed: {stats['success']}")
     logger.info(f"Failed: {stats['failed']}")
     logger.info(f"By source: {stats['sources']}")
 
