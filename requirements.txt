@@ -1,0 +1,17 @@
+# Tech Radar Collector Dependencies
+
+# RSS/Feed parsing
+feedparser>=6.0.10
+
+# HTTP requests
+requests>=2.31.0
+
+# HTML parsing
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# YAML configuration
+PyYAML>=6.0.1
+
+# Optional: Better HTML content extraction
+# trafilatura>=1.6.0

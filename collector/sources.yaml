@@ -1,0 +1,40 @@
+# 情報源定義ファイル
+# type: rss - RSSフィードから記事を収集
+# type: keyword - キーワード検索で記事を収集
+
+sources:
+  # PostgreSQL公式ブログ
+  - type: rss
+    name: postgres_blog
+    url: https://www.postgresql.org/news.rss
+    tags: [postgres, database]
+
+  # Hacker News - Programming
+  - type: rss
+    name: hacker_news
+    url: https://hnrss.org/newest?points=100
+    tags: [tech, general]
+
+  # AWS公式ブログ
+  - type: rss
+    name: aws_blog
+    url: https://aws.amazon.com/blogs/aws/feed/
+    tags: [aws, cloud]
+
+  # GitHub公式ブログ
+  - type: rss
+    name: github_blog
+    url: https://github.blog/feed/
+    tags: [github, devops]
+
+  # Google Developers Blog
+  - type: rss
+    name: google_developers
+    url: https://developers.googleblog.com/feeds/posts/default
+    tags: [google, dev]
+
+  # AI/LLM関連キーワード検索（SerpApi or 別途実装）
+  # - type: keyword
+  #   name: ai_news
+  #   query: "LLM OR OpenAI OR Claude"
+  #   tags: [ai, llm]

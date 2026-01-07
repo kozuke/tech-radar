@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-01-07T06:30:00Z",
+  "items": [
+    {
+      "id": "2026-01-07__postgresql-17-released",
+      "date": "2026-01-07",
+      "title": "PostgreSQL 17がリリース - パフォーマンスと開発者体験が大幅向上",
+      "url": "https://www.postgresql.org/about/news/postgresql-17-released/",
+      "tags": ["postgres", "database"],
+      "source": "rss:postgres_blog",
+      "summary_path": "data/items/2026-01-07__postgresql-17-released.md"
+    },
+    {
+      "id": "2026-01-06__github-copilot-workspace",
+      "date": "2026-01-06",
+      "title": "GitHub Copilot Workspaceが一般公開 - AIネイティブな開発環境",
+      "url": "https://github.blog/news-insights/product-news/github-copilot-workspace-ga/",
+      "tags": ["github", "ai", "devops"],
+      "source": "rss:github_blog",
+      "summary_path": "data/items/2026-01-06__github-copilot-workspace.md"
+    }
+  ]
+}
