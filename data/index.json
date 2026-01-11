@@ -1,6 +1,50 @@
 {
-  "generated_at": "2026-01-10T06:30:15.722390Z",
+  "generated_at": "2026-01-11T06:31:22.954326Z",
   "items": [
+    {
+      "id": "2026-01-11__daily-digest",
+      "date": "2026-01-11",
+      "title": "Tech Radar Daily Digest - 2026-01-11",
+      "type": "daily_digest",
+      "article_count": 15,
+      "urls": [
+        "https://www.postgresql.org/about/news/introducing-pgpm-a-package-manager-for-modular-postgresql-3196/",
+        "https://www.postgresql.org/about/news/welcoming-three-new-members-to-the-postgresql-community-code-of-conduct-committee-3209/",
+        "https://www.postgresql.org/about/news/pgconf-india-2026-talks-trainings-published-and-early-bird-registration-closes-soon-3208/",
+        "https://www.rollingstone.com/music/music-news/bob-weir-grateful-dead-dead-obituary-1234810106/",
+        "https://www.brown.edu/news/2026-01-07/private-equity-autism-centers",
+        "https://reclaimthenet.org/uk-orders-ofcom-to-explore-encryption-backdoors",
+        "https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/",
+        "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/",
+        "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-reinvent-keynote-recap-on-demand-videos-and-more-december-8-2025/",
+        "https://github.blog/open-source/gaming/light-waves-rising-tides-and-drifting-ships-game-off-2025-winners/",
+        "https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/",
+        "https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/",
+        "https://developers.googleblog.com/a-developers-guide-to-debugging-jax-on-cloud-tpus-essential-tools-and-techniques/",
+        "https://developers.googleblog.com/real-world-agent-examples-with-gemini-3/",
+        "https://developers.googleblog.com/gemini-3-flash-is-now-available-in-gemini-cli/"
+      ],
+      "tags": [
+        "aws",
+        "cloud",
+        "database",
+        "dev",
+        "devops",
+        "general",
+        "github",
+        "google",
+        "postgres",
+        "tech"
+      ],
+      "sources": [
+        "rss:github_blog",
+        "rss:aws_blog",
+        "rss:hacker_news",
+        "rss:google_developers",
+        "rss:postgres_blog"
+      ],
+      "summary_path": "data/items/2026-01-11__daily-digest.md"
+    },
     {
       "id": "2026-01-10__daily-digest",
       "date": "2026-01-10",
