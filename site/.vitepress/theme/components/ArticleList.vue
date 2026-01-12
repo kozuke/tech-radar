@@ -5,9 +5,15 @@ interface Article {
   id: string
   date: string
   title: string
-  url: string
+  type?: string
+  // 個別記事の場合
+  url?: string
+  source?: string
+  // daily_digestの場合
+  urls?: string[]
+  sources?: string[]
+  article_count?: number
   tags: string[]
-  source: string
   summary_path: string
 }
 
@@ -98,7 +104,11 @@ const formatDate = (dateStr: string) => {
 }
 
 // ソース名の短縮表示
-const formatSource = (source: string) => {
+const formatSource = (source: string | string[] | undefined) => {
+  if (!source) return ''
+  if (Array.isArray(source)) {
+    return source.map(s => s.replace('rss:', '').replace(/_/g, ' ')).join(', ')
+  }
   return source.replace('rss:', '').replace(/_/g, ' ')
 }
 
@@ -170,10 +180,13 @@ const getArticlePath = (article: Article) => {
           <span class="date">
             📅 {{ formatDate(article.date) }}
           </span>
-          <span class="source">
+          <span v-if="article.type === 'daily_digest'" class="source">
+            📰 {{ article.article_count }}件のソースから
+          </span>
+          <span v-else class="source">
             📰 {{ formatSource(article.source) }}
           </span>
-          <a :href="article.url" target="_blank" rel="noopener noreferrer" class="original-link">
+          <a v-if="article.url" :href="article.url" target="_blank" rel="noopener noreferrer" class="original-link">
             🔗 元記事
           </a>
         </div>
