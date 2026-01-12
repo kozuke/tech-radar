@@ -1,4 +1,3 @@
-```markdown
 # Tech Radar Daily Digest - 2026-01-12
 
 今日の技術ニュースから注目のトピックをお届けします。
@@ -151,4 +150,3 @@ Google の Gemini 3 Flash が Gemini CLI で利用可能になりました。こ
 ---
 
 *生成日: 2026-01-12*
-```

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv/
+venv/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# VitePress
+site/.vitepress/cache/
+site/.vitepress/dist/
+site/public/data/
+
+# ビルド時にdata/items/からコピーされる記事ファイル
+site/articles/2026-*.md
+site/articles/2025-*.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

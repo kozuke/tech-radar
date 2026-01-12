@@ -4,12 +4,30 @@ LLM要約ユーティリティ
 """
 
 import os
+import re
 import requests
 from typing import Optional, List, Dict
 from pathlib import Path
 import logging
 
 logger = logging.getLogger(__name__)
+
+
+def clean_markdown_output(content: str) -> str:
+    """
+    LLM出力からmarkdownコードブロックを除去する
+    ```markdown ... ``` で囲まれている場合、その囲みを削除する
+    """
+    if not content:
+        return content
+    
+    # ```markdown で始まり ``` で終わる場合
+    pattern = r'^```(?:markdown)?\s*\n(.*?)\n```\s*$'
+    match = re.match(pattern, content.strip(), re.DOTALL)
+    if match:
+        return match.group(1).strip()
+    
+    return content.strip()
 
 # OpenRouter API設定
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -120,6 +138,7 @@ def summarize_article(
 
         result = response.json()
         summary = result["choices"][0]["message"]["content"]
+        summary = clean_markdown_output(summary)
 
         logger.info(f"Successfully summarized: {title}")
         return summary
@@ -220,6 +239,7 @@ def summarize_daily_digest(
 
         result = response.json()
         summary = result["choices"][0]["message"]["content"]
+        summary = clean_markdown_output(summary)
 
         logger.info(f"Successfully created daily digest for {date} with {len(articles)} articles")
         return summary
