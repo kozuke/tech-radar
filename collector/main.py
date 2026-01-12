@@ -51,6 +51,7 @@ def collect_rss_articles(
     source: Dict,
     max_items: int = 5,
     existing_urls: set = None,
+    max_age_days: int = 7,
 ) -> List[Dict]:
     """
     RSSソースから記事を収集する（要約はしない）
@@ -59,6 +60,7 @@ def collect_rss_articles(
         source: ソース定義
         max_items: 処理する最大件数
         existing_urls: 既存のURLセット（重複チェック用）
+        max_age_days: 最大日数（この日数以内の記事のみ取得）
 
     Returns:
         収集した記事のリスト（本文含む）
@@ -68,9 +70,10 @@ def collect_rss_articles(
     tags = source.get("tags", [])
     existing_urls = existing_urls or set()
 
-    logger.info(f"Collecting from RSS source: {name}")
+    logger.info(f"Collecting from RSS source: {name} (max {max_age_days} days old)")
 
-    entries = fetch_rss_entries(url, limit=max_items * 2)  # 重複を考慮して多めに取得
+    # 日付フィルタリング付きで取得
+    entries = fetch_rss_entries(url, limit=max_items * 2, max_age_days=max_age_days)
 
     articles = []
     for entry in entries:
@@ -136,17 +139,19 @@ def collect_keyword_articles(
 
 def run_collection(
     max_items_per_source: int = 3,
+    max_age_days: int = 7,
     dry_run: bool = False,
     source_filter: str = None,
 ) -> Dict:
     """
     メイン収集処理
-    1. 全ソースから記事を収集
+    1. 全ソースから記事を収集（日付フィルタリング適用）
     2. 収集した記事をまとめて日次ダイジェストとして要約
     3. 1つのMarkdownファイルとして保存
 
     Args:
         max_items_per_source: ソースごとの最大処理件数
+        max_age_days: 最大日数（この日数以内の記事のみ取得）
         dry_run: Trueの場合は保存しない
         source_filter: 特定のソースのみ処理する場合の名前
 
@@ -159,6 +164,8 @@ def run_collection(
         return {"total": 0, "success": 0, "failed": 0}
 
     today = datetime.now().strftime("%Y-%m-%d")
+    
+    logger.info(f"Filtering articles from the last {max_age_days} days")
     
     # 今日のダイジェストに既に含まれているURLを取得
     existing_urls = get_existing_urls_for_date(today, DATA_DIR)
@@ -179,7 +186,7 @@ def run_collection(
         try:
             if source_type == "rss":
                 articles = collect_rss_articles(
-                    source, max_items_per_source, existing_urls
+                    source, max_items_per_source, existing_urls, max_age_days
                 )
             elif source_type == "keyword":
                 articles = collect_keyword_articles(
@@ -252,6 +259,12 @@ def main():
         help="ソースごとの最大処理件数 (default: 3)",
     )
     parser.add_argument(
+        "--max-age-days",
+        type=int,
+        default=7,
+        help="記事の最大日数 - この日数以内の記事のみ取得 (default: 7)",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="保存せずに処理をシミュレートする",
@@ -276,6 +289,7 @@ def main():
 
     logger.info("Starting Tech Radar collection...")
     logger.info(f"Data directory: {DATA_DIR}")
+    logger.info(f"Max age: {args.max_age_days} days")
 
     # データディレクトリの初期化
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -284,6 +298,7 @@ def main():
     # 収集実行
     stats = run_collection(
         max_items_per_source=args.max_items,
+        max_age_days=args.max_age_days,
         dry_run=args.dry_run,
         source_filter=args.source,
     )

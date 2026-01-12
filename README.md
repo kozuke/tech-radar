@@ -72,10 +72,11 @@ pip install -r requirements.txt
 
 # 環境変数設定
 export OPENROUTER_API_KEY="your-api-key"
+export OPENROUTER_MODEL="google/gemini-3-flash-preview"  # オプション
 
 # 実行（日次ダイジェスト生成）
 cd collector
-python main.py --max-items 3 --verbose  # 各ソースから最大3件取得してダイジェスト化
+python main.py --max-items 3 --max-age-days 7 --verbose  # 直近7日以内の記事を各ソース最大3件取得
 
 # 記事削除（ドライラン）
 python delete.py --older-than 30 --dry-run --verbose
@@ -115,7 +116,8 @@ npm run preview
 
 リポジトリの Settings > Secrets and variables > Actions で以下を設定：
 
-- `OPENROUTER_API_KEY`: OpenRouter APIキー
+- `OPENROUTER_API_KEY`: OpenRouter APIキー（必須）
+- `OPENROUTER_MODEL`: 使用するAIモデル（オプション、未設定時は `google/gemini-3-flash-preview`）
 
 ### ワークフロー
 
@@ -123,7 +125,7 @@ npm run preview
 |-------------|---------|------|
 | `collect.yml` | 毎日 JST 15:00 / 手動 | 複数ソースから記事を収集し、1日1つの日次ダイジェストを生成 |
 | `cleanup.yml` | 手動のみ | 古い記事や条件に合致する記事を削除 |
-| `pages.yml` | data/ or site/ 更新時 | VitePressをビルドしてデプロイ |
+| `pages.yml` | data/ or site/ 更新時 / collect.yml完了時 | VitePressをビルドしてデプロイ |
 
 ### cleanup.yml のオプション
 
@@ -160,6 +162,30 @@ sources:
   #   query: "LLM OR OpenAI"
   #   tags: [ai]
 ```
+
+### 現在設定されている情報源
+
+#### RSSフィード対応済み
+| 名前 | ソース | タグ |
+|------|--------|------|
+| aws_whats_new | AWS What's New (公式新着情報) | aws, cloud |
+| openai_api_changelog | OpenAI API Changelog (GitHub Releases) | ai, chatgpt, openai, api |
+| google_developers | Google Developers Blog | ai, gemini, google |
+| google_workspace_updates | Google Workspace Updates (NotebookLM含む) | google, notebooklm, workspace |
+| anthropic_sdk_releases | Anthropic SDK Releases (GitHub) | ai, claude, anthropic, api |
+| claude_code_releases | Claude Code Releases (GitHub) | ai, claude, claude_code, anthropic |
+
+#### スクレイピング対応が必要（未実装）
+| 名前 | ソース | タグ |
+|------|--------|------|
+| gcp_blog | Google Cloud Blog | gcp, cloud |
+| gcp_press | Google Cloud Press Releases | gcp, cloud |
+| openai_news | OpenAI公式ニュース | ai, chatgpt, openai |
+| anthropic_news | Anthropic公式ニュース | ai, claude, anthropic |
+| google_ai_blog | Google AI Blog | ai, gemini, google, notebooklm |
+| deepmind_blog | DeepMind Blog (Gemini開発元) | ai, gemini, deepmind |
+| cognition_devin | Cognition Labs公式 (Devin開発元) | ai, devin, cognition |
+| claude_code_changelog | Claude Code CHANGELOG.md | ai, claude, claude_code, anthropic |
 
 ## 出力フォーマット
 

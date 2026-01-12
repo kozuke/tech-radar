@@ -1,40 +1,82 @@
 # 情報源定義ファイル
-# type: rss - RSSフィードから記事を収集
-# type: keyword - キーワード検索で記事を収集
+# type: rss - RSSフィードから記事を収集（推奨・コスト効率◎）
+#
+# 運用方針:
+# - 日付フィルタ: 直近7日以内の記事のみ対象
+# - 1日あたり上限: 各ソース3件まで（--max-items オプション）
+# - 本文取得: フィルタ済み記事のみ
 
 sources:
-  # PostgreSQL公式ブログ
-  - type: rss
-    name: postgres_blog
-    url: https://www.postgresql.org/news.rss
-    tags: [postgres, database]
+  # ===========================================
+  # 高優先度: RSSフィード対応済み（コスト効率◎）
+  # ===========================================
 
-  # Hacker News - Programming
+  # AWS What's New (公式新着情報)
+  # 信頼性: ◎ | 更新頻度: 高 | RSS: ◎
   - type: rss
-    name: hacker_news
-    url: https://hnrss.org/newest?points=100
-    tags: [tech, general]
-
-  # AWS公式ブログ
-  - type: rss
-    name: aws_blog
-    url: https://aws.amazon.com/blogs/aws/feed/
+    name: aws_whats_new
+    url: https://aws.amazon.com/about-aws/whats-new/recent/feed/
     tags: [aws, cloud]
 
-  # GitHub公式ブログ
+  # Claude Code Releases (GitHub Atom)
+  # 信頼性: ◎ | 更新頻度: 中 | RSS: ◎
   - type: rss
-    name: github_blog
-    url: https://github.blog/feed/
-    tags: [github, devops]
+    name: claude_code_releases
+    url: https://github.com/anthropics/claude-code/releases.atom
+    tags: [ai, claude, claude_code, anthropic]
 
-  # Google Developers Blog
+  # OpenAI Python SDK Releases (GitHub Atom)
+  # 信頼性: ◎ | 更新頻度: 中 | RSS: ◎
+  - type: rss
+    name: openai_sdk_releases
+    url: https://github.com/openai/openai-python/releases.atom
+    tags: [ai, chatgpt, openai, api]
+
+  # Google Developers Blog (Gemini関連含む)
+  # 信頼性: ◎ | 更新頻度: 中 | RSS: ◎
   - type: rss
     name: google_developers
     url: https://developers.googleblog.com/feeds/posts/default
-    tags: [google, dev]
+    tags: [ai, gemini, google]
 
-  # AI/LLM関連キーワード検索（SerpApi or 別途実装）
-  # - type: keyword
-  #   name: ai_news
-  #   query: "LLM OR OpenAI OR Claude"
-  #   tags: [ai, llm]
+  # Google Workspace Updates (NotebookLM関連含む)
+  # 信頼性: ◎ | 更新頻度: 中 | RSS: ◎
+  - type: rss
+    name: google_workspace_updates
+    url: https://workspaceupdates.googleblog.com/atom.xml
+    tags: [google, notebooklm, workspace]
+
+  # Anthropic SDK Releases (GitHub Atom)
+  # 信頼性: ◎ | 更新頻度: 中 | RSS: ◎
+  - type: rss
+    name: anthropic_sdk_releases
+    url: https://github.com/anthropics/anthropic-sdk-python/releases.atom
+    tags: [ai, claude, anthropic, api]
+
+  # ===========================================
+  # 中優先度: スクレイピング対応予定（要実装）
+  # 実装優先度順に記載
+  # ===========================================
+
+  # Anthropic公式ニュース
+  # 更新頻度が低く、重要な発表のみなのでコスト効率良い
+  # - type: scrape
+  #   name: anthropic_news
+  #   url: https://www.anthropic.com/news
+  #   tags: [ai, claude, anthropic]
+
+  # OpenAI公式ニュース
+  # 重要な発表のみ取得すればコスト抑えられる
+  # - type: scrape
+  #   name: openai_news
+  #   url: https://openai.com/news/
+  #   tags: [ai, chatgpt, openai]
+
+  # ===========================================
+  # 低優先度: 後回し（コスト高 or 更新頻度低）
+  # ===========================================
+
+  # GCPブログ: 記事数多くRSSなし → コスト高
+  # DeepMind Blog: 研究論文寄り → 優先度低
+  # Cognition/Devin: 更新頻度低い → 必要時のみ
+  # Google AI Blog: RSSなし、他ソースでカバー可能

@@ -17,6 +17,11 @@ on:
         required: false
         default: '3'
         type: string
+      max_age_days:
+        description: '記事の最大日数（この日数以内の記事のみ取得）'
+        required: false
+        default: '7'
+        type: string
       source:
         description: '特定のソースのみ処理（空欄で全て）'
         required: false
@@ -53,10 +58,12 @@ jobs:
       - name: Run collector
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ secrets.OPENROUTER_MODEL }}
         run: |
           cd collector
           python main.py \
             --max-items ${{ github.event.inputs.max_items || '3' }} \
+            --max-age-days ${{ github.event.inputs.max_age_days || '7' }} \
             ${{ github.event.inputs.source && format('--source {0}', github.event.inputs.source) || '' }} \
             ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }} \
             --verbose
