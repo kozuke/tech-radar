@@ -13,7 +13,12 @@ logger = logging.getLogger(__name__)
 
 # OpenRouter API設定
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_MODEL = "google/gemini-2.0-flash-001"  # 無料枠対応モデル
+DEFAULT_MODEL = "google/gemini-3-flash-preview"  # フォールバック用デフォルトモデル
+
+
+def get_model() -> str:
+    """使用するモデルを環境変数から取得（未設定の場合はデフォルトを使用）"""
+    return os.environ.get("OPENROUTER_MODEL", DEFAULT_MODEL)
 
 
 def load_prompt_template(template_name: str = "summary") -> str:
@@ -49,7 +54,7 @@ def summarize_article(
     content: str,
     date: str,
     api_key: Optional[str] = None,
-    model: str = DEFAULT_MODEL,
+    model: Optional[str] = None,
 ) -> Optional[str]:
     """
     記事をLLMで要約する
@@ -69,6 +74,9 @@ def summarize_article(
     if not api_key:
         logger.error("OPENROUTER_API_KEY is not set")
         return None
+
+    model = model or get_model()
+    logger.info(f"Using model: {model}")
 
     prompt_template = load_prompt_template()
 
@@ -131,7 +139,7 @@ def summarize_daily_digest(
     articles: List[Dict],
     date: str,
     api_key: Optional[str] = None,
-    model: str = DEFAULT_MODEL,
+    model: Optional[str] = None,
 ) -> Optional[str]:
     """
     複数の記事をまとめて日次ダイジェストとして要約する
@@ -149,6 +157,9 @@ def summarize_daily_digest(
     if not api_key:
         logger.error("OPENROUTER_API_KEY is not set")
         return None
+
+    model = model or get_model()
+    logger.info(f"Using model: {model}")
 
     if not articles:
         logger.warning("No articles provided for daily digest")

@@ -12,6 +12,14 @@ on:
       - 'site/**'
       - 'data/**'
 
+  # collect.ymlが完了した時にトリガー
+  workflow_run:
+    workflows: ["Collect Articles"]
+    types:
+      - completed
+    branches:
+      - main
+
   # 手動実行
   workflow_dispatch:
 
@@ -29,6 +37,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # workflow_runでトリガーされた場合は、元のワークフローが成功した場合のみ実行
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout repository
