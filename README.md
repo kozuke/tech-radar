@@ -118,6 +118,7 @@ npm run preview
 
 - `OPENROUTER_API_KEY`: OpenRouter APIキー（必須）
 - `OPENROUTER_MODEL`: 使用するAIモデル（オプション、未設定時は `google/gemini-3-flash-preview`）
+- `SLACK_WEBHOOK_URL`: Slack Incoming Webhook URL（オプション、設定するとデプロイ完了時に通知）
 
 ### ワークフロー
 
@@ -125,7 +126,7 @@ npm run preview
 |-------------|---------|------|
 | `collect.yml` | 毎日 JST 15:00 / 手動 | 複数ソースから記事を収集し、1日1つの日次ダイジェストを生成 |
 | `cleanup.yml` | 手動のみ | 古い記事や条件に合致する記事を削除 |
-| `pages.yml` | data/ or site/ 更新時 / collect.yml完了時 | VitePressをビルドしてデプロイ |
+| `pages.yml` | data/ or site/ 更新時 / collect.yml完了時 | VitePressをビルドしてデプロイ（Slack通知対応） |
 
 ### cleanup.yml のオプション
 
