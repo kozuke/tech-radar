@@ -39,6 +39,9 @@ jobs:
     runs-on: ubuntu-latest
     # workflow_runでトリガーされた場合は、元のワークフローが成功した場合のみ実行
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    outputs:
+      slack_summary: ${{ steps.extract_summary.outputs.summary }}
+      latest_digest_date: ${{ steps.extract_summary.outputs.date }}
 
     steps:
       - name: Checkout repository
@@ -62,6 +65,36 @@ jobs:
         run: |
           # 記事MDをVitePressで表示できるようにコピー
           cp data/items/*.md site/articles/ 2>/dev/null || true
+
+      - name: Extract Slack summary from latest digest
+        id: extract_summary
+        run: |
+          # 最新のダイジェストファイルを取得
+          LATEST_DIGEST=$(ls -t data/items/*__daily-digest.md 2>/dev/null | head -1)
+          
+          if [ -n "$LATEST_DIGEST" ] && [ -f "$LATEST_DIGEST" ]; then
+            # ファイル名から日付を抽出
+            DATE=$(basename "$LATEST_DIGEST" | sed 's/__daily-digest.md//')
+            echo "date=$DATE" >> $GITHUB_OUTPUT
+            
+            # SLACK_SUMMARY_START と SLACK_SUMMARY_END の間を抽出
+            SUMMARY=$(sed -n '/<!-- SLACK_SUMMARY_START -->/,/<!-- SLACK_SUMMARY_END -->/p' "$LATEST_DIGEST" | \
+                      sed '1d;$d' | \
+                      tr '\n' '\\n' | \
+                      sed 's/\\n$//')
+            
+            if [ -n "$SUMMARY" ]; then
+              # GitHub Actions outputに設定（改行をエスケープ）
+              echo "summary<<EOF" >> $GITHUB_OUTPUT
+              sed -n '/<!-- SLACK_SUMMARY_START -->/,/<!-- SLACK_SUMMARY_END -->/p' "$LATEST_DIGEST" | sed '1d;$d' >> $GITHUB_OUTPUT
+              echo "EOF" >> $GITHUB_OUTPUT
+            else
+              echo "summary=新しい記事が追加されました。詳細はサイトでご確認ください。" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "date=" >> $GITHUB_OUTPUT
+            echo "summary=サイトが更新されました。" >> $GITHUB_OUTPUT
+          fi
 
       - name: Build site
         working-directory: site
@@ -88,34 +121,70 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Notify Slack
-        if: success()
-        uses: slackapi/slack-github-action@v2.0.0
-        with:
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          webhook-type: incoming-webhook
-          payload: |
-            {
-              "text": "Tech Radar サイトが更新されました",
-              "blocks": [
+        if: success() && secrets.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_SUMMARY: ${{ needs.build.outputs.slack_summary }}
+          DIGEST_DATE: ${{ needs.build.outputs.latest_digest_date }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          # Slack Block Kit形式でメッセージを構築
+          # サマリーの改行を適切に処理
+          SUMMARY_TEXT=$(echo "$SLACK_SUMMARY" | sed 's/"/\\"/g')
+          
+          # 日付がある場合はヘッダーに含める
+          if [ -n "$DIGEST_DATE" ]; then
+            HEADER="📰 *Tech Radar Daily Digest - $DIGEST_DATE*"
+          else
+            HEADER="📰 *Tech Radar* サイトが更新されました"
+          fi
+          
+          # Slack Webhook に送信
+          curl -X POST -H 'Content-type: application/json' \
+            --data "{
+              \"blocks\": [
                 {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*Tech Radar* サイトが更新されました :rocket:"
+                  \"type\": \"header\",
+                  \"text\": {
+                    \"type\": \"plain_text\",
+                    \"text\": \"Tech Radar 更新通知\",
+                    \"emoji\": true
                   }
                 },
                 {
-                  "type": "section",
-                  "fields": [
+                  \"type\": \"section\",
+                  \"text\": {
+                    \"type\": \"mrkdwn\",
+                    \"text\": \"$HEADER\"
+                  }
+                },
+                {
+                  \"type\": \"divider\"
+                },
+                {
+                  \"type\": \"section\",
+                  \"text\": {
+                    \"type\": \"mrkdwn\",
+                    \"text\": \"$SUMMARY_TEXT\"
+                  }
+                },
+                {
+                  \"type\": \"divider\"
+                },
+                {
+                  \"type\": \"actions\",
+                  \"elements\": [
                     {
-                      "type": "mrkdwn",
-                      "text": "*URL:*\n${{ steps.deployment.outputs.page_url }}"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Commit:*\n${{ github.sha }}"
+                      \"type\": \"button\",
+                      \"text\": {
+                        \"type\": \"plain_text\",
+                        \"text\": \"📖 サイトを見る\",
+                        \"emoji\": true
+                      },
+                      \"url\": \"$PAGE_URL\",
+                      \"style\": \"primary\"
                     }
                   ]
                 }
               ]
-            }
+            }" \
+            "${{ secrets.SLACK_WEBHOOK_URL }}"
