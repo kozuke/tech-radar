@@ -121,12 +121,19 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Notify Slack
-        if: success() && secrets.SLACK_WEBHOOK_URL != ''
+        if: success()
         env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_SUMMARY: ${{ needs.build.outputs.slack_summary }}
           DIGEST_DATE: ${{ needs.build.outputs.latest_digest_date }}
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
+          # Webhook URLが設定されていない場合はスキップ
+          if [ -z "$SLACK_WEBHOOK_URL" ]; then
+            echo "SLACK_WEBHOOK_URL is not set, skipping notification"
+            exit 0
+          fi
+          
           # Slack Block Kit形式でメッセージを構築
           # サマリーの改行を適切に処理
           SUMMARY_TEXT=$(echo "$SLACK_SUMMARY" | sed 's/"/\\"/g')
@@ -187,4 +194,4 @@ jobs:
                 }
               ]
             }" \
-            "${{ secrets.SLACK_WEBHOOK_URL }}"
+            "$SLACK_WEBHOOK_URL"
