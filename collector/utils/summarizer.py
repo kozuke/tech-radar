@@ -172,25 +172,16 @@ def summarize_daily_digest(
     Returns:
         日次ダイジェストのMarkdown、または失敗時はNone
     """
-    logger.info("=" * 50)
-    logger.info("Starting daily digest summarization")
-    logger.info(f"Date: {date}, Articles count: {len(articles)}")
-    
     api_key = api_key or os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
-        logger.error("OPENROUTER_API_KEY is not set - check GitHub secrets")
-        logger.error("=" * 50)
+        logger.error("OPENROUTER_API_KEY is not set")
         return None
-    
-    # API keyの一部をログに出力（デバッグ用）
-    logger.info(f"API key present: {api_key[:8]}...{api_key[-4:]}")
 
     model = model or get_model()
     logger.info(f"Using model: {model}")
 
     if not articles:
         logger.warning("No articles provided for daily digest")
-        logger.warning("=" * 50)
         return None
 
     prompt_template = load_prompt_template("daily_digest")
@@ -238,8 +229,8 @@ def summarize_daily_digest(
             "temperature": 0.3,
         }
 
-        logger.info(f"Sending request to OpenRouter API...")
-        logger.info(f"Payload size: {len(user_message)} chars")
+        logger.info(f"Calling OpenRouter API with model: {model}")
+        logger.info(f"Request payload size: {len(user_message)} chars")
         
         response = requests.post(
             OPENROUTER_API_URL,
@@ -248,11 +239,10 @@ def summarize_daily_digest(
             timeout=120,  # 複数記事なのでタイムアウトを延長
         )
         
-        logger.info(f"Response status code: {response.status_code}")
+        logger.info(f"API response status: {response.status_code}")
         
         if response.status_code != 200:
-            logger.error(f"API returned non-200 status: {response.status_code}")
-            logger.error(f"Response body: {response.text[:500]}")
+            logger.error(f"API error response: {response.text[:500]}")
         
         response.raise_for_status()
 
@@ -261,22 +251,18 @@ def summarize_daily_digest(
         summary = clean_markdown_output(summary)
 
         logger.info(f"Successfully created daily digest for {date} with {len(articles)} articles")
-        logger.info(f"Summary length: {len(summary)} chars")
-        logger.info("=" * 50)
+        logger.info(f"Generated summary length: {len(summary)} chars")
         return summary
 
     except requests.RequestException as e:
         logger.error(f"API request failed for daily digest: {e}")
-        logger.error(f"Exception type: {type(e).__name__}")
-        logger.error("=" * 50)
+        logger.error(f"Request exception type: {type(e).__name__}")
         return None
     except (KeyError, IndexError) as e:
         logger.error(f"Failed to parse API response for daily digest: {e}")
         logger.error(f"Response content: {response.text[:500] if 'response' in locals() else 'N/A'}")
-        logger.error("=" * 50)
         return None
     except Exception as e:
         logger.error(f"Unexpected error creating daily digest: {e}")
         logger.error(f"Exception type: {type(e).__name__}")
-        logger.error("=" * 50)
         return None

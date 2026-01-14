@@ -74,8 +74,12 @@ def collect_rss_articles(
 
     # 日付フィルタリング付きで取得
     entries = fetch_rss_entries(url, limit=max_items * 2, max_age_days=max_age_days)
+    logger.info(f"[{name}] RSS entries after date filter: {len(entries)}")
 
     articles = []
+    skipped_duplicate = 0
+    skipped_no_content = 0
+    
     for entry in entries:
         if len(articles) >= max_items:
             break
@@ -87,6 +91,7 @@ def collect_rss_articles(
         # 重複チェック
         if article_url in existing_urls:
             logger.debug(f"Skipping existing article: {article_url}")
+            skipped_duplicate += 1
             continue
 
         title = entry.get("title", "Untitled")
@@ -96,6 +101,7 @@ def collect_rss_articles(
         content = extract_article_content(article_url)
         if not content:
             logger.warning(f"Failed to extract content: {article_url}")
+            skipped_no_content += 1
             continue
 
         articles.append({
@@ -109,6 +115,7 @@ def collect_rss_articles(
         # URLを既存リストに追加（同一実行内での重複防止）
         existing_urls.add(article_url)
 
+    logger.info(f"[{name}] Collection result: {len(articles)} articles collected, {skipped_duplicate} duplicates skipped, {skipped_no_content} content extraction failed")
     return articles
 
 
