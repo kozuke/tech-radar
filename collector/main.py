@@ -206,10 +206,23 @@ def run_collection(
 
     # 記事が収集できなかった場合
     if not all_articles:
-        logger.info("No new articles collected")
+        logger.warning("=" * 50)
+        logger.warning("NO NEW ARTICLES COLLECTED")
+        logger.warning("Possible reasons:")
+        logger.warning("  1. All articles were filtered by max_age_days")
+        logger.warning("  2. All articles already exist in today's digest")
+        logger.warning("  3. Failed to fetch/extract content from all sources")
+        logger.warning(f"  - max_age_days: {max_age_days}")
+        logger.warning(f"  - existing_urls count: {len(existing_urls)}")
+        if existing_urls:
+            logger.warning(f"  - existing_urls sample: {list(existing_urls)[:3]}")
+        logger.warning("=" * 50)
         return stats
 
     logger.info(f"Collected {len(all_articles)} articles total")
+    logger.info("Collected article URLs:")
+    for article in all_articles:
+        logger.info(f"  - {article['url']}")
 
     if dry_run:
         logger.info("[DRY RUN] Would create daily digest with:")
@@ -226,11 +239,18 @@ def run_collection(
     )
 
     if not digest_content:
-        logger.error("Failed to generate daily digest")
+        logger.error("=" * 50)
+        logger.error("FAILED TO GENERATE DAILY DIGEST")
+        logger.error("The LLM summarization returned empty/None")
+        logger.error("Check OPENROUTER_API_KEY and model availability")
+        logger.error("=" * 50)
         stats["failed"] = len(all_articles)
         return stats
 
+    logger.info(f"Generated digest content length: {len(digest_content)} chars")
+
     # 保存
+    logger.info(f"Saving daily digest to {DATA_DIR}/items/{today}__daily-digest.md")
     result = save_daily_digest(
         date=today,
         articles=all_articles,
@@ -240,10 +260,17 @@ def run_collection(
 
     if result:
         stats["success"] = len(all_articles)
-        logger.info(f"Successfully saved daily digest for {today}")
+        logger.info("=" * 50)
+        logger.info(f"SUCCESS: Saved daily digest for {today}")
+        logger.info(f"File: {DATA_DIR}/items/{today}__daily-digest.md")
+        logger.info(f"Articles count: {len(all_articles)}")
+        logger.info("=" * 50)
     else:
         stats["failed"] = len(all_articles)
-        logger.error("Failed to save daily digest")
+        logger.error("=" * 50)
+        logger.error("FAILED TO SAVE DAILY DIGEST")
+        logger.error("Check file permissions and disk space")
+        logger.error("=" * 50)
 
     return stats
 
@@ -308,7 +335,16 @@ def main():
     logger.info(f"Total articles collected: {stats['total']}")
     logger.info(f"Successfully processed: {stats['success']}")
     logger.info(f"Failed: {stats['failed']}")
-    logger.info(f"By source: {stats['sources']}")
+    logger.info(f"By source: {stats.get('sources', {})}")
+    
+    # 結果のサマリー
+    if stats['total'] == 0:
+        logger.warning("NO ARTICLES WERE COLLECTED - check source filters and max_age_days")
+    elif stats['success'] == 0 and stats['total'] > 0:
+        logger.warning("ARTICLES COLLECTED BUT NOT SAVED - check summarization and storage")
+    elif stats['success'] > 0:
+        logger.info(f"DIGEST SAVED SUCCESSFULLY with {stats['success']} articles")
+    logger.info("=" * 50)
 
 
 if __name__ == "__main__":

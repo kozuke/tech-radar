@@ -230,10 +230,18 @@ def save_daily_digest(
     md_filename = f"{item_id}.md"
     md_path = items_dir / md_filename
 
+    logger.info(f"Writing daily digest to: {md_path}")
+    logger.info(f"Content length: {len(summary_content)} chars")
+
     try:
         with open(md_path, "w", encoding="utf-8") as f:
             f.write(summary_content)
         logger.info(f"Saved daily digest: {md_filename}")
+        # ファイルが実際に作成されたか確認
+        if md_path.exists():
+            logger.info(f"Verified: {md_path} exists (size: {md_path.stat().st_size} bytes)")
+        else:
+            logger.error(f"File was not created: {md_path}")
     except Exception as e:
         logger.error(f"Failed to save daily digest {md_filename}: {e}")
         return None
