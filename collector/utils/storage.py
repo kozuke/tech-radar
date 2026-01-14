@@ -324,3 +324,26 @@ def get_existing_urls_for_date(date: str, data_dir: Optional[Path] = None) -> se
             return set(item.get("urls", []))
     
     return set()
+
+
+def get_all_existing_urls(data_dir: Optional[Path] = None) -> set:
+    """
+    全てのダイジェストに含まれている既存URLを取得する
+    （過去に収集済みの記事を重複して収集しないため）
+    
+    Args:
+        data_dir: データディレクトリ
+        
+    Returns:
+        全ての既存URLのセット
+    """
+    data_dir = data_dir or DEFAULT_DATA_DIR
+    index = load_index(data_dir)
+    
+    all_urls = set()
+    for item in index.get("items", []):
+        urls = item.get("urls", [])
+        all_urls.update(urls)
+    
+    logger.info(f"Total existing URLs across all digests: {len(all_urls)}")
+    return all_urls

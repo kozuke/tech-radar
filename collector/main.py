@@ -17,6 +17,7 @@ from utils.storage import (
     load_index,
     save_daily_digest,
     get_existing_urls_for_date,
+    get_all_existing_urls,
 )
 
 # ロギング設定
@@ -174,9 +175,11 @@ def run_collection(
     
     logger.info(f"Filtering articles from the last {max_age_days} days")
     
-    # 今日のダイジェストに既に含まれているURLを取得
-    existing_urls = get_existing_urls_for_date(today, DATA_DIR)
-    logger.info(f"Found {len(existing_urls)} existing URLs for {today}")
+    # 過去の全ダイジェストに含まれているURLを取得（重複収集を防止）
+    existing_urls = get_all_existing_urls(DATA_DIR)
+    logger.info(f"Today's date: {today}")
+    today_urls = get_existing_urls_for_date(today, DATA_DIR)
+    logger.info(f"Found {len(today_urls)} URLs already in today's digest")
 
     stats = {"total": 0, "success": 0, "failed": 0, "sources": {}}
     all_articles = []
