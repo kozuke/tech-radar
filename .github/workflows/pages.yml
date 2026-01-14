@@ -29,14 +29,15 @@ permissions:
   pages: write
   id-token: write
 
-# 同時実行の制御
+# 同時実行の制御（具体的なグループ名で競合を回避）
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     # workflow_runでトリガーされた場合は、元のワークフローが成功した場合のみ実行
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     outputs:
@@ -113,12 +114,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs: build
 
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 600000
+          error_count: 10
+          reporting_interval: 5000
 
       - name: Notify Slack
         if: success()
