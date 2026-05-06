@@ -10,6 +10,7 @@ import yaml
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict
+from zoneinfo import ZoneInfo
 
 from utils.fetcher import fetch_rss_entries, extract_article_content
 from utils.summarizer import summarize_daily_digest
@@ -31,6 +32,7 @@ logger = logging.getLogger(__name__)
 COLLECTOR_DIR = Path(__file__).parent
 SOURCES_PATH = COLLECTOR_DIR / "sources.yaml"
 DATA_DIR = COLLECTOR_DIR.parent / "data"
+JST = ZoneInfo("Asia/Tokyo")
 
 
 def load_sources() -> List[Dict]:
@@ -171,7 +173,7 @@ def run_collection(
         logger.error("No sources configured")
         return {"total": 0, "success": 0, "failed": 0}
 
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(JST).strftime("%Y-%m-%d")
     
     logger.info(f"Filtering articles from the last {max_age_days} days")
     
