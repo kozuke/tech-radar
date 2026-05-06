@@ -5,9 +5,9 @@
 name: Collect Articles
 
 on:
-  # 毎日 UTC 22:00 (JST 7:00) に実行
+  # 毎日 UTC 22:17 (JST 7:17) に実行
   schedule:
-    - cron: '0 22 * * *'
+    - cron: '17 22 * * *'
 
   # 手動実行
   workflow_dispatch:
