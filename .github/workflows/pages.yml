@@ -70,8 +70,17 @@ jobs:
       - name: Extract Slack summary from latest digest
         id: extract_summary
         run: |
-          # 最新のダイジェストファイルを取得
-          LATEST_DIGEST=$(ls -t data/items/*__daily-digest.md 2>/dev/null | head -1)
+          # JSTの当日ダイジェストを優先し、存在しない場合はファイル名の日付順で最新を取得
+          TODAY_JST=$(TZ=Asia/Tokyo date +'%Y-%m-%d')
+          TODAY_DIGEST="data/items/${TODAY_JST}__daily-digest.md"
+
+          if [ -f "$TODAY_DIGEST" ]; then
+            LATEST_DIGEST="$TODAY_DIGEST"
+          else
+            LATEST_DIGEST=$(find data/items -maxdepth 1 -type f -name '*__daily-digest.md' 2>/dev/null | sort | tail -1)
+          fi
+
+          echo "Selected digest: ${LATEST_DIGEST:-none}"
           
           if [ -n "$LATEST_DIGEST" ] && [ -f "$LATEST_DIGEST" ]; then
             # ファイル名から日付を抽出
