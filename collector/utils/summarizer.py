@@ -36,7 +36,7 @@ DEFAULT_MODEL = "google/gemini-3-flash-preview"  # フォールバック用デ�
 
 def get_model() -> str:
     """使用するモデルを環境変数から取得（未設定の場合はデフォルトを使用）"""
-    return os.environ.get("OPENROUTER_MODEL", DEFAULT_MODEL)
+    return os.environ.get("OPENROUTER_MODEL") or DEFAULT_MODEL
 
 
 def load_prompt_template(template_name: str = "summary") -> str:

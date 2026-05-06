@@ -140,64 +140,66 @@ jobs:
             exit 0
           fi
           
-          # Slack Block Kit形式でメッセージを構築
-          # サマリーの改行を適切に処理
-          SUMMARY_TEXT=$(echo "$SLACK_SUMMARY" | sed 's/"/\\"/g')
-          
           # 日付がある場合はヘッダーに含める
           if [ -n "$DIGEST_DATE" ]; then
             HEADER="📰 *Tech Radar Daily Digest - $DIGEST_DATE*"
           else
             HEADER="📰 *Tech Radar* サイトが更新されました"
           fi
-          
-          # Slack Webhook に送信
-          curl -X POST -H 'Content-type: application/json' \
-            --data "{
-              \"blocks\": [
+
+          PAYLOAD=$(jq -n \
+            --arg header "$HEADER" \
+            --arg summary "$SLACK_SUMMARY" \
+            --arg page_url "$PAGE_URL" \
+            '{
+              blocks: [
                 {
-                  \"type\": \"header\",
-                  \"text\": {
-                    \"type\": \"plain_text\",
-                    \"text\": \"Tech Radar 更新通知\",
-                    \"emoji\": true
+                  type: "header",
+                  text: {
+                    type: "plain_text",
+                    text: "Tech Radar 更新通知",
+                    emoji: true
                   }
                 },
                 {
-                  \"type\": \"section\",
-                  \"text\": {
-                    \"type\": \"mrkdwn\",
-                    \"text\": \"$HEADER\"
+                  type: "section",
+                  text: {
+                    type: "mrkdwn",
+                    text: $header
                   }
                 },
                 {
-                  \"type\": \"divider\"
+                  type: "divider"
                 },
                 {
-                  \"type\": \"section\",
-                  \"text\": {
-                    \"type\": \"mrkdwn\",
-                    \"text\": \"$SUMMARY_TEXT\"
+                  type: "section",
+                  text: {
+                    type: "mrkdwn",
+                    text: $summary
                   }
                 },
                 {
-                  \"type\": \"divider\"
+                  type: "divider"
                 },
                 {
-                  \"type\": \"actions\",
-                  \"elements\": [
+                  type: "actions",
+                  elements: [
                     {
-                      \"type\": \"button\",
-                      \"text\": {
-                        \"type\": \"plain_text\",
-                        \"text\": \"📖 サイトを見る\",
-                        \"emoji\": true
+                      type: "button",
+                      text: {
+                        type: "plain_text",
+                        text: "📖 サイトを見る",
+                        emoji: true
                       },
-                      \"url\": \"$PAGE_URL\",
-                      \"style\": \"primary\"
+                      url: $page_url,
+                      style: "primary"
                     }
                   ]
                 }
               ]
-            }" \
+            }')
+          
+          # Slack Webhook に送信
+          curl --fail -X POST -H 'Content-type: application/json' \
+            --data "$PAYLOAD" \
             "$SLACK_WEBHOOK_URL"
