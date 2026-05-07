@@ -151,11 +151,17 @@ npm run preview
 
 ```yaml
 sources:
-  # RSSフィード
+  # RSS/Atomフィード
   - type: rss
     name: example_blog
     url: https://example.com/rss
     tags: [example, tech]
+
+  # RSSがないchangelog/release notesページ
+  - type: scrape
+    name: example_changelog
+    url: https://example.com/changelog
+    tags: [example, changelog]
 
   # キーワード検索（将来実装）
   # - type: keyword
@@ -170,11 +176,18 @@ sources:
 | 名前 | ソース | タグ |
 |------|--------|------|
 | aws_whats_new | AWS What's New (公式新着情報) | aws, cloud |
-| openai_api_changelog | OpenAI API Changelog (GitHub Releases) | ai, chatgpt, openai, api |
+| openai_codex_cli_releases | OpenAI Codex CLI Releases (GitHub) | ai, chatgpt, openai, codex, codex_cli |
 | google_developers | Google Developers Blog | ai, gemini, google |
 | google_workspace_updates | Google Workspace Updates (NotebookLM含む) | google, notebooklm, workspace |
 | anthropic_sdk_releases | Anthropic SDK Releases (GitHub) | ai, claude, anthropic, api |
 | claude_code_releases | Claude Code Releases (GitHub) | ai, claude, claude_code, anthropic |
+
+#### スクレイピング対応済み
+| 名前 | ソース | タグ |
+|------|--------|------|
+| devin_release_notes | Devin Release Notes | ai, devin, cognition |
+| devin_cli_changelog | Devin for Terminal Changelog | ai, devin, cognition, cli |
+| cursor_changelog | Cursor Changelog | ai, cursor, editor |
 
 #### スクレイピング対応が必要（未実装）
 | 名前 | ソース | タグ |
@@ -185,7 +198,6 @@ sources:
 | anthropic_news | Anthropic公式ニュース | ai, claude, anthropic |
 | google_ai_blog | Google AI Blog | ai, gemini, google, notebooklm |
 | deepmind_blog | DeepMind Blog (Gemini開発元) | ai, gemini, deepmind |
-| cognition_devin | Cognition Labs公式 (Devin開発元) | ai, devin, cognition |
 | claude_code_changelog | Claude Code CHANGELOG.md | ai, claude, claude_code, anthropic |
 
 ## 出力フォーマット

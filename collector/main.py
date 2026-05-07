@@ -12,7 +12,11 @@ from datetime import datetime
 from typing import List, Dict
 from zoneinfo import ZoneInfo
 
-from utils.fetcher import fetch_rss_entries, extract_article_content
+from utils.fetcher import (
+    fetch_rss_entries,
+    fetch_changelog_sections,
+    extract_article_content,
+)
 from utils.summarizer import summarize_daily_digest
 from utils.storage import (
     load_index,
@@ -147,6 +151,63 @@ def collect_keyword_articles(
     return []
 
 
+def collect_scrape_articles(
+    source: Dict,
+    max_items: int = 5,
+    existing_urls: set = None,
+    max_age_days: int = 7,
+) -> List[Dict]:
+    """
+    RSSのないchangelog/release notesページから日付セクションを収集する。
+
+    Args:
+        source: ソース定義
+        max_items: 処理する最大件数
+        existing_urls: 既存のURLセット（重複チェック用）
+        max_age_days: 最大日数（この日数以内の記事のみ取得）
+
+    Returns:
+        収集した記事のリスト（本文含む）
+    """
+    name = source.get("name", "unknown")
+    url = source.get("url", "")
+    tags = source.get("tags", [])
+    existing_urls = existing_urls or set()
+
+    logger.info(f"Collecting from scraped changelog source: {name} (max {max_age_days} days old)")
+
+    entries = fetch_changelog_sections(url, limit=max_items * 2, max_age_days=max_age_days)
+    logger.info(f"[{name}] Changelog sections after date filter: {len(entries)}")
+
+    articles = []
+    skipped_duplicate = 0
+
+    for entry in entries:
+        if len(articles) >= max_items:
+            break
+
+        article_url = entry.get("url", "")
+        if not article_url:
+            continue
+
+        if article_url in existing_urls:
+            logger.debug(f"Skipping existing changelog section: {article_url}")
+            skipped_duplicate += 1
+            continue
+
+        articles.append({
+            "title": entry.get("title", "Untitled"),
+            "url": article_url,
+            "content": entry.get("content") or entry.get("summary", ""),
+            "source": f"scrape:{name}",
+            "tags": tags,
+        })
+        existing_urls.add(article_url)
+
+    logger.info(f"[{name}] Collection result: {len(articles)} articles collected, {skipped_duplicate} duplicates skipped")
+    return articles
+
+
 def run_collection(
     max_items_per_source: int = 3,
     max_age_days: int = 7,
@@ -203,6 +264,10 @@ def run_collection(
             elif source_type == "keyword":
                 articles = collect_keyword_articles(
                     source, max_items_per_source, existing_urls
+                )
+            elif source_type == "scrape":
+                articles = collect_scrape_articles(
+                    source, max_items_per_source, existing_urls, max_age_days
                 )
             else:
                 logger.warning(f"Unknown source type: {source_type}")

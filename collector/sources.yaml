@@ -1,5 +1,6 @@
 # 情報源定義ファイル
-# type: rss - RSSフィードから記事を収集（推奨・コスト効率◎）
+# type: rss - RSS/Atomフィードから記事を収集（推奨・コスト効率◎）
+# type: scrape - RSSがないchangelog/release notesページから日付セクションを収集
 #
 # 運用方針:
 # - 日付フィルタ: 直近7日以内の記事のみ対象
@@ -25,12 +26,12 @@ sources:
     url: https://github.com/anthropics/claude-code/releases.atom
     tags: [ai, claude, claude_code, anthropic]
 
-  # OpenAI Python SDK Releases (GitHub Atom)
-  # 信頼性: ◎ | 更新頻度: 中 | RSS: ◎
+  # OpenAI Codex CLI Releases (GitHub Atom)
+  # 信頼性: ◎ | 更新頻度: 高 | RSS: ◎
   - type: rss
-    name: openai_sdk_releases
-    url: https://github.com/openai/openai-python/releases.atom
-    tags: [ai, chatgpt, openai, api]
+    name: openai_codex_cli_releases
+    url: https://github.com/openai/codex/releases.atom
+    tags: [ai, chatgpt, openai, codex, codex_cli]
 
   # Google Developers Blog (Gemini関連含む)
   # 信頼性: ◎ | 更新頻度: 中 | RSS: ◎
@@ -52,6 +53,27 @@ sources:
     name: anthropic_sdk_releases
     url: https://github.com/anthropics/anthropic-sdk-python/releases.atom
     tags: [ai, claude, anthropic, api]
+
+  # Devin Release Notes (公式)
+  # 信頼性: ◎ | 更新頻度: 高 | RSS: なし（scrape）
+  - type: scrape
+    name: devin_release_notes
+    url: https://docs.devin.ai/release-notes/overview
+    tags: [ai, devin, cognition]
+
+  # Devin for Terminal Changelog (公式)
+  # 信頼性: ◎ | 更新頻度: 中 | RSS: なし（scrape）
+  - type: scrape
+    name: devin_cli_changelog
+    url: https://cli.devin.ai/docs/changelog/stable
+    tags: [ai, devin, cognition, cli]
+
+  # Cursor Changelog (公式)
+  # 信頼性: ◎ | 更新頻度: 高 | RSS: なし（scrape）
+  - type: scrape
+    name: cursor_changelog
+    url: https://cursor.com/changelog
+    tags: [ai, cursor, editor]
 
   # ===========================================
   # 中優先度: スクレイピング対応予定（要実装）
@@ -78,5 +100,4 @@ sources:
 
   # GCPブログ: 記事数多くRSSなし → コスト高
   # DeepMind Blog: 研究論文寄り → 優先度低
-  # Cognition/Devin: 更新頻度低い → 必要時のみ
   # Google AI Blog: RSSなし、他ソースでカバー可能

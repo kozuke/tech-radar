@@ -13,6 +13,7 @@ import logging
 from urllib.parse import urlparse
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+import re
 import time
 
 logger = logging.getLogger(__name__)
@@ -44,6 +45,8 @@ def parse_date(date_str: str) -> Optional[datetime]:
         "%Y-%m-%dT%H:%M:%S",
         "%Y-%m-%d %H:%M:%S",
         "%Y-%m-%d",
+        "%B %d, %Y",
+        "%b %d, %Y",
     ]
 
     for fmt in formats:
@@ -146,6 +149,149 @@ def fetch_rss_entries(
         return []
 
 
+def _extract_page_text(url: str, timeout: int = 30) -> Optional[str]:
+    """Webページから本文に近いテキストを抽出する。"""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; TechRadarBot/1.0; +https://github.com/tech-radar)"
+    }
+    response = requests.get(url, headers=headers, timeout=timeout)
+    response.raise_for_status()
+
+    soup = BeautifulSoup(response.content, "html.parser")
+    for tag in soup(["script", "style", "nav", "header", "footer", "aside", "form"]):
+        tag.decompose()
+
+    content = soup.find("article") or soup.find("main") or soup.find("body")
+    text = content.get_text(separator="\n", strip=True) if content else ""
+    lines = [line.strip() for line in text.split("\n") if line.strip()]
+    return "\n".join(lines)
+
+
+def _parse_section_date(line: str) -> Optional[datetime]:
+    """changelogの見出し行から日付を取り出す。"""
+    normalized = re.sub(r"\s+", " ", line).strip()
+
+    # Cursor: "3.3 May 6, 2026" / "May 4, 2026"
+    match = re.search(r"(?:\d+(?:\.\d+)*\s+)?([A-Z][a-z]+ \d{1,2}, \d{4})", normalized)
+    if match:
+        return parse_date(match.group(1))
+
+    # Devin CLI: "2026.4.30-0" / "2026.4.13-0.next"
+    match = re.search(r"\b(\d{4})\.(\d{1,2})\.(\d{1,2})(?:[-.\w]*)?\b", normalized)
+    if match:
+        year, month, day = (int(part) for part in match.groups())
+        return datetime(year, month, day, tzinfo=timezone.utc)
+
+    return None
+
+
+def _slugify(value: str) -> str:
+    slug = re.sub(r"[^a-zA-Z0-9]+", "-", value.lower()).strip("-")
+    return slug[:80] or "update"
+
+
+def _looks_like_title(line: str) -> bool:
+    value = line.strip()
+    if len(value) < 4:
+        return False
+    if value.lower() in {"changelog", "release notes"}:
+        return False
+    return bool(re.search(r"[A-Za-z0-9]", value))
+
+
+def fetch_changelog_sections(
+    url: str,
+    limit: int = 10,
+    max_age_days: Optional[int] = 7,
+) -> List[Dict]:
+    """
+    RSSがないchangelog/release notesページから日付単位のセクションを取得する。
+
+    Args:
+        url: changelog/release notesページURL
+        limit: 取得する最大件数
+        max_age_days: 最大日数（この日数以内の記事のみ取得、Noneで無制限）
+
+    Returns:
+        記事エントリのリスト
+    """
+    try:
+        text = _extract_page_text(url)
+        if not text:
+            logger.warning(f"No text extracted from changelog: {url}")
+            return []
+
+        lines = text.split("\n")
+        sections = []
+        current = None
+
+        for line in lines:
+            section_date = _parse_section_date(line)
+            if section_date:
+                if current:
+                    sections.append(current)
+                current = {
+                    "date": section_date,
+                    "heading": line,
+                    "lines": [line],
+                }
+                continue
+
+            if current:
+                current["lines"].append(line)
+
+        if current:
+            sections.append(current)
+
+        entries = []
+        seen_urls = set()
+        cutoff = None
+        if max_age_days is not None:
+            cutoff = datetime.now(timezone.utc) - timedelta(days=max_age_days)
+
+        for section in sections:
+            if len(entries) >= limit:
+                break
+            section_date = section["date"]
+            if cutoff is not None and section_date < cutoff:
+                continue
+
+            content_lines = section["lines"]
+            content = "\n".join(content_lines).strip()
+            if not content:
+                continue
+
+            title = section["heading"]
+            for candidate in content_lines[1:8]:
+                if _looks_like_title(candidate) and not _parse_section_date(candidate):
+                    title = candidate
+                    break
+
+            date_id = section_date.strftime("%Y-%m-%d")
+            entry_url = f"{url}#{date_id}-{_slugify(title)}"
+            if entry_url in seen_urls:
+                continue
+            seen_urls.add(entry_url)
+
+            entries.append({
+                "title": title,
+                "url": entry_url,
+                "published": section_date.isoformat(),
+                "summary": content,
+                "content": content,
+            })
+
+        logger.info(f"Fetched {len(entries)} changelog sections from {url} (within {max_age_days} days)")
+        return entries
+
+    except requests.RequestException as e:
+        logger.error(f"Failed to fetch changelog from {url}: {e}")
+        return []
+    except Exception as e:
+        logger.error(f"Failed to parse changelog from {url}: {e}")
+        return []
+
+
 def extract_article_content(url: str, timeout: int = 30) -> Optional[str]:
     """
     WebページからメインコンテンツをHTML抽出する
@@ -158,35 +304,7 @@ def extract_article_content(url: str, timeout: int = 30) -> Optional[str]:
         抽出されたテキスト、または失敗時はNone
     """
     try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (compatible; TechRadarBot/1.0; +https://github.com/tech-radar)"
-        }
-        response = requests.get(url, headers=headers, timeout=timeout)
-        response.raise_for_status()
-
-        soup = BeautifulSoup(response.content, "html.parser")
-
-        # 不要な要素を削除
-        for tag in soup(["script", "style", "nav", "header", "footer", "aside", "form"]):
-            tag.decompose()
-
-        # articleタグを優先的に探す
-        article = soup.find("article")
-        if article:
-            text = article.get_text(separator="\n", strip=True)
-        else:
-            # mainタグを試す
-            main = soup.find("main")
-            if main:
-                text = main.get_text(separator="\n", strip=True)
-            else:
-                # bodyから取得
-                body = soup.find("body")
-                text = body.get_text(separator="\n", strip=True) if body else ""
-
-        # 空行を整理
-        lines = [line.strip() for line in text.split("\n") if line.strip()]
-        text = "\n".join(lines)
+        text = _extract_page_text(url, timeout=timeout)
 
         # 最大文字数制限（LLMへの入力用）
         max_chars = 15000
