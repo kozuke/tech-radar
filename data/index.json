@@ -1,6 +1,55 @@
 {
-  "generated_at": "2026-05-07T23:11:37.137730Z",
+  "generated_at": "2026-05-08T23:10:36.169699Z",
   "items": [
+    {
+      "id": "2026-05-09__daily-digest",
+      "date": "2026-05-09",
+      "title": "Tech Radar Daily Digest - 2026-05-09",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-route-global-resolver-aws/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-service-catalog-calgary-new-zealand-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/iam-policy-autopilot/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.136",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.133",
+        "https://github.com/openai/codex/releases/tag/rust-v0.130.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.130.0-alpha.11",
+        "https://github.com/openai/codex/releases/tag/rust-v0.130.0-alpha.10",
+        "http://workspaceupdates.googleblog.com/2026/05/weekly-recap-05-08-2026.html",
+        "http://workspaceupdates.googleblog.com/2026/05/improvements-to-help-me-write-in-gmail.html",
+        "https://docs.devin.ai/release-notes/overview#2026-05-08-may-8-2026",
+        "https://docs.devin.ai/release-notes/overview#2026-05-08-devin-review-api",
+        "https://cli.devin.ai/docs/changelog/stable#2026-05-06-web-search"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_workspace_updates",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases",
+        "scrape:devin_release_notes",
+        "scrape:devin_cli_changelog"
+      ],
+      "summary_path": "data/items/2026-05-09__daily-digest.md"
+    },
     {
       "id": "2026-05-08__daily-digest",
       "date": "2026-05-08",
