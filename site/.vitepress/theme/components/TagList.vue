@@ -62,6 +62,8 @@ const getTagSize = (count: number) => {
   if (count >= max * 0.7) return 'large'
   return ''
 }
+
+const getTagFilterPath = (tag: string) => `/tech-radar/?tag=${encodeURIComponent(tag)}`
 </script>
 
 <template>
@@ -78,7 +80,7 @@ const getTagSize = (count: number) => {
       <a
         v-for="[tag, count] in sortedTags"
         :key="tag"
-        :href="`/tech-radar/articles/?tag=${tag}`"
+        :href="getTagFilterPath(tag)"
         :class="['tag', getTagSize(count)]"
       >
         {{ tag }} ({{ count }})

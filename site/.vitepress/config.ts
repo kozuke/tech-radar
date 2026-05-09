@@ -18,21 +18,9 @@ export default defineConfig({
 
     nav: [
       { text: 'ホーム', link: '/' },
-      { text: '記事一覧', link: '/articles/' },
       { text: 'タグ', link: '/tags/' },
       { text: 'About', link: '/about' },
     ],
-
-    sidebar: {
-      '/articles/': [
-        {
-          text: '記事',
-          items: [
-            { text: '最新記事', link: '/articles/' },
-          ]
-        }
-      ]
-    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/your-username/tech-radar' }

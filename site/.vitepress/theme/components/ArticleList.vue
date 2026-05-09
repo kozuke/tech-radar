@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 interface Article {
   id: string
@@ -26,16 +26,44 @@ const props = defineProps<{
   limit?: number
   tag?: string
   showFilter?: boolean
+  featuredFirst?: boolean
+  showStats?: boolean
+  showTagPanel?: boolean
 }>()
 
 const articles = ref<Article[]>([])
+const generatedAt = ref('')
 const loading = ref(true)
 const error = ref<string | null>(null)
 const selectedTag = ref<string>(props.tag || '')
 const searchQuery = ref('')
 
+const getTagFromQuery = () => {
+  if (typeof window === 'undefined') return props.tag || ''
+  return new URLSearchParams(window.location.search).get('tag') || props.tag || ''
+}
+
+const getTagFilterPath = (tag: string) => `/tech-radar/?tag=${encodeURIComponent(tag)}`
+
+const selectTag = (tag: string, event: MouseEvent) => {
+  event.preventDefault()
+  selectedTag.value = tag
+  if (typeof window !== 'undefined') {
+    window.history.pushState({}, '', getTagFilterPath(tag))
+  }
+}
+
+const syncTagFromQuery = () => {
+  selectedTag.value = getTagFromQuery()
+}
+
 // 記事データを読み込み
 onMounted(async () => {
+  syncTagFromQuery()
+  if (typeof window !== 'undefined') {
+    window.addEventListener('popstate', syncTagFromQuery)
+  }
+
   try {
     // ビルド時はdata/index.jsonを参照
     const response = await fetch('/tech-radar/data/index.json')
@@ -47,9 +75,11 @@ onMounted(async () => {
       }
       const data: IndexData = await devResponse.json()
       articles.value = data.items || []
+      generatedAt.value = data.generated_at || ''
     } else {
       const data: IndexData = await response.json()
       articles.value = data.items || []
+      generatedAt.value = data.generated_at || ''
     }
   } catch (e) {
     console.error('Failed to load articles:', e)
@@ -57,6 +87,12 @@ onMounted(async () => {
     articles.value = []
   } finally {
     loading.value = false
+  }
+})
+
+onUnmounted(() => {
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('popstate', syncTagFromQuery)
   }
 })
 
@@ -86,6 +122,16 @@ const filteredArticles = computed(() => {
   return result
 })
 
+const featuredArticle = computed(() => {
+  if (!props.featuredFirst) return null
+  return filteredArticles.value[0] || null
+})
+
+const listArticles = computed(() => {
+  if (!props.featuredFirst) return filteredArticles.value
+  return filteredArticles.value.slice(1)
+})
+
 // 全タグを取得
 const allTags = computed(() => {
   const tagSet = new Set<string>()
@@ -93,11 +139,47 @@ const allTags = computed(() => {
   return Array.from(tagSet).sort()
 })
 
+const tagCounts = computed(() => {
+  const counts = new Map<string, number>()
+  articles.value.forEach(a => {
+    a.tags.forEach(tag => {
+      counts.set(tag, (counts.get(tag) || 0) + 1)
+    })
+  })
+  return counts
+})
+
+const topTags = computed(() => {
+  return Array.from(tagCounts.value.entries())
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, 10)
+})
+
+const totalSourceCount = computed(() => {
+  return articles.value.reduce((total, article) => {
+    if (article.type === 'daily_digest') return total + (article.article_count || 0)
+    return total + 1
+  }, 0)
+})
+
+const latestArticleDate = computed(() => {
+  return articles.value[0]?.date || generatedAt.value
+})
+
 // 日付フォーマット
 const formatDate = (dateStr: string) => {
   const date = new Date(dateStr)
   return date.toLocaleDateString('ja-JP', {
     year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  })
+}
+
+const formatShortDate = (dateStr: string) => {
+  if (!dateStr) return '-'
+  const date = new Date(dateStr)
+  return date.toLocaleDateString('ja-JP', {
     month: 'short',
     day: 'numeric'
   })
@@ -125,8 +207,8 @@ const getArticlePath = (article: Article) => {
   <div class="article-list">
     <!-- フィルターセクション -->
     <div v-if="showFilter" class="filter-section">
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-        <div>
+      <div class="filter-row">
+        <div class="filter-field filter-field-tag">
           <label for="tag-filter">タグ:</label>
           <select id="tag-filter" v-model="selectedTag">
             <option value="">すべて</option>
@@ -135,16 +217,18 @@ const getArticlePath = (article: Article) => {
             </option>
           </select>
         </div>
-        <div style="flex: 1; min-width: 200px;">
+        <div class="filter-field filter-field-search">
           <label for="search">検索:</label>
           <input
             id="search"
             v-model="searchQuery"
             type="text"
             placeholder="タイトルやタグで検索..."
-            style="width: 100%;"
           />
         </div>
+        <p class="filter-result">
+          {{ filteredArticles.length }}件
+        </p>
       </div>
     </div>
 
@@ -167,41 +251,120 @@ const getArticlePath = (article: Article) => {
       <p style="font-size: 0.9rem;">収集を実行すると記事が表示されます</p>
     </div>
 
-    <!-- 記事一覧 -->
-    <div v-else>
-      <div v-for="article in filteredArticles" :key="article.id" class="article-card">
-        <h3>
-          <a :href="`/tech-radar/articles/${article.id}.html`">
-            {{ article.title }}
-          </a>
-        </h3>
-
-        <div class="article-meta">
-          <span class="date">
-            📅 {{ formatDate(article.date) }}
-          </span>
-          <span v-if="article.type === 'daily_digest'" class="source">
-            📰 {{ article.article_count }}件のソースから
-          </span>
-          <span v-else class="source">
-            📰 {{ formatSource(article.source) }}
-          </span>
-          <a v-if="article.url" :href="article.url" target="_blank" rel="noopener noreferrer" class="original-link">
-            🔗 元記事
-          </a>
+    <template v-else>
+      <div v-if="showStats" class="article-stats" aria-label="記事の状態">
+        <div class="article-stat">
+          <span>最新更新</span>
+          <strong>{{ formatShortDate(latestArticleDate) }}</strong>
         </div>
-
-        <div class="tags">
-          <a
-            v-for="tag in article.tags"
-            :key="tag"
-            :href="`/tech-radar/tags/?tag=${tag}`"
-            class="tag"
-          >
-            {{ tag }}
-          </a>
+        <div class="article-stat">
+          <span>記事</span>
+          <strong>{{ articles.length }}</strong>
+        </div>
+        <div class="article-stat">
+          <span>ソース</span>
+          <strong>{{ totalSourceCount }}</strong>
+        </div>
+        <div class="article-stat">
+          <span>タグ</span>
+          <strong>{{ allTags.length }}</strong>
         </div>
       </div>
-    </div>
+
+      <!-- 記事一覧 -->
+      <div :class="['article-content', { 'with-tag-panel': showTagPanel }]">
+        <div class="article-feed">
+          <article v-if="featuredArticle" class="article-card article-card-featured">
+            <div v-if="featuredArticle.tags.length" class="featured-label">
+              {{ featuredArticle.tags[0] }}
+            </div>
+            <h3>
+              <a :href="`/tech-radar/articles/${featuredArticle.id}.html`">
+                {{ featuredArticle.title }}
+              </a>
+            </h3>
+
+            <div class="article-meta">
+              <span class="date">
+                📅 {{ formatDate(featuredArticle.date) }}
+              </span>
+              <span v-if="featuredArticle.type === 'daily_digest'" class="source">
+                📰 {{ featuredArticle.article_count }}件のソースから
+              </span>
+              <span v-else class="source">
+                📰 {{ formatSource(featuredArticle.source) }}
+              </span>
+              <a v-if="featuredArticle.url" :href="featuredArticle.url" target="_blank" rel="noopener noreferrer" class="original-link">
+                🔗 元記事
+              </a>
+            </div>
+
+            <div class="tags">
+              <a
+                v-for="tag in featuredArticle.tags"
+                :key="tag"
+                :href="getTagFilterPath(tag)"
+                class="tag"
+                @click="selectTag(tag, $event)"
+              >
+                {{ tag }}
+              </a>
+            </div>
+          </article>
+
+          <article v-for="article in listArticles" :key="article.id" class="article-card">
+            <h3>
+              <a :href="`/tech-radar/articles/${article.id}.html`">
+                {{ article.title }}
+              </a>
+            </h3>
+
+            <div class="article-meta">
+              <span class="date">
+                📅 {{ formatDate(article.date) }}
+              </span>
+              <span v-if="article.type === 'daily_digest'" class="source">
+                📰 {{ article.article_count }}件のソースから
+              </span>
+              <span v-else class="source">
+                📰 {{ formatSource(article.source) }}
+              </span>
+              <a v-if="article.url" :href="article.url" target="_blank" rel="noopener noreferrer" class="original-link">
+                🔗 元記事
+              </a>
+            </div>
+
+            <div class="tags">
+              <a
+                v-for="tag in article.tags"
+                :key="tag"
+                :href="getTagFilterPath(tag)"
+                class="tag"
+                @click="selectTag(tag, $event)"
+              >
+                {{ tag }}
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <aside v-if="showTagPanel" class="top-tag-panel" aria-label="注目タグ">
+          <div class="top-tag-panel-heading">
+            <h3>注目タグ</h3>
+            <a href="/tech-radar/tags/">一覧</a>
+          </div>
+          <a
+            v-for="[tag, count] in topTags"
+            :key="tag"
+            :href="getTagFilterPath(tag)"
+            class="top-tag-row"
+            @click="selectTag(tag, $event)"
+          >
+            <span>{{ tag }}</span>
+            <strong>{{ count }}</strong>
+          </a>
+        </aside>
+      </div>
+    </template>
   </div>
 </template>
