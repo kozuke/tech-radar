@@ -1,0 +1,40 @@
+{
+  "id": "2026-05-10__daily-digest",
+  "date": "2026-05-10",
+  "title": "Tech Radar Daily Digest - 2026-05-10",
+  "type": "daily_digest",
+  "article_count": 9,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-client-vpn-ubuntu-26/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-adds-default-step-by-step-guides-for-after-contact-work",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-route-53-resolver-ipv6/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.138",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.137",
+    "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.4",
+    "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.3",
+    "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.2",
+    "https://cli.devin.ai/docs/changelog/stable#2026-05-06-fixed"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cli",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "openai"
+  ],
+  "sources": [
+    "scrape:devin_cli_changelog",
+    "rss:claude_code_releases",
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-05-09T23:05:04.863169Z"
+}
