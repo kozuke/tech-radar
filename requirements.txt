@@ -1,7 +1,7 @@
 # Tech Radar Collector Dependencies
 
 # RSS/Feed parsing
-feedparser>=6.0.10
+feedparser>=6.0.12
 
 # HTTP requests
 requests>=2.31.0
