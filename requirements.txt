@@ -4,7 +4,7 @@
 feedparser>=6.0.10
 
 # HTTP requests
-requests>=2.31.0
+requests>=2.33.1
 
 # HTML parsing
 beautifulsoup4>=4.12.0
