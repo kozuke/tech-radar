@@ -149,17 +149,19 @@ jobs:
             exit 0
           fi
           
-          # 日付がある場合はヘッダーに含める
+          # 日付がある場合は当日のダイジェスト詳細ページへ直接リンクする
           if [ -n "$DIGEST_DATE" ]; then
             HEADER="📰 *Tech Radar Daily Digest - $DIGEST_DATE*"
+            TARGET_PAGE_URL="${PAGE_URL%/}/articles/${DIGEST_DATE}__daily-digest.html"
           else
             HEADER="📰 *Tech Radar* サイトが更新されました"
+            TARGET_PAGE_URL="$PAGE_URL"
           fi
 
           PAYLOAD=$(jq -n \
             --arg header "$HEADER" \
             --arg summary "$SLACK_SUMMARY" \
-            --arg page_url "$PAGE_URL" \
+            --arg page_url "$TARGET_PAGE_URL" \
             '{
               blocks: [
                 {

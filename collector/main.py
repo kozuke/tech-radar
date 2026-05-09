@@ -19,7 +19,6 @@ from utils.fetcher import (
 )
 from utils.summarizer import summarize_daily_digest
 from utils.storage import (
-    load_index,
     save_daily_digest,
     get_existing_urls_for_date,
     get_all_existing_urls,

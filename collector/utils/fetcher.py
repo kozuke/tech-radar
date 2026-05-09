@@ -14,7 +14,6 @@ from urllib.parse import urlparse
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 import re
-import time
 
 logger = logging.getLogger(__name__)
 
@@ -40,8 +39,11 @@ def parse_date(date_str: str) -> Optional[datetime]:
 
     # ISO 8601形式
     formats = [
+        "%Y-%m-%dT%H:%M:%S.%f%z",
         "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%S.%fZ",
         "%Y-%m-%dT%H:%M:%SZ",
+        "%Y-%m-%dT%H:%M:%S.%f",
         "%Y-%m-%dT%H:%M:%S",
         "%Y-%m-%d %H:%M:%S",
         "%Y-%m-%d",
