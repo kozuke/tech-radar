@@ -126,7 +126,7 @@ npm run preview
 |-------------|---------|------|
 | `collect.yml` | 毎日 JST 7:00 / 手動 | 複数ソースから記事を収集し、1日1つの日次ダイジェストを生成 |
 | `cleanup.yml` | 手動のみ | 古い記事や条件に合致する記事を削除 |
-| `pages.yml` | data/ or site/ 更新時 / collect.yml完了時 | VitePressをビルドしてデプロイ（Slack通知対応） |
+| `pages.yml` | data/ or site/ 更新時 / collect.yml完了後に data/ or site/ の変更がある時 | VitePressをビルドしてデプロイ（Slack通知対応） |
 
 ### cleanup.yml のオプション
 

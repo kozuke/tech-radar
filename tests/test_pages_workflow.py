@@ -18,3 +18,11 @@ def test_deploy_job_does_not_checkout_repository_before_using_slack_secret():
     notify_section = deploy_section.split("      - name: Notify Slack", maxsplit=1)[0]
 
     assert "actions/checkout" not in notify_section
+
+
+def test_workflow_run_deploys_only_when_data_or_site_changed():
+    workflow = PAGES_WORKFLOW.read_text(encoding="utf-8")
+
+    assert "  detect_changes:" in workflow
+    assert 'git diff --name-only "$WORKFLOW_RUN_HEAD_SHA"..HEAD -- data site' in workflow
+    assert "needs.detect_changes.outputs.should_deploy == 'true'" in workflow

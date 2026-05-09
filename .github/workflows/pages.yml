@@ -1,10 +1,10 @@
 # Tech Radar - GitHub Pages デプロイワークフロー
-# data/が更新されたらサイトをビルド・デプロイする
+# data/またはsite/が更新されたらサイトをビルド・デプロイする
 
 name: Deploy to GitHub Pages
 
 on:
-  # data/が更新されたらトリガー
+  # data/またはsite/が更新されたらトリガー
   push:
     branches:
       - main
@@ -35,11 +35,52 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  detect_changes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      should_deploy: ${{ steps.detect.outputs.should_deploy }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Detect deployable changes
+        id: detect
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          WORKFLOW_RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha || '' }}
+        run: |
+          if [ "$EVENT_NAME" != "workflow_run" ]; then
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ -z "$WORKFLOW_RUN_HEAD_SHA" ]; then
+            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::workflow_run head SHA is empty; skipping deploy"
+            exit 0
+          fi
+
+          CHANGED_FILES=$(git diff --name-only "$WORKFLOW_RUN_HEAD_SHA"..HEAD -- data site)
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "should_deploy=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::No deployable changes detected in data/ or site/"
+          else
+            echo "should_deploy=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::Deployable changes detected:"
+            echo "$CHANGED_FILES"
+          fi
+
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     # workflow_runでトリガーされた場合は、元のワークフローが成功した場合のみ実行
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    needs: detect_changes
+    if: ${{ needs.detect_changes.outputs.should_deploy == 'true' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success') }}
     outputs:
       slack_summary: ${{ steps.extract_summary.outputs.summary }}
       latest_digest_date: ${{ steps.extract_summary.outputs.date }}
