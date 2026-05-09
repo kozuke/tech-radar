@@ -7,7 +7,8 @@ PAGES_WORKFLOW = Path(".github/workflows/pages.yml")
 def test_slack_button_links_to_daily_digest_page():
     workflow = PAGES_WORKFLOW.read_text(encoding="utf-8")
 
-    assert 'TARGET_PAGE_URL="${PAGE_URL%/}/articles/${DIGEST_DATE}__daily-digest.html"' in workflow
+    assert 'DIGEST_PAGE_PATH: ${{ needs.build.outputs.digest_page_path }}' in workflow
+    assert 'TARGET_PAGE_URL="${PAGE_URL%/}/$DIGEST_PAGE_PATH"' in workflow
     assert '--arg page_url "$TARGET_PAGE_URL"' in workflow
     assert "url: $page_url" in workflow
 

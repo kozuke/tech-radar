@@ -84,10 +84,14 @@ jobs:
     outputs:
       slack_summary: ${{ steps.extract_summary.outputs.summary }}
       latest_digest_date: ${{ steps.extract_summary.outputs.date }}
+      digest_page_path: ${{ steps.verify_digest_page.outputs.path }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -100,13 +104,18 @@ jobs:
 
       - name: Copy data to public
         run: |
-          mkdir -p site/public/data
-          cp -r data/* site/public/data/
+          rm -rf site/public/data
+          mkdir -p site/public/data/items
+          cp data/index.json site/public/data/index.json
+          cp data/items/*.meta.json site/public/data/items/ 2>/dev/null || true
 
       - name: Copy articles to site
         run: |
           # 記事MDをVitePressで表示できるようにコピー
+          rm -f site/articles/*__daily-digest.md
           cp data/items/*.md site/articles/ 2>/dev/null || true
+          echo "Copied article pages:"
+          ls -1 site/articles/*__daily-digest.md 2>/dev/null || true
 
       - name: Extract Slack summary from latest digest
         id: extract_summary
@@ -151,6 +160,36 @@ jobs:
         working-directory: site
         run: npm run build
 
+      - name: Verify digest detail page
+        id: verify_digest_page
+        run: |
+          DIGEST_DATE="${{ steps.extract_summary.outputs.date }}"
+          COPIED_COUNT=$(find site/articles -maxdepth 1 -type f -name '*__daily-digest.md' 2>/dev/null | wc -l | tr -d ' ')
+          GENERATED_COUNT=$(find site/.vitepress/dist/articles -maxdepth 1 -type f -name '*__daily-digest.html' 2>/dev/null | wc -l | tr -d ' ')
+
+          echo "Copied digest markdown pages: $COPIED_COUNT"
+          echo "Generated digest HTML pages: $GENERATED_COUNT"
+
+          if [ "$COPIED_COUNT" -gt 0 ] && [ "$GENERATED_COUNT" -eq 0 ]; then
+            echo "::error::No digest detail pages were generated under site/.vitepress/dist/articles"
+            exit 1
+          fi
+
+          if [ -z "$DIGEST_DATE" ]; then
+            echo "path=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          DIGEST_PAGE_PATH="articles/${DIGEST_DATE}__daily-digest.html"
+          if [ -f "site/.vitepress/dist/$DIGEST_PAGE_PATH" ]; then
+            echo "path=$DIGEST_PAGE_PATH" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::Digest detail page was not generated: $DIGEST_PAGE_PATH"
+            echo "Generated article pages:"
+            find site/.vitepress/dist/articles -maxdepth 1 -type f -name '*__daily-digest.html' -print 2>/dev/null | sort || true
+            exit 1
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
@@ -182,6 +221,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_SUMMARY: ${{ needs.build.outputs.slack_summary }}
           DIGEST_DATE: ${{ needs.build.outputs.latest_digest_date }}
+          DIGEST_PAGE_PATH: ${{ needs.build.outputs.digest_page_path }}
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           # Webhook URLが設定されていない場合はスキップ
@@ -193,7 +233,11 @@ jobs:
           # 日付がある場合は当日のダイジェスト詳細ページへ直接リンクする
           if [ -n "$DIGEST_DATE" ]; then
             HEADER="📰 *Tech Radar Daily Digest - $DIGEST_DATE*"
-            TARGET_PAGE_URL="${PAGE_URL%/}/articles/${DIGEST_DATE}__daily-digest.html"
+            if [ -n "$DIGEST_PAGE_PATH" ]; then
+              TARGET_PAGE_URL="${PAGE_URL%/}/$DIGEST_PAGE_PATH"
+            else
+              TARGET_PAGE_URL="$PAGE_URL"
+            fi
           else
             HEADER="📰 *Tech Radar* サイトが更新されました"
             TARGET_PAGE_URL="$PAGE_URL"
