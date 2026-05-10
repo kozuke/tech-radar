@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "prepare-site": "node scripts/prepare-site-data.mjs",
-    "dev": "npm run prepare-site && vitepress dev site",
-    "build": "npm run prepare-site && vitepress build site",
-    "preview": "npm run prepare-site && vitepress preview site"
+    "apply-styles": "node -e \"require('fs').copyFileSync('site/styles.css','site/.vitepress/theme/custom.css')\"",
+    "dev": "npm run prepare-site && npm run apply-styles && vitepress dev site",
+    "build": "npm run prepare-site && npm run apply-styles && vitepress build site",
+    "preview": "npm run prepare-site && npm run apply-styles && vitepress preview site"
   },
   "devDependencies": {
     "vitepress": "^1.5.0",
