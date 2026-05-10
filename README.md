@@ -109,25 +109,33 @@ npm run preview
 ```
 
 `npm run dev` は起動前に `data/` から表示用データを `site/public/data/` と `site/articles/` にコピーします。
+このとき日次ダイジェスト内の「Slack通知用サマリー」は元の `data/items/` 側には残したまま、
+公開用の `site/articles/` 側では非表示になるよう変換されます。
 Bolt.newなどでリポジトリをimportした場合も、`npm install` 後に `npm run dev` でプレビューできます。
 
 開発サーバーは http://localhost:5173/ で起動します。
 GitHub Pages向けのビルドでは `/tech-radar/` をベースパスとして使用します。
 Netlify / Vercel / bolt.new のプレビューではルート `/` で配信されます (環境変数で自動判別)。
 
-### bolt.new 上でデザインを編集する
+### デザインを編集する
 
-bolt のファイルツリーは隠しディレクトリ (`.vitepress/`) を表示しないため、
+bolt.new のファイルツリーは隠しディレクトリ (`.vitepress/`) を表示しないため、
 デザイン修正は以下の可視ファイルで行えるようになっています。
 
-- `site/public/custom.css` - サイト全体のスタイル定義。色・余白・レイアウトなど。
+- `site/styles.css` - サイト全体のスタイル定義。色・余白・タイポグラフィ・レイアウトなど。
 - `site/index.md` - トップページのマークアップ (ヒーロー見出しなど)。
 - `site/about.md` - About ページ本文。
 - `site/tags/index.md` - タグ一覧ページ本文。
 
-`site/public/custom.css` は VitePress のテーマより後にロードされるため、
-同じセレクタを書くだけで既定スタイルを上書きできます。
-保存すれば dev サーバーが即座にリロードしてプレビューに反映されます。
+スタイルは **`site/styles.css` が編集対象の正本** です。
+`npm run dev` / `build` / `preview` の起動時に `apply-styles` スクリプトで
+`site/.vitepress/theme/custom.css` へ自動コピーされ、VitePress の既定テーマ CSS より後に
+ロードされます。同じセレクタを書くだけで既定スタイルを上書きできます。
+
+`npm run dev` 実行中に `site/styles.css` を変更した場合は、
+別ターミナルで `npm run apply-styles` を実行するか dev サーバーを再起動すると
+プレビューに反映されます (テーマファイル `theme/custom.css` を直接編集すると即時 HMR で反映されますが、
+次回ビルド時に上書きされる点に注意)。
 
 ### Netlify でデプロイする
 

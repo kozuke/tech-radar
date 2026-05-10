@@ -12,7 +12,7 @@ head:
 
 # タグ一覧
 
-<p class="page-lead">気になる技術カテゴリから、ホームの記事一覧を絞り込めます。</p>
+<p class="page-lead">気になるカテゴリから記事をたどれます。タグ名をクリックすると、ホームの記事一覧をそのタグで絞り込みます。</p>
 
 <script setup>
 import TagList from '../.vitepress/theme/components/TagList.vue'

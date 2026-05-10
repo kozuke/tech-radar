@@ -81,7 +81,8 @@ const getTagFilterPath = (tag: string) => withBase(`/?tag=${encodeURIComponent(t
         :href="getTagFilterPath(tag)"
         :class="['tag', getTagSize(count)]"
       >
-        {{ tag }} ({{ count }})
+        <span class="tag-name">{{ tag }}</span>
+        <span class="tag-count">{{ count }}</span>
       </a>
     </div>
   </div>

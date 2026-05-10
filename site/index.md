@@ -18,7 +18,7 @@ import ArticleList from './.vitepress/theme/components/ArticleList.vue'
   <div>
     <p class="top-kicker">Daily Tech Briefing</p>
     <h1>Tech Radar</h1>
-    <p class="top-summary">LLMで要約した技術記事を毎日更新。</p>
+    <p class="top-summary">技術系ブログ・公式リリース・チェンジログを毎日収集し、LLM で要約した日次ダイジェストとして配信しています。</p>
   </div>
   <nav class="top-actions" aria-label="主要リンク">
     <a href="./tags/" class="VPButton medium brand">タグから探す</a>
@@ -28,7 +28,7 @@ import ArticleList from './.vitepress/theme/components/ArticleList.vue'
 
 <section class="top-articles" aria-labelledby="latest-articles">
   <div class="top-section-heading">
-    <h2 id="latest-articles">最新記事</h2>
+    <h2 id="latest-articles">Latest Issues</h2>
   </div>
 
   <ArticleList featuredFirst showStats showTagPanel showFilter />

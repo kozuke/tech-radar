@@ -43,4 +43,6 @@ def test_prepare_site_script_copies_digest_pages_for_vitepress():
     assert "siteArticlesDir" in script
     assert "'site', 'public', 'data'" in script
     assert "endsWith('__daily-digest.md')" in script
-    assert "await cp(path.join(dataItemsDir, file), path.join(siteArticlesDir, file))" in script
+    assert "hideSlackSummarySection" in script
+    assert 'slack-summary-only" hidden aria-hidden="true"' in script
+    assert "const sanitized = hideSlackSummarySection(raw)" in script

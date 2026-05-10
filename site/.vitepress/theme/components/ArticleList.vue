@@ -238,11 +238,8 @@ const getArticlePath = (article: Article) => {
 
     <!-- 記事なし -->
     <div v-else-if="filteredArticles.length === 0" class="no-articles">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-      <p>記事がありません</p>
-      <p style="font-size: 0.9rem;">収集を実行すると記事が表示されます</p>
+      <p>該当する記事はありません。</p>
+      <p style="font-size: 0.88rem;">収集を実行すると記事が表示されます。</p>
     </div>
 
     <template v-else>
@@ -269,8 +266,8 @@ const getArticlePath = (article: Article) => {
       <div :class="['article-content', { 'with-tag-panel': showTagPanel }]">
         <div class="article-feed">
           <article v-if="featuredArticle" class="article-card article-card-featured">
-            <div v-if="featuredArticle.tags.length" class="featured-label">
-              {{ featuredArticle.tags[0] }}
+            <div class="featured-label">
+              {{ featuredArticle.tags[0] || 'Featured' }}
             </div>
             <h3>
               <a :href="getArticlePath(featuredArticle)">
@@ -279,17 +276,15 @@ const getArticlePath = (article: Article) => {
             </h3>
 
             <div class="article-meta">
-              <span class="date">
-                📅 {{ formatDate(featuredArticle.date) }}
-              </span>
+              <span class="date">{{ formatDate(featuredArticle.date) }}</span>
               <span v-if="featuredArticle.type === 'daily_digest'" class="source">
-                📰 {{ featuredArticle.article_count }}件のソースから
+                {{ featuredArticle.article_count }}件のソースを集約
               </span>
-              <span v-else class="source">
-                📰 {{ formatSource(featuredArticle.source) }}
+              <span v-else-if="featuredArticle.source" class="source">
+                {{ formatSource(featuredArticle.source) }}
               </span>
               <a v-if="featuredArticle.url" :href="featuredArticle.url" target="_blank" rel="noopener noreferrer" class="original-link">
-                🔗 元記事
+                元記事を読む
               </a>
             </div>
 
@@ -314,17 +309,15 @@ const getArticlePath = (article: Article) => {
             </h3>
 
             <div class="article-meta">
-              <span class="date">
-                📅 {{ formatDate(article.date) }}
-              </span>
+              <span class="date">{{ formatDate(article.date) }}</span>
               <span v-if="article.type === 'daily_digest'" class="source">
-                📰 {{ article.article_count }}件のソースから
+                {{ article.article_count }}件のソースを集約
               </span>
-              <span v-else class="source">
-                📰 {{ formatSource(article.source) }}
+              <span v-else-if="article.source" class="source">
+                {{ formatSource(article.source) }}
               </span>
               <a v-if="article.url" :href="article.url" target="_blank" rel="noopener noreferrer" class="original-link">
-                🔗 元記事
+                元記事を読む
               </a>
             </div>
 

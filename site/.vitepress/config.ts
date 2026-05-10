@@ -12,7 +12,7 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${siteBase}logo.svg` }],
-    ['meta', { name: 'theme-color', content: '#6366f1' }],
+    ['meta', { name: 'theme-color', content: '#0f766e' }],
   ],
 
   themeConfig: {

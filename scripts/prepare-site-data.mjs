@@ -11,6 +11,29 @@ const publicDataItemsDir = path.join(publicDataDir, 'items')
 const siteArticlesDir = path.join(rootDir, 'site', 'articles')
 const themeCssPath = path.join(rootDir, 'site', '.vitepress', 'theme', 'custom.css')
 const designCssPath = path.join(rootDir, 'site', 'styles.css')
+const slackSummaryPattern = /## 📢 Slack通知用サマリー\s*\n\s*<!-- SLACK_SUMMARY_START -->[\s\S]*?<!-- SLACK_SUMMARY_END -->\s*\n\s*---/m
+
+function hideSlackSummarySection(content) {
+  const hiddenSummaryBlock = (match) => {
+    const [, summaryBlock = ''] = match.match(/(<!-- SLACK_SUMMARY_START -->[\s\S]*<!-- SLACK_SUMMARY_END -->)/m) || []
+
+    if (!summaryBlock) {
+      return match
+    }
+
+    return [
+      '<div class="slack-summary-only" hidden aria-hidden="true">',
+      '',
+      summaryBlock.trim(),
+      '',
+      '</div>',
+      '',
+      '---'
+    ].join('\n')
+  }
+
+  return content.replace(slackSummaryPattern, hiddenSummaryBlock)
+}
 
 // theme/custom.css は環境によって差し戻されるため、bolt 編集可能な site/styles.css を
 // ビルド前に theme/custom.css へ上書きコピーする。これにより新デザインが必ず勝つ。
@@ -47,15 +70,16 @@ if (existsSync(dataItemsDir)) {
     const src = path.join(dataItemsDir, file)
     const dest = path.join(siteArticlesDir, file)
     const raw = await readFile(src, 'utf8')
-    if (raw.startsWith('---\nlastUpdated: false')) {
-      await cp(path.join(dataItemsDir, file), path.join(siteArticlesDir, file))
+    const sanitized = hideSlackSummarySection(raw)
+    if (sanitized.startsWith('---\nlastUpdated: false')) {
+      await writeFile(dest, sanitized, 'utf8')
       continue
     }
     // Prepend `lastUpdated: false` frontmatter so VitePress skips the git-based
     // timestamp lookup (git may be unavailable in sandboxed dev environments).
-    const withFrontmatter = raw.startsWith('---\n')
-      ? raw.replace(/^---\n/, '---\nlastUpdated: false\n')
-      : `---\nlastUpdated: false\n---\n\n${raw}`
+    const withFrontmatter = sanitized.startsWith('---\n')
+      ? sanitized.replace(/^---\n/, '---\nlastUpdated: false\n')
+      : `---\nlastUpdated: false\n---\n\n${sanitized}`
     await writeFile(dest, withFrontmatter, 'utf8')
   }
 }
