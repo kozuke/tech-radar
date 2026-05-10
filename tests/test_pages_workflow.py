@@ -27,3 +27,10 @@ def test_workflow_run_deploys_only_when_data_or_site_changed():
     assert "  detect_changes:" in workflow
     assert 'git diff --name-only "$WORKFLOW_RUN_HEAD_SHA"..HEAD -- data site' in workflow
     assert "needs.detect_changes.outputs.should_deploy == 'true'" in workflow
+
+
+def test_pages_workflow_creates_articles_directory_before_copying_digests():
+    workflow = PAGES_WORKFLOW.read_text(encoding="utf-8")
+
+    assert "mkdir -p site/articles" in workflow
+    assert "cp data/items/*.md site/articles/" in workflow

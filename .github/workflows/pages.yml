@@ -112,6 +112,7 @@ jobs:
       - name: Copy articles to site
         run: |
           # 記事MDをVitePressで表示できるようにコピー
+          mkdir -p site/articles
           rm -f site/articles/*__daily-digest.md
           cp data/items/*.md site/articles/ 2>/dev/null || true
           echo "Copied article pages:"
