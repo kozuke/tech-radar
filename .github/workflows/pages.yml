@@ -11,6 +11,8 @@ on:
     paths:
       - 'site/**'
       - 'data/**'
+      - 'scripts/**'
+      - 'package.json'
 
   # collect.ymlが完了した時にトリガー
   workflow_run:
@@ -99,24 +101,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        working-directory: site
         run: npm install
-
-      - name: Copy data to public
-        run: |
-          rm -rf site/public/data
-          mkdir -p site/public/data/items
-          cp data/index.json site/public/data/index.json
-          cp data/items/*.meta.json site/public/data/items/ 2>/dev/null || true
-
-      - name: Copy articles to site
-        run: |
-          # 記事MDをVitePressで表示できるようにコピー
-          mkdir -p site/articles
-          rm -f site/articles/*__daily-digest.md
-          cp data/items/*.md site/articles/ 2>/dev/null || true
-          echo "Copied article pages:"
-          ls -1 site/articles/*__daily-digest.md 2>/dev/null || true
 
       - name: Extract Slack summary from latest digest
         id: extract_summary
@@ -158,7 +143,6 @@ jobs:
           fi
 
       - name: Build site
-        working-directory: site
         run: npm run build
 
       - name: Verify digest detail page

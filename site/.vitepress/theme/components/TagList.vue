@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
+import { withBase } from 'vitepress'
 
 interface Article {
   id: string
@@ -18,19 +19,16 @@ interface IndexData {
 
 const articles = ref<Article[]>([])
 const loading = ref(true)
+const siteDataUrl = `${import.meta.env.BASE_URL}data/index.json`
 
 onMounted(async () => {
   try {
-    const response = await fetch('/tech-radar/data/index.json')
+    const response = await fetch(siteDataUrl)
     if (!response.ok) {
-      const devResponse = await fetch('../../data/index.json')
-      if (!devResponse.ok) throw new Error('Failed to load')
-      const data: IndexData = await devResponse.json()
-      articles.value = data.items || []
-    } else {
-      const data: IndexData = await response.json()
-      articles.value = data.items || []
+      throw new Error(`Failed to load articles: ${response.status}`)
     }
+    const data: IndexData = await response.json()
+    articles.value = data.items || []
   } catch (e) {
     console.error('Failed to load articles:', e)
     articles.value = []
@@ -63,7 +61,7 @@ const getTagSize = (count: number) => {
   return ''
 }
 
-const getTagFilterPath = (tag: string) => `/tech-radar/?tag=${encodeURIComponent(tag)}`
+const getTagFilterPath = (tag: string) => withBase(`/?tag=${encodeURIComponent(tag)}`)
 </script>
 
 <template>

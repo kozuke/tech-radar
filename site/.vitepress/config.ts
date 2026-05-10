@@ -1,15 +1,17 @@
 import { defineConfig } from 'vitepress'
 
+const siteBase = process.env.VITEPRESS_BASE ?? (process.env.npm_lifecycle_event === 'dev' ? '/' : '/tech-radar/')
+
 export default defineConfig({
   title: 'Tech Radar',
   description: '技術トレンドを自動収集・要約',
   lang: 'ja-JP',
 
-  // GitHub Pages用のベースパス（リポジトリ名に合わせて変更）
-  base: '/tech-radar/',
+  // dev previews use root for tools like Bolt; production builds keep the GitHub Pages repo path.
+  base: siteBase,
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/tech-radar/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${siteBase}logo.svg` }],
     ['meta', { name: 'theme-color', content: '#6366f1' }],
   ],
 

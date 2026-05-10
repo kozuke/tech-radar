@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { withBase } from 'vitepress'
 
 interface Article {
   id: string
@@ -43,7 +44,7 @@ const getTagFromQuery = () => {
   return new URLSearchParams(window.location.search).get('tag') || props.tag || ''
 }
 
-const getTagFilterPath = (tag: string) => `/tech-radar/?tag=${encodeURIComponent(tag)}`
+const getTagFilterPath = (tag: string) => withBase(`/?tag=${encodeURIComponent(tag)}`)
 
 const selectTag = (tag: string, event: MouseEvent) => {
   event.preventDefault()
@@ -57,6 +58,8 @@ const syncTagFromQuery = () => {
   selectedTag.value = getTagFromQuery()
 }
 
+const siteDataUrl = `${import.meta.env.BASE_URL}data/index.json`
+
 // 記事データを読み込み
 onMounted(async () => {
   syncTagFromQuery()
@@ -65,22 +68,13 @@ onMounted(async () => {
   }
 
   try {
-    // ビルド時はdata/index.jsonを参照
-    const response = await fetch('/tech-radar/data/index.json')
+    const response = await fetch(siteDataUrl)
     if (!response.ok) {
-      // 開発時のフォールバック
-      const devResponse = await fetch('../../data/index.json')
-      if (!devResponse.ok) {
-        throw new Error('Failed to load articles')
-      }
-      const data: IndexData = await devResponse.json()
-      articles.value = data.items || []
-      generatedAt.value = data.generated_at || ''
-    } else {
-      const data: IndexData = await response.json()
-      articles.value = data.items || []
-      generatedAt.value = data.generated_at || ''
+      throw new Error(`Failed to load articles: ${response.status}`)
     }
+    const data: IndexData = await response.json()
+    articles.value = data.items || []
+    generatedAt.value = data.generated_at || ''
   } catch (e) {
     console.error('Failed to load articles:', e)
     error.value = '記事の読み込みに失敗しました'
@@ -199,7 +193,7 @@ const getArticlePath = (article: Article) => {
   // summary_pathからパスを生成
   // data/items/2026-01-07__example.md -> /articles/2026-01-07__example
   const filename = article.summary_path.split('/').pop()?.replace('.md', '') || article.id
-  return `/articles/${filename}`
+  return withBase(`/articles/${filename}.html`)
 }
 </script>
 
@@ -279,7 +273,7 @@ const getArticlePath = (article: Article) => {
               {{ featuredArticle.tags[0] }}
             </div>
             <h3>
-              <a :href="`/tech-radar/articles/${featuredArticle.id}.html`">
+              <a :href="getArticlePath(featuredArticle)">
                 {{ featuredArticle.title }}
               </a>
             </h3>
@@ -314,7 +308,7 @@ const getArticlePath = (article: Article) => {
 
           <article v-for="article in listArticles" :key="article.id" class="article-card">
             <h3>
-              <a :href="`/tech-radar/articles/${article.id}.html`">
+              <a :href="getArticlePath(article)">
                 {{ article.title }}
               </a>
             </h3>
@@ -351,7 +345,7 @@ const getArticlePath = (article: Article) => {
         <aside v-if="showTagPanel" class="top-tag-panel" aria-label="注目タグ">
           <div class="top-tag-panel-heading">
             <h3>注目タグ</h3>
-            <a href="/tech-radar/tags/">一覧</a>
+            <a :href="withBase('/tags/')">一覧</a>
           </div>
           <a
             v-for="[tag, count] in topTags"

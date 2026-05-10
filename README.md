@@ -92,6 +92,8 @@ OpenRouter APIキーは [openrouter.ai](https://openrouter.ai/) で取得でき�
 
 ### 2. Site（閲覧サイト）
 
+リポジトリ直下で実行します。
+
 ```bash
 # 依存関係インストール
 npm install
@@ -106,7 +108,11 @@ npm run build
 npm run preview
 ```
 
-開発サーバーは http://localhost:5173/tech-radar/ で起動します。
+`npm run dev` は起動前に `data/` から表示用データを `site/public/data/` と `site/articles/` にコピーします。
+Bolt.newなどでリポジトリをimportした場合も、`npm install` 後に `npm run dev` でプレビューできます。
+
+開発サーバーは http://localhost:5173/ で起動します。
+GitHub Pages向けのビルドでは `/tech-radar/` をベースパスとして使用します。
 
 ## GitHub Actions設定
 
