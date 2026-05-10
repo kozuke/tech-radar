@@ -9,6 +9,16 @@ const dataItemsDir = path.join(dataDir, 'items')
 const publicDataDir = path.join(rootDir, 'site', 'public', 'data')
 const publicDataItemsDir = path.join(publicDataDir, 'items')
 const siteArticlesDir = path.join(rootDir, 'site', 'articles')
+const themeCssPath = path.join(rootDir, 'site', '.vitepress', 'theme', 'custom.css')
+const designCssPath = path.join(rootDir, 'site', 'styles.css')
+
+// theme/custom.css は環境によって差し戻されるため、bolt 編集可能な site/styles.css を
+// ビルド前に theme/custom.css へ上書きコピーする。これにより新デザインが必ず勝つ。
+if (existsSync(designCssPath)) {
+  const designCss = await readFile(designCssPath, 'utf8')
+  await writeFile(themeCssPath, designCss, 'utf8')
+  console.log('Applied site/styles.css -> theme/custom.css')
+}
 
 if (!existsSync(path.join(dataDir, 'index.json'))) {
   throw new Error('data/index.json was not found. Run the collector or add data before starting the site.')
