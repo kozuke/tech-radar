@@ -14,8 +14,8 @@ import ArticleList from './.vitepress/theme/components/ArticleList.vue'
     <p class="top-summary">LLMで要約した技術記事を毎日更新。</p>
   </div>
   <nav class="top-actions" aria-label="主要リンク">
-    <a href="/tech-radar/tags/" class="VPButton medium brand">タグから探す</a>
-    <a href="/tech-radar/about" class="VPButton medium alt">About</a>
+    <a href="./tags/" class="VPButton medium brand">タグから探す</a>
+    <a href="./about" class="VPButton medium alt">About</a>
   </nav>
 </section>
 
