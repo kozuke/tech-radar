@@ -1,5 +1,6 @@
 ---
 layout: page
+lastUpdated: false
 ---
 
 <script setup>

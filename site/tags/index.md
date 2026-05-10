@@ -1,5 +1,6 @@
 ---
 title: タグ一覧
+lastUpdated: false
 ---
 
 # タグ一覧

@@ -1,5 +1,6 @@
 ---
 title: About
+lastUpdated: false
 ---
 
 # Tech Radar について
