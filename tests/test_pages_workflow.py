@@ -2,6 +2,7 @@ from pathlib import Path
 
 
 PAGES_WORKFLOW = Path(".github/workflows/pages.yml")
+PREPARE_SITE_SCRIPT = Path("scripts/prepare-site-data.mjs")
 
 
 def test_slack_button_links_to_daily_digest_page():
@@ -29,8 +30,17 @@ def test_workflow_run_deploys_only_when_data_or_site_changed():
     assert "needs.detect_changes.outputs.should_deploy == 'true'" in workflow
 
 
-def test_pages_workflow_creates_articles_directory_before_copying_digests():
+def test_pages_workflow_uses_root_build_script_to_prepare_site_data():
     workflow = PAGES_WORKFLOW.read_text(encoding="utf-8")
 
-    assert "mkdir -p site/articles" in workflow
-    assert "cp data/items/*.md site/articles/" in workflow
+    assert "working-directory: site" not in workflow
+    assert "run: npm run build" in workflow
+
+
+def test_prepare_site_script_copies_digest_pages_for_vitepress():
+    script = PREPARE_SITE_SCRIPT.read_text(encoding="utf-8")
+
+    assert "siteArticlesDir" in script
+    assert "'site', 'public', 'data'" in script
+    assert "endsWith('__daily-digest.md')" in script
+    assert "await cp(path.join(dataItemsDir, file), path.join(siteArticlesDir, file))" in script
