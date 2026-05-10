@@ -1,6 +1,13 @@
 ---
 title: About
 lastUpdated: false
+head:
+  - - link
+    - rel: stylesheet
+      href: /tr-design.css
+  - - link
+    - rel: stylesheet
+      href: /tech-radar/tr-design.css
 ---
 
 # Tech Radar について
