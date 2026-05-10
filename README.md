@@ -114,8 +114,13 @@ npm run preview
 Bolt.newなどでリポジトリをimportした場合も、`npm install` 後に `npm run dev` でプレビューできます。
 
 開発サーバーは http://localhost:5173/ で起動します。
-GitHub Pages向けのビルドでは `/tech-radar/` をベースパスとして使用します。
-Netlify / Vercel / bolt.new のプレビューではルート `/` で配信されます (環境変数で自動判別)。
+VitePress の `base` は以下で自動判定されます。
+
+- 開発サーバー (`npm run dev`): `/`
+- GitHub Pages ビルド: `/tech-radar/`
+- Netlify / Vercel / Cloudflare Pages: `/`
+
+必要に応じて `VITEPRESS_BASE` を設定すれば明示的に上書きできます。
 
 ### デザインを編集する
 
@@ -131,6 +136,8 @@ bolt.new のファイルツリーは隠しディレクトリ (`.vitepress/`) を
 `npm run dev` / `build` / `preview` の起動時に `apply-styles` スクリプトで
 `site/.vitepress/theme/custom.css` へ自動コピーされ、VitePress の既定テーマ CSS より後に
 ロードされます。同じセレクタを書くだけで既定スタイルを上書きできます。
+トップページ・About・タグ一覧ページもこのグローバル CSS が適用されるため、
+各 Markdown でホスト別の stylesheet パスを追加する必要はありません。
 
 `npm run dev` 実行中に `site/styles.css` を変更した場合は、
 別ターミナルで `npm run apply-styles` を実行するか dev サーバーを再起動すると
@@ -140,7 +147,7 @@ bolt.new のファイルツリーは隠しディレクトリ (`.vitepress/`) を
 ### Netlify でデプロイする
 
 ルートに `netlify.toml` を置いてあるので、Netlify に接続すれば追加設定なしでビルドされます。
-Netlify 環境では `NETLIFY=true` によって base パスが `/` に切り替わるため、
+Netlify 環境では `NETLIFY` 環境変数を検知して base パスが `/` に切り替わるため、
 `/tech-radar/` プレフィックス無しでアクセスできます。
 GitHub Pages 側のワークフロー (`pages.yml`) はそのまま残っており、従来どおり併用可能です。
 

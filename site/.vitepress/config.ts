@@ -1,13 +1,15 @@
 import { defineConfig } from 'vitepress'
 
-const siteBase = process.env.VITEPRESS_BASE ?? (process.env.npm_lifecycle_event === 'dev' ? '/' : '/tech-radar/')
+const isDev = process.env.npm_lifecycle_event === 'dev'
+const isRootHosted = Boolean(process.env.NETLIFY || process.env.VERCEL || process.env.CF_PAGES)
+const siteBase = process.env.VITEPRESS_BASE ?? (isDev || isRootHosted ? '/' : '/tech-radar/')
 
 export default defineConfig({
   title: 'Tech Radar',
   description: '技術トレンドを自動収集・要約',
   lang: 'ja-JP',
 
-  // dev previews use root for tools like Bolt; production builds keep the GitHub Pages repo path.
+  // GitHub Pages serves under /tech-radar/, while Netlify/Vercel/preview hosts serve from /.
   base: siteBase,
 
   head: [

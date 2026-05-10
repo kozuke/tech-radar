@@ -1,13 +1,6 @@
 ---
 layout: page
 lastUpdated: false
-head:
-  - - link
-    - rel: stylesheet
-      href: /tr-design.css
-  - - link
-    - rel: stylesheet
-      href: /tech-radar/tr-design.css
 ---
 
 <script setup>
