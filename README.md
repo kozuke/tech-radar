@@ -93,8 +93,6 @@ OpenRouter APIキーは [openrouter.ai](https://openrouter.ai/) で取得でき�
 ### 2. Site（閲覧サイト）
 
 ```bash
-cd site
-
 # 依存関係インストール
 npm install
 
@@ -108,7 +106,7 @@ npm run build
 npm run preview
 ```
 
-開発サーバーは http://localhost:5173 で起動します。
+開発サーバーは http://localhost:5173/tech-radar/ で起動します。
 
 ## GitHub Actions設定
 
