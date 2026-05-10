@@ -113,6 +113,28 @@ Bolt.newなどでリポジトリをimportした場合も、`npm install` 後に 
 
 開発サーバーは http://localhost:5173/ で起動します。
 GitHub Pages向けのビルドでは `/tech-radar/` をベースパスとして使用します。
+Netlify / Vercel / bolt.new のプレビューではルート `/` で配信されます (環境変数で自動判別)。
+
+### bolt.new 上でデザインを編集する
+
+bolt のファイルツリーは隠しディレクトリ (`.vitepress/`) を表示しないため、
+デザイン修正は以下の可視ファイルで行えるようになっています。
+
+- `site/public/custom.css` - サイト全体のスタイル定義。色・余白・レイアウトなど。
+- `site/index.md` - トップページのマークアップ (ヒーロー見出しなど)。
+- `site/about.md` - About ページ本文。
+- `site/tags/index.md` - タグ一覧ページ本文。
+
+`site/public/custom.css` は VitePress のテーマより後にロードされるため、
+同じセレクタを書くだけで既定スタイルを上書きできます。
+保存すれば dev サーバーが即座にリロードしてプレビューに反映されます。
+
+### Netlify でデプロイする
+
+ルートに `netlify.toml` を置いてあるので、Netlify に接続すれば追加設定なしでビルドされます。
+Netlify 環境では `NETLIFY=true` によって base パスが `/` に切り替わるため、
+`/tech-radar/` プレフィックス無しでアクセスできます。
+GitHub Pages 側のワークフロー (`pages.yml`) はそのまま残っており、従来どおり併用可能です。
 
 ## GitHub Actions設定
 

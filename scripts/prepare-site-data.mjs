@@ -37,6 +37,10 @@ if (existsSync(dataItemsDir)) {
     const src = path.join(dataItemsDir, file)
     const dest = path.join(siteArticlesDir, file)
     const raw = await readFile(src, 'utf8')
+    if (raw.startsWith('---\nlastUpdated: false')) {
+      await cp(path.join(dataItemsDir, file), path.join(siteArticlesDir, file))
+      continue
+    }
     // Prepend `lastUpdated: false` frontmatter so VitePress skips the git-based
     // timestamp lookup (git may be unavailable in sandboxed dev environments).
     const withFrontmatter = raw.startsWith('---\n')
