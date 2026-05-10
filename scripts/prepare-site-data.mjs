@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, rm } from 'node:fs/promises'
+import { cp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -34,7 +34,15 @@ if (existsSync(dataItemsDir)) {
   }
 
   for (const file of itemFiles.filter((name) => name.endsWith('__daily-digest.md'))) {
-    await cp(path.join(dataItemsDir, file), path.join(siteArticlesDir, file))
+    const src = path.join(dataItemsDir, file)
+    const dest = path.join(siteArticlesDir, file)
+    const raw = await readFile(src, 'utf8')
+    // Prepend `lastUpdated: false` frontmatter so VitePress skips the git-based
+    // timestamp lookup (git may be unavailable in sandboxed dev environments).
+    const withFrontmatter = raw.startsWith('---\n')
+      ? raw.replace(/^---\n/, '---\nlastUpdated: false\n')
+      : `---\nlastUpdated: false\n---\n\n${raw}`
+    await writeFile(dest, withFrontmatter, 'utf8')
   }
 }
 
