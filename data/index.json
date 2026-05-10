@@ -1,6 +1,28 @@
 {
-  "generated_at": "2026-05-09T23:05:04.863521Z",
+  "generated_at": "2026-05-10T23:08:42.063801Z",
   "items": [
+    {
+      "id": "2026-05-11__daily-digest",
+      "date": "2026-05-11",
+      "title": "Tech Radar Daily Digest - 2026-05-11",
+      "type": "daily_digest",
+      "article_count": 2,
+      "urls": [
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.1"
+      ],
+      "tags": [
+        "ai",
+        "chatgpt",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-05-11__daily-digest.md"
+    },
     {
       "id": "2026-05-10__daily-digest",
       "date": "2026-05-10",
