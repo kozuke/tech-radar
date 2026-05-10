@@ -1,0 +1,44 @@
+{
+  "id": "2026-01-10__daily-digest",
+  "date": "2026-01-10",
+  "title": "Tech Radar Daily Digest - 2026-01-10",
+  "type": "daily_digest",
+  "article_count": 15,
+  "urls": [
+    "https://www.postgresql.org/about/news/introducing-pgpm-a-package-manager-for-modular-postgresql-3196/",
+    "https://www.postgresql.org/about/news/welcoming-three-new-members-to-the-postgresql-community-code-of-conduct-committee-3209/",
+    "https://www.postgresql.org/about/news/pgconf-india-2026-talks-trainings-published-and-early-bird-registration-closes-soon-3208/",
+    "https://mathstodon.xyz/@tao/115855840223258103",
+    "https://www.bbc.com/news/articles/cz7yv4524gqo",
+    "https://scottjg.com/posts/2026-01-08-crappy-computer-showdown/",
+    "https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/",
+    "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/",
+    "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-reinvent-keynote-recap-on-demand-videos-and-more-december-8-2025/",
+    "https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/",
+    "https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/",
+    "https://github.blog/ai-and-ml/github-copilot/wrap-up-your-backlog-with-github-copilot-coding-agent/",
+    "https://developers.googleblog.com/a-developers-guide-to-debugging-jax-on-cloud-tpus-essential-tools-and-techniques/",
+    "https://developers.googleblog.com/real-world-agent-examples-with-gemini-3/",
+    "https://developers.googleblog.com/gemini-3-flash-is-now-available-in-gemini-cli/"
+  ],
+  "tags": [
+    "aws",
+    "cloud",
+    "database",
+    "dev",
+    "devops",
+    "general",
+    "github",
+    "google",
+    "postgres",
+    "tech"
+  ],
+  "sources": [
+    "rss:google_developers",
+    "rss:aws_blog",
+    "rss:postgres_blog",
+    "rss:hacker_news",
+    "rss:github_blog"
+  ],
+  "created_at": "2026-01-10T06:30:15.722054Z"
+}

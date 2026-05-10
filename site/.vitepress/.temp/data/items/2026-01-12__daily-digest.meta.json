@@ -1,0 +1,53 @@
+{
+  "id": "2026-01-12__daily-digest",
+  "date": "2026-01-12",
+  "title": "Tech Radar Daily Digest - 2026-01-12",
+  "type": "daily_digest",
+  "article_count": 21,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-sagemaker-hyperpod-validates-service-quotas/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-lex-configurable-voice-activity-detection-sensitivity/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-connect-agent-screen-recording-status-tracking",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-redshift-serverless-aws-asia-pacific-new-zealand-region",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/amazon-inspector-java-gradle-ecosystem/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.5",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.4",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.3",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.2",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.1",
+    "https://github.com/openai/openai-python/releases/tag/v2.15.0",
+    "https://developers.googleblog.com/gemini-3-flash-is-now-available-in-gemini-cli/",
+    "https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/",
+    "https://developers.googleblog.com/introducing-agent-development-kit-for-typescript-build-ai-agents-with-the-power-of-a-code-first-approach/",
+    "https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/",
+    "https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/",
+    "http://workspaceupdates.googleblog.com/2026/01/forms-stop-collecting-responses.html",
+    "http://workspaceupdates.googleblog.com/2026/01/weekly-recap-01-09-2026.html.html",
+    "http://workspaceupdates.googleblog.com/2026/01/emojis-reactions-in-gmail-will-be-on-by-default.html",
+    "http://workspaceupdates.googleblog.com/2026/01/google-meet-take-notes-for-me-controls.html",
+    "http://workspaceupdates.googleblog.com/2026/01/control-speech-translation-in-meet.html"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_developers",
+    "rss:aws_whats_new",
+    "rss:google_workspace_updates",
+    "rss:openai_sdk_releases",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-01-12T22:17:43.650465Z"
+}
