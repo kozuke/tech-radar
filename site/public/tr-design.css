@@ -589,6 +589,98 @@ html {
   background-color: var(--tr-c-card-muted);
 }
 
+/* ===== 詳細ページ (article) のレイアウト ===== */
+/* VitePress のデフォルトは本文幅が狭く左右の余白が大きすぎるため、
+   画面幅に応じて本文幅と余白を動的に広げる。 */
+.VPDoc.has-aside .container {
+  max-width: 1440px !important;
+}
+
+.VPDoc:not(.has-sidebar) .container {
+  max-width: 1280px !important;
+}
+
+.VPDoc.has-aside .content {
+  max-width: none !important;
+  padding-right: 32px;
+}
+
+.VPDoc .content-container {
+  max-width: 960px !important;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 860px !important;
+}
+
+@media (min-width: 1440px) {
+  .VPDoc.has-aside .container {
+    max-width: 1560px !important;
+  }
+  .VPDoc.has-aside .content-container {
+    max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .VPDoc.has-aside .container {
+    max-width: 1320px !important;
+  }
+}
+
+@media (max-width: 1279px) {
+  .VPDoc .container,
+  .VPDoc.has-aside .container {
+    max-width: 100% !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .VPDoc .content-container,
+  .VPDoc.has-aside .content-container {
+    max-width: 100% !important;
+  }
+  .VPDoc.has-aside .content {
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .VPDoc .container,
+  .VPDoc.has-aside .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .VPDoc.has-aside .content {
+    padding-right: 0;
+  }
+}
+
+/* 本文タイポの読みやすさを調整 */
+.VPDoc .vp-doc h1 {
+  font-size: clamp(1.8rem, 2.4vw, 2.3rem);
+  line-height: 1.25;
+}
+
+.VPDoc .vp-doc h2 {
+  margin-top: 2.2rem;
+  padding-top: 1.6rem;
+  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+}
+
+.VPDoc .vp-doc h3 {
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+}
+
+.VPDoc .vp-doc p,
+.VPDoc .vp-doc li {
+  line-height: 1.85;
+}
+
+/* 右サイドバー (目次) を少し広げる */
+.VPDocAside {
+  padding-left: 16px;
+}
+
 /* ===== レスポンシブ ===== */
 @media (max-width: 768px) {
   .top-hero {
