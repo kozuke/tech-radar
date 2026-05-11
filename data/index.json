@@ -1,6 +1,57 @@
 {
-  "generated_at": "2026-05-10T23:08:42.063801Z",
+  "generated_at": "2026-05-11T23:11:38.730619Z",
   "items": [
+    {
+      "id": "2026-05-12__daily-digest",
+      "date": "2026-05-12",
+      "title": "Tech Radar Daily Digest - 2026-05-12",
+      "type": "daily_digest",
+      "article_count": 11,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/04/g6e-region-expansion-sagemaker-studio-notebooks/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/03/g6-region-expansion-sagemaker-studio-notebooks/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/02/p4de-region-expansion-sagemaker-studio-notebooks/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.8",
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.6",
+        "http://workspaceupdates.googleblog.com/2026/05/add-avatars-when-you-convert-presentations-to-Vids.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.101.0",
+        "https://cli.devin.ai/docs/changelog/stable#2026-05-06-added",
+        "https://cursor.com/changelog#2026-05-11-cursor-is-now-available-in-microsoft-teams"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "cursor",
+        "devin",
+        "editor",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:anthropic_sdk_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:google_workspace_updates",
+        "rss:claude_code_releases",
+        "scrape:cursor_changelog",
+        "rss:aws_whats_new",
+        "scrape:devin_cli_changelog"
+      ],
+      "summary_path": "data/items/2026-05-12__daily-digest.md"
+    },
     {
       "id": "2026-05-11__daily-digest",
       "date": "2026-05-11",
