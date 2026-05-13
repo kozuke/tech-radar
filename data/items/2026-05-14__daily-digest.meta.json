@@ -1,0 +1,46 @@
+{
+  "id": "2026-05-14__daily-digest",
+  "date": "2026-05-14",
+  "title": "Tech Radar Daily Digest - 2026-05-14",
+  "type": "daily_digest",
+  "article_count": 10,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-fsx-openzfs-multi-az-vpcs/",
+    "https://aws.amazon.com/about-aws/whats-new/amazon-oracle-m8i-r8i-license-included",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-security-agent-full-repository-code-review/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.141",
+    "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.13",
+    "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.12",
+    "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.11",
+    "http://workspaceupdates.googleblog.com/2026/05/small-businesses-can-now-seamlessly-import-users-from-Microsoft-to-Google-Workspace.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.102.0",
+    "https://cursor.com/changelog#2026-05-13-to-take-engineering-tasks-from-start-to-finish-agents-need-a-development-environ"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cursor",
+    "editor",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "scrape:cursor_changelog",
+    "rss:google_workspace_updates",
+    "rss:claude_code_releases",
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new",
+    "rss:anthropic_sdk_releases"
+  ],
+  "created_at": "2026-05-13T23:21:11.368835Z"
+}
