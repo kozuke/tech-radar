@@ -1,6 +1,47 @@
 {
-  "generated_at": "2026-05-14T23:12:40.603125Z",
+  "generated_at": "2026-05-15T23:11:40.348353Z",
   "items": [
+    {
+      "id": "2026-05-16__daily-digest",
+      "date": "2026-05-16",
+      "title": "Tech Radar Daily Digest - 2026-05-16",
+      "type": "daily_digest",
+      "article_count": 10,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/cloudwatch-logs-query-results/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-emr-serverless-aws-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-cases-related-item/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.143",
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.22",
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.21",
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.20",
+        "http://workspaceupdates.googleblog.com/2026/05/workspace-updates-weekly-recap-may-15-2026.html",
+        "http://workspaceupdates.googleblog.com/2026/05/android-all-in-one-devices-neat-logitech.html",
+        "http://workspaceupdates.googleblog.com/2026/05/whiteboarding-add-ons-meet-hardware-android.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-05-16__daily-digest.md"
+    },
     {
       "id": "2026-05-15__daily-digest",
       "date": "2026-05-15",
