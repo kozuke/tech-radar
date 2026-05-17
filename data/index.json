@@ -1,6 +1,26 @@
 {
-  "generated_at": "2026-05-16T23:08:45.785589Z",
+  "generated_at": "2026-05-17T23:11:45.140646Z",
   "items": [
+    {
+      "id": "2026-05-18__daily-digest",
+      "date": "2026-05-18",
+      "title": "Tech Radar Daily Digest - 2026-05-18",
+      "type": "daily_digest",
+      "article_count": 2,
+      "urls": [
+        "https://docs.devin.ai/release-notes/overview#2026-05-17-may-17-2026",
+        "https://docs.devin.ai/release-notes/overview#2026-05-17-collapsible-session-folders"
+      ],
+      "tags": [
+        "ai",
+        "cognition",
+        "devin"
+      ],
+      "sources": [
+        "scrape:devin_release_notes"
+      ],
+      "summary_path": "data/items/2026-05-18__daily-digest.md"
+    },
     {
       "id": "2026-05-17__daily-digest",
       "date": "2026-05-17",
