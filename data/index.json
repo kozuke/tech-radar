@@ -1,6 +1,38 @@
 {
-  "generated_at": "2026-05-17T23:11:45.140646Z",
+  "generated_at": "2026-05-18T23:18:52.627950Z",
   "items": [
+    {
+      "id": "2026-05-19__daily-digest",
+      "date": "2026-05-19",
+      "title": "Tech Radar Daily Digest - 2026-05-19",
+      "type": "daily_digest",
+      "article_count": 6,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-local-zones-region-selector/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-glue-zero-etl-mumbai-region",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-lightsail-cdn-ipv6/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.132.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.131.0",
+        "https://cursor.com/changelog#2026-05-18-composer-2-5"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new",
+        "scrape:cursor_changelog"
+      ],
+      "summary_path": "data/items/2026-05-19__daily-digest.md"
+    },
     {
       "id": "2026-05-18__daily-digest",
       "date": "2026-05-18",
