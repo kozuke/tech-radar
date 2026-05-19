@@ -1,0 +1,47 @@
+{
+  "id": "2026-05-20__daily-digest",
+  "date": "2026-05-20",
+  "title": "Tech Radar Daily Digest - 2026-05-20",
+  "type": "daily_digest",
+  "article_count": 12,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-mwaa-now-supports-apache-airflow-3-2/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-inspector-taipei/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ecs-pause-continue-deployments/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.145",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+    "https://github.com/openai/codex/releases/tag/rust-v0.132.0",
+    "https://developers.googleblog.com/google-tensor-sdk-beta-with-litert/",
+    "https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/",
+    "https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.1",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+    "https://cursor.com/changelog#2026-05-19-cursor-is-now-available-in-jira"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cursor",
+    "editor",
+    "gemini",
+    "google",
+    "openai"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:anthropic_sdk_releases",
+    "scrape:cursor_changelog",
+    "rss:google_developers",
+    "rss:aws_whats_new",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-05-19T23:33:11.769336Z"
+}
