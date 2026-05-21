@@ -1,6 +1,48 @@
 {
-  "generated_at": "2026-05-20T23:39:30.844989Z",
+  "generated_at": "2026-05-21T23:17:30.849568Z",
   "items": [
+    {
+      "id": "2026-05-22__daily-digest",
+      "date": "2026-05-22",
+      "title": "Tech Radar Daily Digest - 2026-05-22",
+      "type": "daily_digest",
+      "article_count": 10,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-c7i-flex-m7i-flex-m7i-instances-HYD-region/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/sagemaker-unified-studio-glue/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-ai-openai-apis/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.147",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.146",
+        "https://github.com/openai/codex/releases/tag/rust-v0.133.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.133.0-alpha.4",
+        "https://developers.googleblog.com/empowering-service-providers-and-hardware-partners-with-gemini-for-home/",
+        "https://developers.googleblog.com/adk-kotlin-android-building-ai-agents/",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.104.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:aws_whats_new",
+        "rss:google_developers",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-05-22__daily-digest.md"
+    },
     {
       "id": "2026-05-21__daily-digest",
       "date": "2026-05-21",
