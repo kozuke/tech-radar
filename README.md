@@ -50,7 +50,9 @@ tech-radar/
 ├── specs/                  # 仕様書
 │   ├── 00_overview.md
 │   ├── 01_basic_design.md
-│   └── 02_detail_design.md
+│   ├── 02_detail_design.md
+│   ├── 03_collection_summary.md
+│   └── 04_github_app_setup.md  # ruleset 下での bot push 用 GitHub App 設定
 │
 ├── .github/workflows/
 │   ├── collect.yml        # 定期収集ワークフロー
@@ -160,6 +162,13 @@ GitHub Pages 側のワークフロー (`pages.yml`) はそのまま残ってお�
 - `OPENROUTER_API_KEY`: OpenRouter APIキー（必須）
 - `OPENROUTER_MODEL`: 使用するAIモデル（オプション、未設定時は `google/gemini-3-flash-preview`）
 - `SLACK_WEBHOOK_URL`: Slack Incoming Webhook URL（オプション、設定するとデプロイ完了時に通知）
+
+`main` に ruleset（PR 必須）を適用している場合、`collect.yml` / `cleanup.yml` の push には **GitHub App** が必要です。設定手順は [specs/04_github_app_setup.md](specs/04_github_app_setup.md) を参照してください。
+
+| 種別 | Name | 説明 |
+|------|------|------|
+| Variable | `TECH_RADAR_APP_ID` | GitHub App の App ID |
+| Secret | `TECH_RADAR_APP_PRIVATE_KEY` | GitHub App の秘密鍵（.pem 全文） |
 
 ### ワークフロー
 
@@ -288,6 +297,13 @@ sources:
 ##### Amazon S3が新機能をリリース
 
 S3に新しいストレージクラスが追加されました。これにより、アクセス頻度の低いデータをより低コストで保存できるようになります。
+
+**機能別の概要**（複数機能が言及されている場合のみ）
+
+| 機能 | 概要 |
+|------|------|
+| Glacier Instant Retrieval | ミリ秒レベルのアクセスが可能な新ストレージクラス |
+| Intelligent-Tiering | 自動階層化の精度が向上 |
 
 **技術ポイント**
 

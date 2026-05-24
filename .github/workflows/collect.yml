@@ -41,8 +41,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.TECH_RADAR_APP_ID }}
+          private-key: ${{ secrets.TECH_RADAR_APP_PRIVATE_KEY }}
+
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -100,8 +109,8 @@ jobs:
         if: steps.changes.outputs.has_changes == 'true' && github.event.inputs.dry_run != 'true'
         run: |
           echo "=== Committing changes ==="
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "tech-radar-bot[bot]"
+          git config --local user.email "3837213+tech-radar-bot[bot]@users.noreply.github.com"
           git add data/
           echo "--- Staged changes ---"
           git diff --cached --stat
