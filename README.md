@@ -165,10 +165,10 @@ GitHub Pages 側のワークフロー (`pages.yml`) はそのまま残ってお�
 
 `main` に ruleset（PR 必須）を適用している場合、`collect.yml` / `cleanup.yml` の push には **GitHub App** が必要です。設定手順は [specs/04_github_app_setup.md](specs/04_github_app_setup.md) を参照してください。
 
-| 種別 | Name | 説明 |
-|------|------|------|
-| Variable | `TECH_RADAR_APP_ID` | GitHub App の App ID |
-| Secret | `TECH_RADAR_APP_PRIVATE_KEY` | GitHub App の秘密鍵（.pem 全文） |
+| 種別 | タブ | Name | 説明 |
+|------|------|------|------|
+| Variable | **Variables** | `TECH_RADAR_APP_ID` | GitHub App の App ID |
+| Secret | **Secrets** | `TECH_RADAR_APP_PRIVATE_KEY` | GitHub App の秘密鍵（.pem 全文） |
 
 ### ワークフロー
 

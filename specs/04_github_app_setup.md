@@ -120,19 +120,21 @@ App 設定ページ上部の **App ID**（数字）をメモする。
 
 ## 6. Secrets / Variables を登録
 
-リポジトリ → **Settings** → **Secrets and variables** → **Actions**
+`tech-radar` → **Settings** → **Secrets and variables** → **Actions**
 
-### Secrets
+> **重要:** App ID と秘密鍵は **別タブ** に登録します。App ID を Secret タブだけに入れると `Input required and not supplied: app-id` エラーになります。
+
+**Variables タブ**（Repository variables）
+
+| Name | 値 |
+|------|-----|
+| `TECH_RADAR_APP_ID` | 手順 3 で控えた App ID（例: `3837213`） |
+
+**Secrets タブ**（Repository secrets）
 
 | Name | 値 |
 |------|-----|
 | `TECH_RADAR_APP_PRIVATE_KEY` | ダウンロードした `.pem` ファイルの **全文** |
-
-### Variables
-
-| Name | 値 |
-|------|-----|
-| `TECH_RADAR_APP_ID` | 手順 3 で控えた App ID |
 
 ---
 
@@ -191,6 +193,7 @@ commit / push ステップでは git user を App 名に合わせます。
 
 | エラー | 原因の例 |
 |--------|----------|
+| `Input required and not supplied: app-id` | `TECH_RADAR_APP_ID` が **Variables** 未登録（Secret タブのみに入れている） |
 | `Resource not accessible by integration` | App の Contents 権限不足 |
 | `Changes must be made through a pull request` | bypass list に App 未追加、または checkout が GITHUB_TOKEN のまま |
 | `Bad credentials` | 秘密鍵の形式不正、App ID の typo |
