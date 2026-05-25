@@ -178,6 +178,14 @@ GitHub Pages 側のワークフロー (`pages.yml`) はそのまま残ってお�
 | `cleanup.yml` | 手動のみ | 古い記事や条件に合致する記事を削除 |
 | `pages.yml` | data/ or site/ 更新時 / collect.yml完了後に data/ or site/ の変更がある時 | VitePressをビルドしてデプロイ（Slack通知対応） |
 
+#### collect の動作検証（URL削除テスト）
+
+収集パイプラインの確認用に、`data/index.json` と該当日の `data/items/*__daily-digest.meta.json` から URL を削除してマージすると、次回の `collect.yml` で再収集されるか検証できます。
+
+- 重複判定は `index.json` 内の全ダイジェスト URL を参照する（`2026-05-24__daily-digest.md` の本文だけ削除しても再収集されない）
+- フィード先頭付近に載っている URL を削除すると、現行の `max_items` 設定でも取りこぼしにくい
+- マージ後は Actions の **Collect Articles** を手動実行するか、スケジュール実行を待つ
+
 ### cleanup.yml のオプション
 
 | オプション | 説明 | 例 |

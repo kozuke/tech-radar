@@ -6,13 +6,10 @@
       "date": "2026-05-24",
       "title": "Tech Radar Daily Digest - 2026-05-24",
       "type": "daily_digest",
-      "article_count": 6,
+      "article_count": 3,
       "urls": [
-        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-security-agent/",
         "https://aws.amazon.com/about-aws/whats-new/2026/05/workspaces-linux-migration",
         "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-keyspaces-malaysia-thailand/",
-        "https://github.com/anthropics/claude-code/releases/tag/v2.1.150",
-        "https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.3",
         "https://docs.devin.ai/release-notes/overview#2026-05-22-platform-default-settings"
       ],
       "tags": [
