@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-05-23T23:11:30.104366Z",
+  "generated_at": "2026-05-25T03:10:39.756868Z",
   "items": [
+    {
+      "id": "2026-05-25__daily-digest",
+      "date": "2026-05-25",
+      "title": "Tech Radar Daily Digest - 2026-05-25",
+      "type": "daily_digest",
+      "article_count": 3,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-security-agent/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.150",
+        "https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.3"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-05-25__daily-digest.md"
+    },
     {
       "id": "2026-05-24__daily-digest",
       "date": "2026-05-24",
