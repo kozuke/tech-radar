@@ -1,6 +1,52 @@
 {
-  "generated_at": "2026-05-25T03:10:39.756868Z",
+  "generated_at": "2026-05-26T23:33:32.823546Z",
   "items": [
+    {
+      "id": "2026-05-27__daily-digest",
+      "date": "2026-05-27",
+      "title": "Tech Radar Daily Digest - 2026-05-27",
+      "type": "daily_digest",
+      "article_count": 10,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-rds-ena-express-multiAZ/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-m8i-m8i-flex-govcloud-east/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ec2-r8i-r8i-flex-govcloud-east/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.134.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.4",
+        "https://developers.googleblog.com/enhancing-android-checkout-with-dynamic-callbacks-in-google-pay/",
+        "http://workspaceupdates.googleblog.com/2026/05/simplify-decision-making-with-polly-now-available-for-Google-Chat.html",
+        "http://workspaceupdates.googleblog.com/2026/05/introducing-fresh-visual-identity-for-Google-Workspace-app-icons.html",
+        "https://cli.devin.ai/docs/changelog/stable#2026-05-26-added",
+        "https://cursor.com/changelog#2026-05-20-you-can-now-share-canvases-from-cursor-with-your-team"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "cursor",
+        "devin",
+        "editor",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "scrape:devin_cli_changelog",
+        "rss:google_developers",
+        "rss:openai_codex_cli_releases",
+        "scrape:cursor_changelog",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-05-27__daily-digest.md"
+    },
     {
       "id": "2026-05-25__daily-digest",
       "date": "2026-05-25",
