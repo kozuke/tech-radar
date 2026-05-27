@@ -78,7 +78,7 @@ export OPENROUTER_MODEL="google/gemini-3-flash-preview"  # オプション
 
 # 実行（日次ダイジェスト生成）
 cd collector
-python main.py --max-items 3 --max-age-days 7 --verbose  # 直近7日以内の記事を各ソース最大3件取得
+python main.py --max-items 5 --max-age-days 7 --verbose  # 直近7日以内の記事を各ソース最大5件取得
 
 # 記事削除（ドライラン）
 python delete.py --older-than 30 --dry-run --verbose
@@ -183,7 +183,7 @@ GitHub Pages 側のワークフロー (`pages.yml`) はそのまま残ってお�
 収集パイプラインの確認用に、`data/index.json` と該当日の `data/items/*__daily-digest.meta.json` から URL を削除してマージすると、次回の `collect.yml` で再収集されるか検証できます。
 
 - 重複判定は `index.json` 内の全ダイジェスト URL を参照する（`2026-05-24__daily-digest.md` の本文だけ削除しても再収集されない）
-- フィード先頭付近に載っている URL を削除すると、現行の `max_items` 設定でも取りこぼしにくい
+- フィードは未登録 URL が見つかるまで深く走査する（`max_items` 件集まるか、走査上限まで）
 - マージ後は Actions の **Collect Articles** を手動実行するか、スケジュール実行を待つ
 
 ### cleanup.yml のオプション
