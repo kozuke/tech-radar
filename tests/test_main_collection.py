@@ -15,6 +15,29 @@ def test_load_sources_reads_yaml(monkeypatch, tmp_path):
     assert collector_main.load_sources() == [{"name": "test", "type": "rss"}]
 
 
+def test_feed_scan_limit_scales_with_max_items():
+    assert collector_main.feed_scan_limit(5) == 75
+    assert collector_main.feed_scan_limit(1) == collector_main.FEED_SCAN_MIN
+    assert collector_main.feed_scan_limit(20) == collector_main.FEED_SCAN_MAX
+
+
+def test_collect_rss_articles_uses_deep_feed_scan_limit(monkeypatch):
+    captured = {}
+
+    def fake_fetch(url, limit, max_age_days):
+        captured["limit"] = limit
+        return []
+
+    monkeypatch.setattr(collector_main, "fetch_rss_entries", fake_fetch)
+
+    collector_main.collect_rss_articles(
+        {"name": "source", "url": "https://example.com/feed", "tags": []},
+        max_items=5,
+    )
+
+    assert captured["limit"] == collector_main.feed_scan_limit(5)
+
+
 def test_collect_rss_articles_skips_duplicates_and_missing_content(monkeypatch):
     entries = [
         {"title": "Duplicate", "url": "https://example.com/duplicate"},
@@ -45,6 +68,31 @@ def test_collect_rss_articles_skips_duplicates_and_missing_content(monkeypatch):
         }
     ]
     assert "https://example.com/collected" in existing_urls
+
+
+def test_collect_rss_articles_collects_past_duplicate_block(monkeypatch):
+    """先頭が既出でも、走査範囲内の未登録記事を max_items まで収集する。"""
+    entries = [
+        {"title": f"Dup {i}", "url": f"https://example.com/dup-{i}"}
+        for i in range(6)
+    ] + [
+        {"title": "New 1", "url": "https://example.com/new-1"},
+        {"title": "New 2", "url": "https://example.com/new-2"},
+    ]
+    monkeypatch.setattr(collector_main, "fetch_rss_entries", lambda *args, **kwargs: entries)
+    monkeypatch.setattr(collector_main, "extract_article_content", lambda url: "body")
+
+    existing_urls = {e["url"] for e in entries[:6]}
+
+    articles = collector_main.collect_rss_articles(
+        {"name": "source", "url": "https://example.com/feed", "tags": ["t"]},
+        max_items=2,
+        existing_urls=existing_urls,
+    )
+
+    assert len(articles) == 2
+    assert articles[0]["url"] == "https://example.com/new-1"
+    assert articles[1]["url"] == "https://example.com/new-2"
 
 
 def test_collect_scrape_articles_skips_duplicates_and_limits(monkeypatch):

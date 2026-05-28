@@ -37,6 +37,15 @@ SOURCES_PATH = COLLECTOR_DIR / "sources.yaml"
 DATA_DIR = COLLECTOR_DIR.parent / "data"
 JST = ZoneInfo("Asia/Tokyo")
 
+# 重複スキップ後も新規を探すため、日付フィルタ後に走査する候補の上限
+FEED_SCAN_MIN = 50
+FEED_SCAN_MAX = 100
+
+
+def feed_scan_limit(max_items: int) -> int:
+    """未登録 URL を探すために走査するフィード候補数の上限。"""
+    return min(max(max_items * 15, FEED_SCAN_MIN), FEED_SCAN_MAX)
+
 
 def load_sources() -> List[Dict]:
     """情報源定義を読み込む"""
@@ -78,9 +87,11 @@ def collect_rss_articles(
 
     logger.info(f"Collecting from RSS source: {name} (max {max_age_days} days old)")
 
-    # 日付フィルタリング付きで取得
-    entries = fetch_rss_entries(url, limit=max_items * 2, max_age_days=max_age_days)
-    logger.info(f"[{name}] RSS entries after date filter: {len(entries)}")
+    scan_limit = feed_scan_limit(max_items)
+    entries = fetch_rss_entries(url, limit=scan_limit, max_age_days=max_age_days)
+    logger.info(
+        f"[{name}] RSS entries after date filter: {len(entries)} (scan limit: {scan_limit})"
+    )
 
     articles = []
     skipped_duplicate = 0
@@ -175,8 +186,11 @@ def collect_scrape_articles(
 
     logger.info(f"Collecting from scraped changelog source: {name} (max {max_age_days} days old)")
 
-    entries = fetch_changelog_sections(url, limit=max_items * 2, max_age_days=max_age_days)
-    logger.info(f"[{name}] Changelog sections after date filter: {len(entries)}")
+    scan_limit = feed_scan_limit(max_items)
+    entries = fetch_changelog_sections(url, limit=scan_limit, max_age_days=max_age_days)
+    logger.info(
+        f"[{name}] Changelog sections after date filter: {len(entries)} (scan limit: {scan_limit})"
+    )
 
     articles = []
     skipped_duplicate = 0
@@ -208,7 +222,7 @@ def collect_scrape_articles(
 
 
 def run_collection(
-    max_items_per_source: int = 3,
+    max_items_per_source: int = 5,
     max_age_days: int = 7,
     dry_run: bool = False,
     source_filter: str = None,
@@ -358,8 +372,8 @@ def main():
     parser.add_argument(
         "--max-items",
         type=int,
-        default=3,
-        help="ソースごとの最大処理件数 (default: 3)",
+        default=5,
+        help="ソースごとの最大処理件数 (default: 5)",
     )
     parser.add_argument(
         "--max-age-days",
