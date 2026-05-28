@@ -6,9 +6,9 @@
 
 ## 🔥 注目トピック
 
-Googleは「Google I/O」にて、AI時代を見据えたGoogle Payの進化と、開発者向けの新たなAI統合ツールを発表しました。既存の決済インフラを維持しつつ、AIエージェントが商取引を支援する「Universal Commerce Protocol (UCP)」への対応や、開発環境に直接統合可能な「Google Pay & Wallet Developer MCPサーバー」の公開が大きな柱です。これにより、開発者は既存のバックエンドを活かしながら、AIエージェントによるトラブルシューティングやコード生成、トレンド分析を効率化できるようになります。
+本日は、AIエージェントによる動的なUI生成を標準化する「A2UI v0.9」のリリースが大きな注目を集めています。これまでAIによるUI生成はデモレベルでの活用が中心でしたが、A2UI v0.9はフレームワークに依存しない標準規格を提供することで、既存のデザインシステムやコンポーネントカタログとAIをシームレスに統合可能にしました。これにより、開発者は新しいUIコンポーネントを学習することなく、既存のフロントエンド資産を活かしながら、AIがユーザーの文脈に合わせてリアルタイムにUIを構築する「Generative UI」を本番環境へ導入しやすくなります。
 
-また、Google WorkspaceにおいてもAI活用が加速しています。Google Meetでは「Ask Gemini」のアクセス性が向上し、サイドパネルがより使いやすい位置へ配置されました。さらに、Connected SheetsではBigQuery MLとTimesFMを活用した「異常検知機能」が追加され、SQLの知識がなくても時系列データの外れ値を自動的に特定可能となりました。これらのアップデートは、AIを単なるチャットボットとしてではなく、業務フローやデータ分析の基盤に深く組み込むというGoogleの戦略を明確に示しています。
+また、AWSからは大規模・メモリ最適化ワークロード向けのインフラ強化が相次いで発表されました。特にEC2 X8iインスタンスの提供地域拡大や、Glueにおける新しいワーカータイプの導入、SageMaker HyperPodでの最小容量指定機能の追加など、AI学習やデータ分析基盤の安定性と効率性を高めるアップデートが目立っています。これらは、エンタープライズ環境における複雑なデータ処理や大規模モデルのトレーニングにおいて、より確実なリソース管理とパフォーマンス向上を実現する重要なステップとなります。
 
 ---
 
@@ -16,33 +16,30 @@ Googleは「Google I/O」にて、AI時代を見据えたGoogle Payの進化と�
 
 ### AI/LLM
 
-#### Claude Code
+#### A2UI
 
-##### v2.1.152
+##### A2UI v0.9: フレームワーク非依存のGenerative UI標準
 
-Claude Codeの最新アップデートでは、コードレビュー機能が強化され、修正提案を直接ワーキングツリーに適用可能になりました。また、セッション開始時のフック機能やプラグインマーケットプレイスの管理設定が拡充され、開発者のワークフローに合わせた柔軟なカスタマイズが容易になっています。
+A2UI v0.9は、AIエージェントが既存のコンポーネントカタログを使用して動的にUIを生成するためのフレームワーク非依存な標準規格です。Web、モバイルなどあらゆるプラットフォームで利用可能であり、開発者は既存のデザインシステムを維持したまま、AIによる柔軟なUI構築を実現できます。
+
+**機能別の概要**
+
+| 機能 | 概要 |
+|------|------|
+| Web-coreライブラリ | クライアント側のUIレンダリングを簡素化する共通ライブラリを導入。 |
+| Agent SDK | 生成パイプラインの最適化とキャッシュ層の追加により、低遅延なUI体験を提供。 |
+| 言語機能の拡張 | クライアント定義関数やデータ同期機能を追加し、対話的なUI操作を強化。 |
 
 **技術ポイント**
 
 | 項目 | 詳細 |
 |------|------|
-| 主要技術 | Claude Code CLI |
-| 特徴・性能 | コードレビューの自動適用、セッション管理の柔軟性向上 |
-| 対応環境 | CLI環境 |
+| 主要技術 | Generative UI, MCP, Websockets, REST |
+| 対応フレームワーク | React, Flutter, Lit, Angular |
+| 開発体験 | Python SDK提供（pip install a2ui-agent-sdk） |
 
 > 🔗 **参考リンク**
-> https://github.com/anthropics/claude-code/releases/tag/v2.1.152
-
----
-
-#### OpenAI Codex
-
-##### 0.135.0-alpha.1 / 0.135.0-alpha.2
-
-OpenAIのCodex CLIに関するプレリリース版が公開されました。詳細な変更ログは現在確認できませんが、継続的な改善が行われています。
-
-> 🔗 **参考リンク**
-> https://github.com/openai/codex/releases/tag/rust-v0.135.0-alpha.2
+> https://developers.googleblog.com/a2ui-v0-9-generative-ui/
 
 ---
 
@@ -50,63 +47,48 @@ OpenAIのCodex CLIに関するプレリリース版が公開されました。�
 
 #### AWS
 
-##### SageMaker Notebook Instancesのインスタンスタイプ拡充
+##### AWS Glue: スペインリージョンで大規模・メモリ最適化ワーカーを提供開始
 
-SageMaker Notebook Instancesにおいて、P5.4xlおよびP5en.48xlインスタンスが利用可能になりました。H100およびH200 GPUを搭載したこれらのインスタンスは、大規模言語モデル（LLM）の学習や推論、HPCアプリケーションのパフォーマンスを大幅に向上させます。
-
-**機能別の概要**
-
-| 機能 | 概要 |
-|------|------|
-| P5.4xl | NVIDIA H100 GPUを搭載し、従来のGPUインスタンス比で最大4倍の高速化と40%のコスト削減を実現。 |
-| P5en.48xl | H200 GPUと第4世代Intel Xeonを搭載し、メモリ帯域とCPU-GPU間通信を強化、レイテンシを最大35%改善。 |
+AWS Glueは、スペインリージョンにおいてG.12X/G.16X（汎用）およびR.1X/R.2X/R.4X/R.8X（メモリ最適化）ワーカーの提供を開始しました。これにより、複雑な変換や大規模なデータ集計、メモリ消費の激しいSpark処理をより効率的に実行可能となります。
 
 **技術ポイント**
 
 | 項目 | 詳細 |
 |------|------|
-| 主要技術 | Amazon SageMaker, NVIDIA H100/H200 |
-| 特徴・性能 | LLM学習/推論の高速化、高帯域通信 |
-| 対応環境 | AWS各リージョン（東京含む） |
+| 対象リージョン | 欧州（スペイン） |
+| ワーカータイプ | Gシリーズ（汎用）、Rシリーズ（メモリ最適化） |
+| 利用方法 | Glue Studio, ノートブック, Glue Job APIs |
 
 > 🔗 **参考リンク**
-> https://aws.amazon.com/about-aws/whats-new/2026/03/p5-4xl-new-instance-launch-sagemaker-notebook-instances/
+> https://aws.amazon.com/about-aws/whats-new/2026/05/aws-glue-larger-memory-intensive-workers-spain
 
-##### Amazon EMRでApache Spark 4.0.2をサポート
+##### Amazon Connect: 生成AIによるセルフサービス対話の自動評価機能
 
-Amazon EMRがApache Spark 4.0.2の一般提供を開始しました。ANSI SQLのサポート強化やVARIANTデータ型の導入により、データエンジニアリングのアクセシビリティが向上し、Apache Iceberg v3による強固なトランザクション管理と監査機能が提供されます。
-
-**技術ポイント**
-
-| 項目 | 詳細 |
-|------|------|
-| 主要技術 | Apache Spark 4.0.2, Apache Iceberg v3 |
-| 特徴・性能 | ANSI SQLサポート、FGAC（細粒度アクセス制御） |
-| 関連サービス | AWS Lake Formation |
+Amazon Connectは、生成AIを活用してセルフサービス（AIエージェント）の対話品質を自動評価する機能をリリースしました。マネージャーは自然言語で評価基準を定義でき、AIがトランスクリプトに基づいて評価理由と根拠を提示するため、AIエージェントのパフォーマンス改善を迅速に行えます。
 
 > 🔗 **参考リンク**
-> https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-emr-apache-spark/
+> https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-customer-gen-AI-evaluations-self-service
 
----
+##### Amazon SageMaker HyperPod: Slurmクラスターの最小容量指定（MinCount）に対応
 
-### Workspace
-
-#### Google Workspace
-
-##### Google MeetおよびConnected Sheetsのアップデート
-
-Google Meetの「Ask Gemini」がUI改善によりアクセスしやすくなり、Connected SheetsではBigQueryデータを対象としたAI異常検知機能が利用可能になりました。また、Workspace Studioに対して管理者がステップやスターター単位で利用制限をかけられる詳細な制御機能が追加されました。
-
-**機能別の概要**
-
-| 機能 | 概要 |
-|------|------|
-| Ask Gemini in Meet | プロンプトボックスを画面左下に移動し、発見性と操作性を向上。 |
-| 異常検知 (Connected Sheets) | BigQuery MLとTimesFMを活用し、SQL不要で時系列データから外れ値を自動抽出。 |
-| Workspace Studio管理 | 管理者が組織単位やグループ単位でStudioの各機能を有効/無効化可能に。 |
+SageMaker HyperPodのSlurmクラスターにおいて、連続プロビジョニング時に最小ノード数（MinCount）を指定可能になりました。これにより、PyTorch FSDPやMegatron-LMなどの分散学習において、必要なノード数が確保されるまでジョブの開始を待機させることができ、学習の安定性が向上します。
 
 > 🔗 **参考リンク**
-> http://workspaceupdates.googleblog.com/2026/05/ask-gemini-in-google-meet-is-becoming-more-easily-accessible-on-web.html
+> https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-mincount/
+
+##### AWS Backup: 論理的にエアギャップされたボールトへのOTP認証を追加
+
+AWS Backupは、論理的にエアギャップされたボールト（Logically air-gapped vaults）のマルチパーティ承認アクションに対し、OTP（ワンタイムパスワード）認証を必須化しました。IAM Identity Center経由で送信される6桁のコード入力が必要となり、承認プロセスのセキュリティが強化されました。
+
+> 🔗 **参考リンク**
+> https://aws.amazon.com/about-aws/whats-new/2026/05/aws-backup-otp-multi-party-approval-lag/
+
+##### Amazon EC2 X8iインスタンスの提供リージョン拡大
+
+Intel Xeon 6プロセッサを搭載したEC2 X8iインスタンスが、シンガポール、シドニー、AWS GovCloud (US-West) リージョンで利用可能になりました。SAP HANAや大規模データベースなど、メモリ負荷の高いワークロードにおいて前世代比で最大43%の性能向上を実現します。
+
+> 🔗 **参考リンク**
+> https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-x8i-instances-SIN-SYD-PDT-region/
 
 ---
 
@@ -114,9 +96,9 @@ Google Meetの「Ask Gemini」がUI改善によりアクセスしやすくなり
 
 | アクション | 対象者 | 優先度 |
 |------------|--------|--------|
-| 大規模モデル学習環境のP5/P5enへの移行検討 | MLエンジニア | 🟡 中 |
-| EMR環境のSpark 4.0.2へのアップグレード検証 | データエンジニア | 🟡 中 |
-| Workspace Studioの機能制限設定の確認 | 管理者 | 🟢 低 |
+| A2UI v0.9を検証し、既存フロントエンドへの導入可能性を検討する | フロントエンドエンジニア | 🟡 中 |
+| SageMaker HyperPodのMinCount設定を確認し、分散学習ジョブの安定化を図る | MLエンジニア | 🔴 高 |
+| AWS Backupの承認プロセスにOTPが導入されたことをチームへ周知する | セキュリティ担当者 | 🟡 中 |
 
 ---
 
@@ -124,16 +106,12 @@ Google Meetの「Ask Gemini」がUI改善によりアクセスしやすくなり
 
 | タイトル | カテゴリ | ソース | URL |
 |---------|----------|--------|-----|
-| SageMaker Notebook Instances now support P5.4xl | クラウド | AWS | [URL](https://aws.amazon.com/about-aws/whats-new/2026/03/p5-4xl-new-instance-launch-sagemaker-notebook-instances/) |
-| SageMaker Notebook Instances now support P5en.48xl | クラウド | AWS | [URL](https://aws.amazon.com/about-aws/whats-new/2026/02/p5en-new-instance-launch-sagemaker-notebook-instances/) |
-| Amazon EMR now supports Apache Spark 4.0.2 | クラウド | AWS | [URL](https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-emr-apache-spark/) |
-| v2.1.152 | AI/LLM | Claude | [URL](https://github.com/anthropics/claude-code/releases/tag/v2.1.152) |
-| 0.135.0-alpha.2 | AI/LLM | OpenAI | [URL](https://github.com/openai/codex/releases/tag/rust-v0.135.0-alpha.2) |
-| 0.135.0-alpha.1 | AI/LLM | OpenAI | [URL](https://github.com/openai/codex/releases/tag/rust-v0.135.0-alpha.1) |
-| The latest updates to Google Pay | AI/LLM | Google | [URL](https://developers.googleblog.com/the-latest-updates-to-google-pay/) |
-| Ask Gemini in Google Meet accessibility | Workspace | Google | [URL](http://workspaceupdates.googleblog.com/2026/05/ask-gemini-in-google-meet-is-becoming-more-easily-accessible-on-web.html) |
-| Anomaly detection in Connected Sheets | Workspace | Google | [URL](http://workspaceupdates.googleblog.com/2026/05/easily-identify-data-irregularities-with-anomaly-detection-in-Connected-Sheets.html) |
-| Granular admin controls for Workspace Studio | Workspace | Google | [URL](http://workspaceupdates.googleblog.com/2026/05/more-granular-admin-controls-for-Workspace-Studio-steps-and-starters.html) |
+| AWS Glue large and memory optimized workers... | クラウド | AWS | https://aws.amazon.com/about-aws/whats-new/2026/05/aws-glue-larger-memory-intensive-workers-spain |
+| Amazon Connect Customer now uses generative AI... | クラウド | AWS | https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-customer-gen-AI-evaluations-self-service |
+| Amazon SageMaker HyperPod Slurm clusters... | クラウド | AWS | https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-hyperpod-mincount/ |
+| AWS Backup adds OTP verification... | クラウド | AWS | https://aws.amazon.com/about-aws/whats-new/2026/05/aws-backup-otp-multi-party-approval-lag/ |
+| Amazon EC2 X8i instances are now available... | クラウド | AWS | https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-x8i-instances-SIN-SYD-PDT-region/ |
+| A2UI v0.9: The New Standard for Portable... | AI/LLM | Google | https://developers.googleblog.com/a2ui-v0-9-generative-ui/ |
 
 ---
 
@@ -142,12 +120,13 @@ Google Meetの「Ask Gemini」がUI改善によりアクセスしやすくなり
 <!-- SLACK_SUMMARY_START -->
 🚀 **今日の注目ポイント**
 
-GoogleがAIエージェント時代の商取引基盤「Universal Commerce Protocol」を発表し、WorkspaceでもAI活用が大幅強化されました。
+AIエージェントによるUI生成を標準化する「A2UI v0.9」が登場。既存のコンポーネントを活かしたGenerative UI開発が加速します。
 
 📌 **ピックアップ**
-• AWS: SageMakerでH100/H200搭載のP5インスタンスが利用可能に
-• Claude Code: コードレビュー修正の自動適用など機能拡充
-• Google: SheetsでのAI異常検知やMeetのUI改善などWorkspace機能が進化
+• A2UI v0.9: フレームワーク非依存のGenerative UI標準規格がリリース
+• AWS Glue: スペインリージョンで大規模・メモリ最適化ワーカーが利用可能に
+• SageMaker HyperPod: 分散学習の安定性を高める最小ノード数指定機能を追加
+• AWS Backup: エアギャップボールトの承認プロセスにOTP認証を導入
 
 👉 詳細はサイトでチェック！
 <!-- SLACK_SUMMARY_END -->
