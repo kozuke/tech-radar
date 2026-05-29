@@ -1,0 +1,52 @@
+{
+  "id": "2026-05-30__daily-digest",
+  "date": "2026-05-30",
+  "title": "Tech Radar Daily Digest - 2026-05-30",
+  "type": "daily_digest",
+  "article_count": 16,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-ses-global-deliverability/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-rcs-countries/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-connect-customer-tasks-90day-schedule",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-shield-ddos/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-redshift-serverless-4-rpu-seven-regions/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.157",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.156",
+    "https://github.com/openai/codex/releases/tag/rust-v0.135.0-alpha.1",
+    "http://workspaceupdates.googleblog.com/2026/05/weekly-recap-05-29-2026.html",
+    "http://workspaceupdates.googleblog.com/2026/05/keep-track-of-student-progress-with-learning-standards-and-skills-in-Google-Classroom.html",
+    "http://workspaceupdates.googleblog.com/2026/05/available-in-beta-convert-your-client-side-encrypted-Slides-after-a-Vault-or-Takeout-export.html",
+    "http://workspaceupdates.googleblog.com/2026/05/more-granular-admin-controls-for-Workspace-Studio-steps-and-starters.html",
+    "http://workspaceupdates.googleblog.com/2026/05/gemini-lti-update-include-your-lms-sources-when-using-NotebookLM-in-Powerschool-Schoology.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.2",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.1",
+    "https://cursor.com/changelog#2026-05-29-auto-review-is-a-new-run-mode-that-allows-cursor-to-work-for-longer-with-fewer-a"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cursor",
+    "editor",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:anthropic_sdk_releases",
+    "rss:google_workspace_updates",
+    "rss:claude_code_releases",
+    "scrape:cursor_changelog",
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-05-29T23:42:02.439243Z"
+}
