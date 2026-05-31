@@ -1,6 +1,40 @@
 {
-  "generated_at": "2026-05-30T23:15:02.588096Z",
+  "generated_at": "2026-05-31T23:17:52.907027Z",
   "items": [
+    {
+      "id": "2026-06-01__daily-digest",
+      "date": "2026-06-01",
+      "title": "Tech Radar Daily Digest - 2026-06-01",
+      "type": "daily_digest",
+      "article_count": 7,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-workspaces-applications-windows-desktop-OS/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-dynamodb-streams-privatelink-fips-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-opensearch-serverless-next-generation-generally-available/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-iot-core-direct-messaging/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-partner-central-opportunity-deal-sizing-tcv/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.159",
+        "https://github.com/openai/codex/releases/tag/rust-v0.136.0-alpha.2"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-06-01__daily-digest.md"
+    },
     {
       "id": "2026-05-31__daily-digest",
       "date": "2026-05-31",
