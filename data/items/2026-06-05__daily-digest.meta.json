@@ -1,0 +1,50 @@
+{
+  "id": "2026-06-05__daily-digest",
+  "date": "2026-06-05",
+  "title": "Tech Radar Daily Digest - 2026-06-05",
+  "type": "daily_digest",
+  "article_count": 13,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cognito-multi-region/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-databases-vercel-aws-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-eks-capabilities-logging",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-mq-eur-sov-cloud",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-redesigned-console-optimized-openai-anthropic-compatible-apis/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.163",
+    "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.4",
+    "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.3",
+    "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.2",
+    "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.1",
+    "http://workspaceupdates.googleblog.com/2026/06/new-ios-device-management-settings-now-generally-available-in-Google-Endpoint-Management.html",
+    "https://docs.devin.ai/release-notes/overview#2026-06-03-personal-automations",
+    "https://cursor.com/changelog#2026-06-04-with"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "cursor",
+    "devin",
+    "editor",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "scrape:devin_release_notes",
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases",
+    "scrape:cursor_changelog",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-06-04T23:36:32.475784Z"
+}
