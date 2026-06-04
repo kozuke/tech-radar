@@ -1,6 +1,61 @@
 {
-  "generated_at": "2026-06-03T00:02:26.476951Z",
+  "generated_at": "2026-06-04T00:00:12.441492Z",
   "items": [
+    {
+      "id": "2026-06-04__daily-digest",
+      "date": "2026-06-04",
+      "title": "Tech Radar Daily Digest - 2026-06-04",
+      "type": "daily_digest",
+      "article_count": 19,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/aws-iot-device-management-mqtt/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-data-agent/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-unified-studio/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-step-functions-agentcore/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/GPT54-available-in-aws-govcloud-us-west/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.162",
+        "https://github.com/openai/codex/releases/tag/rust-vsigning-test-20260603T180504Z",
+        "https://github.com/openai/codex/releases/tag/rust-v0.137.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.137.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.137.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/python-v0.1.0b3",
+        "https://developers.googleblog.com/gemma-4-12b-the-developer-guide/",
+        "https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/",
+        "http://workspaceupdates.googleblog.com/2026/06/gmail-as-source-in-ask-gemini-in-drive-now-generally-available.html",
+        "http://workspaceupdates.googleblog.com/2026/05/data-loss-prevention-policies-for-Google-Calendar-now-available-in-GA.html",
+        "http://workspaceupdates.googleblog.com/2026/06/new-data-loss-prevention-capabilities-for-file-attachments-and-proximity-conditions-are-generally-available.html",
+        "http://workspaceupdates.googleblog.com/2026/06/quickly-scan-multiple-pages-in-google-Drive-on-Android.html",
+        "http://workspaceupdates.googleblog.com/2026/06/enhanced-data-protection-for-managed-third-party-apps.html",
+        "https://cursor.com/changelog#2026-06-03-enterprise-customers-can-now-manage-multiple-cursor-teams-from-one-place-with-di"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates",
+        "rss:google_developers",
+        "rss:openai_codex_cli_releases",
+        "scrape:cursor_changelog",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-06-04__daily-digest.md"
+    },
     {
       "id": "2026-06-03__daily-digest",
       "date": "2026-06-03",
