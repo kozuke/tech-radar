@@ -1,6 +1,56 @@
 {
-  "generated_at": "2026-06-04T23:36:32.476220Z",
+  "generated_at": "2026-06-05T23:38:05.774437Z",
   "items": [
+    {
+      "id": "2026-06-06__daily-digest",
+      "date": "2026-06-06",
+      "title": "Tech Radar Daily Digest - 2026-06-06",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-runtime/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/gdc-s3tables-simplified-permissions-in-aws-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/opensearch-ui-govcloud-region",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ecs-fargate-32vcpu",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-mcp-server/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.165",
+        "https://github.com/openai/codex/releases/tag/rusty-v8-v149.2.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.5",
+        "https://developers.googleblog.com/introducing-the-google-colab-cli/",
+        "http://workspaceupdates.googleblog.com/2026/06/weekly-recap-06-05-2026.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.106.0",
+        "https://cursor.com/changelog#2026-06-05-with-design-mode-in-the-cursor-browser-you-can-click-draw-or-describe-changes-by"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:anthropic_sdk_releases",
+        "rss:google_workspace_updates",
+        "rss:aws_whats_new",
+        "scrape:cursor_changelog",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:google_developers"
+      ],
+      "summary_path": "data/items/2026-06-06__daily-digest.md"
+    },
     {
       "id": "2026-06-05__daily-digest",
       "date": "2026-06-05",
