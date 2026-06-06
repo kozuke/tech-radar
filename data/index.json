@@ -1,6 +1,44 @@
 {
-  "generated_at": "2026-06-05T23:38:05.774437Z",
+  "generated_at": "2026-06-06T23:17:06.866294Z",
   "items": [
+    {
+      "id": "2026-06-07__daily-digest",
+      "date": "2026-06-07",
+      "title": "Tech Radar Daily Digest - 2026-06-07",
+      "type": "daily_digest",
+      "article_count": 9,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-data-agent-bdc/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/deadline-cloud/plugin-sync",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-compute-optimizer-ebs-ecs-32-day-lookback/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/region-switch-aurora-scaling-neptune-failover/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/keyspaces-cdc-iterator-position/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.167",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.166",
+        "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.6",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.107.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:anthropic_sdk_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-06-07__daily-digest.md"
+    },
     {
       "id": "2026-06-06__daily-digest",
       "date": "2026-06-06",
