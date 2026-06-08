@@ -1,6 +1,50 @@
 {
-  "generated_at": "2026-06-07T23:19:29.811954Z",
+  "generated_at": "2026-06-08T23:36:46.664803Z",
   "items": [
+    {
+      "id": "2026-06-09__daily-digest",
+      "date": "2026-06-09",
+      "title": "Tech Radar Daily Digest - 2026-06-09",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-compute-optimizer-six-new-idle",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-msk-express-topic-support-kstreams/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-documentdb-engine-minor-version-5-0-1/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-savings-plans-coverage/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/postgresql-19-beta-1-amazon-rds-database-preview-environment/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.169",
+        "https://github.com/openai/codex/releases/tag/rust-v0.139.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.138.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.8",
+        "https://github.com/openai/codex/releases/tag/rust-v0.138.0-alpha.7",
+        "http://workspaceupdates.googleblog.com/2026/06/introducing-workspace-policy-api-mutate-endpoints-for-DLP.html",
+        "http://workspaceupdates.googleblog.com/2026/06/convert-rubric-files-and-images-into-Google-Classroom-rubrics-with-help-from-Gemini.html",
+        "http://workspaceupdates.googleblog.com/2026/06/request-lightweight-document-alignment-with approvals in Google Drive.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-06-09__daily-digest.md"
+    },
     {
       "id": "2026-06-08__daily-digest",
       "date": "2026-06-08",
