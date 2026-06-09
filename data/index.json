@@ -1,6 +1,48 @@
 {
-  "generated_at": "2026-06-08T23:36:46.664803Z",
+  "generated_at": "2026-06-09T23:43:10.163266Z",
   "items": [
+    {
+      "id": "2026-06-10__daily-digest",
+      "date": "2026-06-10",
+      "title": "Tech Radar Daily Digest - 2026-06-10",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-sagemaker-unified-studio-emr/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-s3-access-grants-european-sovereign-cloud-germany-region",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-finops-agent-preview/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/claude-fable-5-aws/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-backup-amazon-eks-aws-european-sovereign-cloud/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.170",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.139.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.139.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.139.0-alpha.2",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.0",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.108.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:anthropic_sdk_releases"
+      ],
+      "summary_path": "data/items/2026-06-10__daily-digest.md"
+    },
     {
       "id": "2026-06-09__daily-digest",
       "date": "2026-06-09",
