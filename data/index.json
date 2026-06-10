@@ -1,6 +1,59 @@
 {
-  "generated_at": "2026-06-09T23:43:10.163266Z",
+  "generated_at": "2026-06-10T23:50:16.347903Z",
   "items": [
+    {
+      "id": "2026-06-11__daily-digest",
+      "date": "2026-06-11",
+      "title": "Tech Radar Daily Digest - 2026-06-11",
+      "type": "daily_digest",
+      "article_count": 15,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/ecs-managed-daemons-pid-ipc-modes/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/ec2-m9g-m9gd-instances-graviton5-processors-available",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-p6-b200-aws-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-cost-usage-report/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-fsx-openzfs/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.172",
+        "https://github.com/openai/codex/releases/tag/rust-vrust-v0.140.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.3",
+        "https://developers.googleblog.com/diffusiongemma-the-developer-guide/",
+        "http://workspaceupdates.googleblog.com/2026/06/google-meet-now-supports-sending-1080p-HD-video-from-ChromeOS-meeting-room-hardware.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.1",
+        "https://cursor.com/changelog#2026-06-10-the-average-review-time-for-bugbot-is-now-90-seconds-down-from-5-minutes-bugbot-"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_developers",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "scrape:cursor_changelog",
+        "rss:anthropic_sdk_releases",
+        "rss:google_workspace_updates",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-06-11__daily-digest.md"
+    },
     {
       "id": "2026-06-10__daily-digest",
       "date": "2026-06-10",
