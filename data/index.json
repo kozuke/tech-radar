@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-06-10T23:50:16.347903Z",
+  "generated_at": "2026-06-11T23:53:40.668821Z",
   "items": [
+    {
+      "id": "2026-06-12__daily-digest",
+      "date": "2026-06-12",
+      "title": "Tech Radar Daily Digest - 2026-06-12",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-aurora-postgresql-major-version-18/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/elastic-beanstalk-cloudwatch-logs/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-mwaa-serverless-eventbridge/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-managed-service-prometheus-native-histograms/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-managed-service-prometheus-outoforder-ingestion/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.173",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.12",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.11",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.10",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.9",
+        "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.8",
+        "http://workspaceupdates.googleblog.com/2026/06/google-vault-now-supports-retention-rules-and-litigation-holds-for-Gemini-app.html",
+        "https://docs.devin.ai/release-notes/overview#2026-06-10-devin-review-pending-pr-reviews-canceled-on-new-commits"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "scrape:devin_release_notes",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-06-12__daily-digest.md"
+    },
     {
       "id": "2026-06-11__daily-digest",
       "date": "2026-06-11",
