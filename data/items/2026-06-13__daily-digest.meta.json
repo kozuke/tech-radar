@@ -1,0 +1,44 @@
+{
+  "id": "2026-06-13__daily-digest",
+  "date": "2026-06-13",
+  "title": "Tech Radar Daily Digest - 2026-06-13",
+  "type": "daily_digest",
+  "article_count": 13,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-lightsail-aws-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-sagemaker-ft-nemotron-3/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-i7i-instances-europe-paris-region/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-capacity-blocks-ml-govcloud/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-u7i-8tb-europe-paris/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.176",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.175",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.174",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.16",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.15",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.14",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.13",
+    "http://workspaceupdates.googleblog.com/2026/06/weekly-recap-06-12-2026.html"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new",
+    "rss:claude_code_releases",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-06-12T23:49:41.335744Z"
+}
