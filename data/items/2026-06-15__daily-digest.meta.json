@@ -1,0 +1,29 @@
+{
+  "id": "2026-06-15__daily-digest",
+  "date": "2026-06-15",
+  "title": "Tech Radar Daily Digest - 2026-06-15",
+  "type": "daily_digest",
+  "article_count": 6,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/opensearch-agentic-observability-mcp-app",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/gemma-4-amazon-bedrock/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-flow-logs-metadata",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-metal-sizes-network-EBS/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/amazon-emr-serverless-spark-connect",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.19"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "openai"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-06-14T23:37:48.589937Z"
+}
