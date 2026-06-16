@@ -1,0 +1,45 @@
+{
+  "id": "2026-06-16__daily-digest",
+  "date": "2026-06-16",
+  "title": "Tech Radar Daily Digest - 2026-06-16",
+  "type": "daily_digest",
+  "article_count": 12,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/05/agentcore-memory-scmetadata",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/on-demand-cross-region-replication/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-log-analytics/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-route-53-resolver-dns/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ecs-express-mode-govcloud/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.178",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.22",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.21",
+    "https://github.com/openai/codex/releases/tag/rust-v0.140.0-alpha.20",
+    "http://workspaceupdates.googleblog.com/2026/06/carrier-link-for-google-voice.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.2"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "rss:anthropic_sdk_releases",
+    "rss:aws_whats_new",
+    "rss:claude_code_releases",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-06-16T00:02:00.744277Z"
+}
