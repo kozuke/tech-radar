@@ -1,0 +1,49 @@
+{
+  "id": "2026-06-17__daily-digest",
+  "date": "2026-06-17",
+  "title": "Tech Radar Daily Digest - 2026-06-17",
+  "type": "daily_digest",
+  "article_count": 16,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-transform-model-to-model-assessments",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-transform-mainframe-traceable-reimagine-workflow/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-sign-in/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-redshift-rg-instances-3-additional-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-blocks-preview",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.179",
+    "https://github.com/openai/codex/releases/tag/rust-v0.141.0-alpha.4",
+    "https://github.com/openai/codex/releases/tag/rust-v0.141.0-alpha.3",
+    "https://github.com/openai/codex/releases/tag/rust-v0.141.0-alpha.2",
+    "https://github.com/openai/codex/releases/tag/rust-v0.141.0-alpha.1",
+    "https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/",
+    "https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/",
+    "http://workspaceupdates.googleblog.com/2026/06/temporary-chats-and-conversation-deletion-control-for-gemini.html",
+    "http://workspaceupdates.googleblog.com/2026/06/expanded-availability-gemini-in-chrome.html",
+    "http://workspaceupdates.googleblog.com/2026/06/AI-note-taking-in-google-voice.html",
+    "http://workspaceupdates.googleblog.com/2026/06/discoverable-space-setting-chat.html"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_developers",
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-06-16T23:47:47.583226Z"
+}
