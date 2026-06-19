@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-06-19T00:00:21.533139Z",
+  "generated_at": "2026-06-19T23:14:22.199718Z",
   "items": [
+    {
+      "id": "2026-06-20__daily-digest",
+      "date": "2026-06-20",
+      "title": "Tech Radar Daily Digest - 2026-06-20",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-local-zones-hanoi-vietnam/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-synthetics-multilocation/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-msk-express-intelligent/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/all-minilm-l12-v2-on-sagemaker-jumpstart/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-compute-optimizer-enhances-ebs-recommendations/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.183",
+        "https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.141.0-alpha.7",
+        "http://workspaceupdates.googleblog.com/2026/06/weekly-recap-06-19-2026.html",
+        "https://cli.devin.ai/docs/changelog/stable#2026-07-23-fixed"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "scrape:devin_cli_changelog",
+        "rss:google_workspace_updates",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-06-20__daily-digest.md"
+    },
     {
       "id": "2026-06-19__daily-digest",
       "date": "2026-06-19",
