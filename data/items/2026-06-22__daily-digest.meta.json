@@ -1,0 +1,31 @@
+{
+  "id": "2026-06-22__daily-digest",
+  "date": "2026-06-22",
+  "title": "Tech Radar Daily Digest - 2026-06-22",
+  "type": "daily_digest",
+  "article_count": 8,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/ubuntu-china-zhy/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/rds-sqlserver-increases-gp3-limits/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-outposts-amd-bmn-cx3a/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-quick/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-new-optimization-capabilities",
+    "https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.10",
+    "https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.9",
+    "https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.8"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "openai"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-06-21T23:44:20.169125Z"
+}
