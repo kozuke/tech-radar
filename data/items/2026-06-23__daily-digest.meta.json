@@ -1,0 +1,46 @@
+{
+  "id": "2026-06-23__daily-digest",
+  "date": "2026-06-23",
+  "title": "Tech Radar Daily Digest - 2026-06-23",
+  "type": "daily_digest",
+  "article_count": 13,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-healthomics-nextflow-profiles/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-lambda-microvms/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-network-firewall-updates-default-drop-action",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/batch-ordered-allocation-strategies/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-identity-center-separate-quotas/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.186",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.1",
+    "https://github.com/openai/codex/releases/tag/rust-v0.142.0",
+    "https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.12",
+    "https://github.com/openai/codex/releases/tag/rust-v0.142.0-alpha.11",
+    "https://developers.googleblog.com/measuring-what-matters-with-jules/",
+    "https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/",
+    "http://workspaceupdates.googleblog.com/2026/06/troubleshoot-formula-errors-in-sheets.html"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_developers",
+    "rss:openai_codex_cli_releases",
+    "rss:claude_code_releases",
+    "rss:aws_whats_new",
+    "rss:google_workspace_updates"
+  ],
+  "created_at": "2026-06-22T23:42:57.193928Z"
+}
