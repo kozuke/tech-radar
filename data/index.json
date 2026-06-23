@@ -1,6 +1,56 @@
 {
-  "generated_at": "2026-06-22T23:42:57.194807Z",
+  "generated_at": "2026-06-23T23:21:17.735152Z",
   "items": [
+    {
+      "id": "2026-06-24__daily-digest",
+      "date": "2026-06-24",
+      "title": "Tech Radar Daily Digest - 2026-06-24",
+      "type": "daily_digest",
+      "article_count": 16,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-syslog-ingestion/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/03/g6e-new-launch-sagemaker-notebook-instances/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/agentcore-memory-cross-account-access",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/healthomics-scratch-storage/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cognito-customer-managed-key",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.187",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.9",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.8",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.5",
+        "http://workspaceupdates.googleblog.com/2026/06/room-codes-google-meet-hardware-early-preview.html",
+        "http://workspaceupdates.googleblog.com/2026/06/google-apps-script-workspace-core-service.html",
+        "http://workspaceupdates.googleblog.com/2026/06/join-google-meet-calls-from-safari-on-iOS-devices.html",
+        "http://workspaceupdates.googleblog.com/2026/06/enhanced-security-monitoring-with-expanded-Admin-password-reset-alerts.html",
+        "https://cursor.com/changelog#2026-06-22-plugins-skills-and-mcps-let-you-customize-cursor-for-your-workflows-the-new-cust"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "scrape:cursor_changelog",
+        "rss:google_workspace_updates",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-06-24__daily-digest.md"
+    },
     {
       "id": "2026-06-23__daily-digest",
       "date": "2026-06-23",
