@@ -1,0 +1,53 @@
+{
+  "id": "2026-06-25__daily-digest",
+  "date": "2026-06-25",
+  "title": "Tech Radar Daily Digest - 2026-06-25",
+  "type": "daily_digest",
+  "article_count": 16,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/ec2-image-watermarks-allowed-images",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-emr-serverless/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-iot-device-sdk-swift/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-neptune-aws-cloudformation/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-tags-on-dashboards",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.191",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.190",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.15",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.14",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.13",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.12",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.11",
+    "http://workspaceupdates.googleblog.com/2026/06/stricter-classifications-for-google-groups-to-enhance-data-security-and-privacy.html",
+    "http://workspaceupdates.googleblog.com/2026/06/updates-to-gemini-in-google-classroom.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.112.0",
+    "https://cli.devin.ai/docs/changelog/stable#2026-08-18-added"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cli",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new",
+    "scrape:devin_cli_changelog",
+    "rss:anthropic_sdk_releases",
+    "rss:claude_code_releases",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-06-24T23:34:03.085358Z"
+}
