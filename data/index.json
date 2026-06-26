@@ -1,6 +1,50 @@
 {
-  "generated_at": "2026-06-25T23:45:21.215803Z",
+  "generated_at": "2026-06-26T23:34:36.700077Z",
   "items": [
+    {
+      "id": "2026-06-27__daily-digest",
+      "date": "2026-06-27",
+      "title": "Tech Radar Daily Digest - 2026-06-27",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-r8g-instances-additional-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-c8in-ireland-ohio/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-redshift-ri-upfront-pricing-rg-instances",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/default-govcloud-us-based-support/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-backup-amazon-s3-copy-enhancement/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.195",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.26",
+        "https://github.com/openai/codex/releases/tag/rust-v0.142.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.20",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.19",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.18",
+        "http://workspaceupdates.googleblog.com/2026/06/weekly-recap-06-26-2026.html",
+        "http://workspaceupdates.googleblog.com/2026/06/streamline-your-data-backups-with-incremental-exports-for-Google-Workspace.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-06-27__daily-digest.md"
+    },
     {
       "id": "2026-06-26__daily-digest",
       "date": "2026-06-26",
