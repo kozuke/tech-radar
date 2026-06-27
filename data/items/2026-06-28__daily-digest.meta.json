@@ -1,0 +1,34 @@
+{
+  "id": "2026-06-28__daily-digest",
+  "date": "2026-06-28",
+  "title": "Tech Radar Daily Digest - 2026-06-28",
+  "type": "daily_digest",
+  "article_count": 8,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-rds-custom-supports-latest-cu-gdr-updates-microsoft-sql-server",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-rds-supports-latest-gdr-updates-microsoft-sql-server",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/opensearch-ingestion-europe-paris-region-availability",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-route-53-global-resolver/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-ec2-u7in-24tb-aws-seoul/",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.28",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.27",
+    "https://docs.devin.ai/release-notes/overview#2026-06-26-archive-unarchive-sessions-from-command-palette"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "openai"
+  ],
+  "sources": [
+    "scrape:devin_release_notes",
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-06-27T23:16:44.682543Z"
+}
