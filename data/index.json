@@ -1,6 +1,35 @@
 {
-  "generated_at": "2026-06-27T23:16:44.683300Z",
+  "generated_at": "2026-06-28T23:17:53.467141Z",
   "items": [
+    {
+      "id": "2026-06-29__daily-digest",
+      "date": "2026-06-29",
+      "title": "Tech Radar Daily Digest - 2026-06-29",
+      "type": "daily_digest",
+      "article_count": 6,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-guardduty/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-guardrails/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-otel-amazon-eks/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/claude-tag-aws-marketplace/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-opensearch-service-ai-migrations",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.29"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-06-29__daily-digest.md"
+    },
     {
       "id": "2026-06-28__daily-digest",
       "date": "2026-06-28",
