@@ -1,6 +1,51 @@
 {
-  "generated_at": "2026-06-29T23:16:16.982103Z",
+  "generated_at": "2026-06-30T23:37:54.522531Z",
   "items": [
+    {
+      "id": "2026-07-01__daily-digest",
+      "date": "2026-07-01",
+      "title": "Tech Radar Daily Digest - 2026-07-01",
+      "type": "daily_digest",
+      "article_count": 15,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-cloudwatch-logs-resource-tags/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-cloudformation/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-cloudformation-cdk/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-rds-iam/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-parallel-computing-service-upgrade/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.197",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.196",
+        "https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/",
+        "https://developers.googleblog.com/announcing-adk-go-20/",
+        "http://workspaceupdates.googleblog.com/2026/06/ai-overviews-in-drive-now-available-on-mobile.html",
+        "http://workspaceupdates.googleblog.com/2026/06/work-with-delegated-gmail-accounts-from-mobile-devices.html",
+        "http://workspaceupdates.googleblog.com/2026/06/ask-gemini-in-drive-now-available-on-mobile.html",
+        "http://workspaceupdates.googleblog.com/2026/06/create-fully-native-and-editable-presentations-with-Gemini-in-Google-Slides.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "claude",
+        "claude_code",
+        "cloud",
+        "gemini",
+        "google",
+        "notebooklm",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_developers",
+        "rss:google_workspace_updates",
+        "rss:anthropic_sdk_releases",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-07-01__daily-digest.md"
+    },
     {
       "id": "2026-06-30__daily-digest",
       "date": "2026-06-30",
