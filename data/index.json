@@ -1,6 +1,58 @@
 {
-  "generated_at": "2026-06-30T23:37:54.522531Z",
+  "generated_at": "2026-07-01T23:42:25.826876Z",
   "items": [
+    {
+      "id": "2026-07-02__daily-digest",
+      "date": "2026-07-02",
+      "title": "Tech Radar Daily Digest - 2026-07-02",
+      "type": "daily_digest",
+      "article_count": 14,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-bedrock-agentcore-increases-default-runtime-quota-limits/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-cloudwatch-log-alarms/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-artifact-assurance-assistant/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-marketplace-co-selling-support/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-cross-region-automated-backups-additional-aws-regions/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.198",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.32",
+        "https://github.com/openai/codex/releases/tag/rust-v0.142.5",
+        "https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/",
+        "https://developers.googleblog.com/why-we-built-adk-20/",
+        "https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/",
+        "http://workspaceupdates.googleblog.com/2026/06/import-3d-bar-charts-into-google-sheets.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.1",
+        "https://cursor.com/changelog#2026-06-30-we-ve-expanded"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:anthropic_sdk_releases",
+        "scrape:cursor_changelog",
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates",
+        "rss:google_developers",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-07-02__daily-digest.md"
+    },
     {
       "id": "2026-07-01__daily-digest",
       "date": "2026-07-01",
