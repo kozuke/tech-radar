@@ -1,6 +1,45 @@
 {
-  "generated_at": "2026-07-01T23:42:25.826876Z",
+  "generated_at": "2026-07-02T23:29:58.258651Z",
   "items": [
+    {
+      "id": "2026-07-03__daily-digest",
+      "date": "2026-07-03",
+      "title": "Tech Radar Daily Digest - 2026-07-03",
+      "type": "daily_digest",
+      "article_count": 9,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-sagemaker-unified-studio-terraform/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-ec2-x8i-instances-ICN-KUL-NRT-region/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-amd-sev-snp-dedicated-hosts",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-config-new-resource-types",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-aws-management-console/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.34",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.33",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.116.0",
+        "https://docs.devin.ai/release-notes/overview#2026-07-01-no-access-permission-popover"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:anthropic_sdk_releases",
+        "scrape:devin_release_notes",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-07-03__daily-digest.md"
+    },
     {
       "id": "2026-07-02__daily-digest",
       "date": "2026-07-02",
