@@ -1,0 +1,40 @@
+{
+  "id": "2026-07-04__daily-digest",
+  "date": "2026-07-04",
+  "title": "Tech Radar Daily Digest - 2026-07-04",
+  "type": "daily_digest",
+  "article_count": 9,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-sagemaker-hyperpod-ami-version-auto-patch",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-four-additional-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-circuit-breaker-settings/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-guardduty-sfm/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/6/aws-appconfig-experimentation/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.200",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.199",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.35",
+    "http://workspaceupdates.googleblog.com/2026/07/weekly-recap-07-03-2026.html"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-07-03T23:18:08.180829Z"
+}
