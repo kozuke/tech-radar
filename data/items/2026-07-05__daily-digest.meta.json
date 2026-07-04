@@ -1,0 +1,28 @@
+{
+  "id": "2026-07-05__daily-digest",
+  "date": "2026-07-05",
+  "title": "Tech Radar Daily Digest - 2026-07-05",
+  "type": "daily_digest",
+  "article_count": 6,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ecs-express-mode-custom-task-def/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-eks-version-rollback",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-managed-service-prometheus-fedramp-high/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-security-agent-asia-pacific/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-db2-supports-self-managed-active-directory",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.201"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "claude",
+    "claude_code",
+    "cloud"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-07-04T23:12:28.475492Z"
+}
