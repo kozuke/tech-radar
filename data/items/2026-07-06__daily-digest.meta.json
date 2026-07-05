@@ -1,0 +1,29 @@
+{
+  "id": "2026-07-06__daily-digest",
+  "date": "2026-07-06",
+  "title": "Tech Radar Daily Digest - 2026-07-06",
+  "type": "daily_digest",
+  "article_count": 6,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-opensearch-service-optimized-log-analytics",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/screen-recording-rule-based/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-elasticache-t4g-additional-aws-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-neptune-ipv6/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/connect-7-security-profiles-user/",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.36"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "openai"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-07-05T23:18:22.474488Z"
+}
