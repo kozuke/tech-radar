@@ -1,6 +1,55 @@
 {
-  "generated_at": "2026-07-05T23:18:22.475161Z",
+  "generated_at": "2026-07-06T23:32:05.638803Z",
   "items": [
+    {
+      "id": "2026-07-07__daily-digest",
+      "date": "2026-07-07",
+      "title": "Tech Radar Daily Digest - 2026-07-07",
+      "type": "daily_digest",
+      "article_count": 11,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/7/amazon-sagemaker-hyperpod-dpd/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/cognito-provisioned-limits",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-evs-vcf9",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-certificate-manager-acme/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/cloudwatch-service-events/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.202",
+        "https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.37",
+        "https://developers.googleblog.com/we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext/",
+        "http://workspaceupdates.googleblog.com/2026/07/join-video-conferences-on-google-meet-hardware-via-SIP-through-Pexip.html",
+        "https://docs.devin.ai/release-notes/overview#2026-07-03-diff-line-permalinks",
+        "https://cli.devin.ai/docs/changelog/stable#3000-01-23-added"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:google_developers",
+        "rss:openai_codex_cli_releases",
+        "scrape:devin_release_notes",
+        "scrape:devin_cli_changelog",
+        "rss:claude_code_releases",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-07-07__daily-digest.md"
+    },
     {
       "id": "2026-07-06__daily-digest",
       "date": "2026-07-06",
