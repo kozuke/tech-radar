@@ -1,0 +1,46 @@
+{
+  "id": "2026-07-09__daily-digest",
+  "date": "2026-07-09",
+  "title": "Tech Radar Daily Digest - 2026-07-09",
+  "type": "daily_digest",
+  "article_count": 13,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-builder-center-sandbox/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-security-hub-network-scanning/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-graviton-rg-instances-trailing-track",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-aurora-dsql-cdc-ga/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-connect-customer-agent-scheduling-tasks/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.205",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.204",
+    "https://github.com/openai/codex/releases/tag/rust-v0.144.0-alpha.3",
+    "https://github.com/openai/codex/releases/tag/rust-v0.144.0-alpha.2",
+    "https://github.com/openai/codex/releases/tag/rust-v0.144.0-alpha.1",
+    "https://github.com/openai/codex/releases/tag/rust-v0.143.0",
+    "https://developers.googleblog.com/bridging-the-domain-gap-ai-race-coach-built-with-antigravity-and-gemini/",
+    "http://workspaceupdates.googleblog.com/2026/07/convert-your-google-slides-to-videos-in-7-additional-languages.html"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new",
+    "rss:google_developers",
+    "rss:google_workspace_updates",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-07-08T23:30:19.566021Z"
+}
