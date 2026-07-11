@@ -1,6 +1,40 @@
 {
-  "generated_at": "2026-07-10T23:12:41.223082Z",
+  "generated_at": "2026-07-11T23:10:24.022932Z",
   "items": [
+    {
+      "id": "2026-07-12__daily-digest",
+      "date": "2026-07-12",
+      "title": "Tech Radar Daily Digest - 2026-07-12",
+      "type": "daily_digest",
+      "article_count": 7,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2025/06/ami-configuration-continuous-slurm/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-i7ie-instances-aws-hyd-region/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-documentdb-r8g-24xl-48xl/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-dms-sc-ai-agent-automation-mcp-server/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-organizations-security-controls-new-orgs-console",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.207",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.4"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-07-12__daily-digest.md"
+    },
     {
       "id": "2026-07-11__daily-digest",
       "date": "2026-07-11",
