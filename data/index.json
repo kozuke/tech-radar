@@ -1,6 +1,28 @@
 {
-  "generated_at": "2026-07-11T23:10:24.022932Z",
+  "generated_at": "2026-07-12T23:08:35.897998Z",
   "items": [
+    {
+      "id": "2026-07-13__daily-digest",
+      "date": "2026-07-13",
+      "title": "Tech Radar Daily Digest - 2026-07-13",
+      "type": "daily_digest",
+      "article_count": 5,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/oauth-aws-mcp-server/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-i8g-instances-aws-govcloud-us-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-replace-root-volume-ebs-volume/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-msk-replicator-external-kafka-standard-broker-support",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-config-additional-managed-rules"
+      ],
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "sources": [
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-07-13__daily-digest.md"
+    },
     {
       "id": "2026-07-12__daily-digest",
       "date": "2026-07-12",
