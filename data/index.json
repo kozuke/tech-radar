@@ -1,6 +1,62 @@
 {
-  "generated_at": "2026-07-15T23:11:50.485490Z",
+  "generated_at": "2026-07-16T23:10:12.975004Z",
   "items": [
+    {
+      "id": "2026-07-17__daily-digest",
+      "date": "2026-07-17",
+      "title": "Tech Radar Daily Digest - 2026-07-17",
+      "type": "daily_digest",
+      "article_count": 20,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-managed-grafana-fedramp-high/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/monitor-cost-efficiency-using-dashboards",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-public-images-ssm-parameters",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-s3-event-notifications-system-generated-tags/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/postgresql-19-beta-2-amazon-rds-database-preview-environment/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.20",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.19",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.18",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.17",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.16",
+        "https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/",
+        "https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/",
+        "https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/",
+        "http://workspaceupdates.googleblog.com/2026/07/new-google-meet-take-notes-for-me-settings-for-admins-and-end-users.html",
+        "http://workspaceupdates.googleblog.com/2026/07/cast-yourself-in-ai-video-clips-using-your-personal-avatar-with-Gemini-Omni-in-Vids.html",
+        "http://workspaceupdates.googleblog.com/2026/07/generate-higher-quality-ai-video-clips-and-edit-any-video-with-Gemini-Omni-in-Vids.html",
+        "http://workspaceupdates.googleblog.com/2026/07/expanded-language-support-for-gemini-in-Google-Docs.html",
+        "http://workspaceupdates.googleblog.com/2026/06/easily-steer-ai-voiceover-and-avatar-speaking-with-emotions-pacing-and-sound-effects.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0",
+        "https://docs.devin.ai/release-notes/overview#2026-07-15-quote-text-in-your-messages"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:google_developers",
+        "rss:anthropic_sdk_releases",
+        "rss:openai_codex_cli_releases",
+        "scrape:devin_release_notes",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-07-17__daily-digest.md"
+    },
     {
       "id": "2026-07-16__daily-digest",
       "date": "2026-07-16",
