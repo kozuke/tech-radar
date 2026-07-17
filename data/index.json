@@ -1,6 +1,54 @@
 {
-  "generated_at": "2026-07-16T23:10:12.975004Z",
+  "generated_at": "2026-07-17T23:07:34.809430Z",
   "items": [
+    {
+      "id": "2026-07-18__daily-digest",
+      "date": "2026-07-18",
+      "title": "Tech Radar Daily Digest - 2026-07-18",
+      "type": "daily_digest",
+      "article_count": 14,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-gamelift-streams-iam/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-opensearch-ui-one-click-dashboard-migration",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-sustainability-water-withdrawals/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-adds-rg-large-12xlarge-instance-sizes",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-high-memory-europe/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.212",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.23",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.22",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.21",
+        "https://github.com/openai/codex/releases/tag/rust-v0.144.5",
+        "https://github.com/openai/codex/releases/tag/python-v0.144.4",
+        "http://workspaceupdates.googleblog.com/2026/07/weekly-recap-07-17-2026.html",
+        "http://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html",
+        "https://cursor.com/changelog#2026-07-17-cursor-in-slack-now-shares-a-plan-before-it-starts-runs-in-multi-repo-environmen"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "scrape:cursor_changelog",
+        "rss:google_workspace_updates",
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-07-18__daily-digest.md"
+    },
     {
       "id": "2026-07-17__daily-digest",
       "date": "2026-07-17",
