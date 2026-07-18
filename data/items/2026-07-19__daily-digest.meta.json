@@ -1,0 +1,35 @@
+{
+  "id": "2026-07-19__daily-digest",
+  "date": "2026-07-19",
+  "title": "Tech Radar Daily Digest - 2026-07-19",
+  "type": "daily_digest",
+  "article_count": 8,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/hyperpod-partition-topology-slurm/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/s3-removes-30-day-transitions-standard-ia-one-zone-ia",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-backup-logically-air-gapped-vault-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-backup-restore-testing-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-control-tower-account/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+    "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.24",
+    "https://github.com/openai/codex/releases/tag/rust-v0.144.6"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "openai"
+  ],
+  "sources": [
+    "rss:claude_code_releases",
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-07-18T23:11:50.317240Z"
+}
