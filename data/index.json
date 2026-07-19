@@ -1,6 +1,34 @@
 {
-  "generated_at": "2026-07-18T23:11:50.318275Z",
+  "generated_at": "2026-07-19T23:11:03.281959Z",
   "items": [
+    {
+      "id": "2026-07-20__daily-digest",
+      "date": "2026-07-20",
+      "title": "Tech Radar Daily Digest - 2026-07-20",
+      "type": "daily_digest",
+      "article_count": 6,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-aurora-dsql-now-in-scope-for-fedramp-moderate/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/7/amazon-cloudwatch-logs-insights-ql/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-g7e-additional-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-express-version-42/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-upto-four-storage-modifications-24-hours",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.215"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "claude",
+        "claude_code",
+        "cloud"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-07-20__daily-digest.md"
+    },
     {
       "id": "2026-07-19__daily-digest",
       "date": "2026-07-19",
