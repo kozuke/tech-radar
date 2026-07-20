@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-07-19T23:11:03.281959Z",
+  "generated_at": "2026-07-20T23:14:13.710200Z",
   "items": [
+    {
+      "id": "2026-07-21__daily-digest",
+      "date": "2026-07-21",
+      "title": "Tech Radar Daily Digest - 2026-07-21",
+      "type": "daily_digest",
+      "article_count": 10,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-data-exports-amazon-bedrock-product-metadata/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-r8i-r8i-flex-instances-in-stockholm-zurich-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-cloudtrail-filter-useridentity-advance-selectors/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-connect-agentic-voice/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ec2-i8ge-instances-aws-govcloud-us-regions/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.216",
+        "https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.25",
+        "https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/",
+        "http://workspaceupdates.googleblog.com/2026/07/import-and-create-combo-charts-in-Google-Sheets.html",
+        "https://cli.devin.ai/docs/changelog/stable#2026-07-19-added"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_developers",
+        "rss:openai_codex_cli_releases",
+        "scrape:devin_cli_changelog",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-07-21__daily-digest.md"
+    },
     {
       "id": "2026-07-20__daily-digest",
       "date": "2026-07-20",
