@@ -1,0 +1,45 @@
+{
+  "id": "2026-07-24__daily-digest",
+  "date": "2026-07-24",
+  "title": "Tech Radar Daily Digest - 2026-07-24",
+  "type": "daily_digest",
+  "article_count": 11,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/credit-memo-applications/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-mysql-long-term-9-7-rds-database-preview/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-bedrock-agentcore-unified-observability-single-log-group/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-evs-available-in-additional-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/claude-sonnet-5-govcloud/",
+    "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.5",
+    "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.3.1",
+    "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.4",
+    "http://workspaceupdates.googleblog.com/2026/07/view-supporting-calendar-delegates-in-meeting-guest-list.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0",
+    "https://docs.devin.ai/release-notes/overview#2026-07-22-smarter-linear-thread-handling"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "scrape:devin_release_notes",
+    "rss:anthropic_sdk_releases",
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-07-23T23:10:57.507847Z"
+}
