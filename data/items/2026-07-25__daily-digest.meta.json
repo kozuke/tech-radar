@@ -1,0 +1,47 @@
+{
+  "id": "2026-07-25__daily-digest",
+  "date": "2026-07-25",
+  "title": "Tech Radar Daily Digest - 2026-07-25",
+  "type": "daily_digest",
+  "article_count": 12,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-mwaa-now-supports-apache-airflow-version-2-11-2",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/ec2-dedicated-hosts-hrg/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/kinesis/on-demand-scale-down",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-lambda-managed-instances-logs/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-ses-simplified-smtp-mail-manager",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+    "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.8",
+    "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.7",
+    "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.6",
+    "https://developers.googleblog.com/run-ray-on-tpu-part-2-ray-ai-libraries/",
+    "http://workspaceupdates.googleblog.com/2026/07/weekly-recap-07-24-2026.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.0"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_developers",
+    "rss:anthropic_sdk_releases",
+    "rss:openai_codex_cli_releases",
+    "rss:claude_code_releases",
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-07-24T23:16:00.022952Z"
+}
