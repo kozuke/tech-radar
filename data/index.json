@@ -1,6 +1,47 @@
 {
-  "generated_at": "2026-07-24T23:16:00.023878Z",
+  "generated_at": "2026-07-25T23:11:57.164240Z",
   "items": [
+    {
+      "id": "2026-07-26__daily-digest",
+      "date": "2026-07-26",
+      "title": "Tech Radar Daily Digest - 2026-07-26",
+      "type": "daily_digest",
+      "article_count": 11,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-connect/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/claude-opus-5-aws/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/kiro-opus-sonnet-monitoring-launch-aws-govcloud-us/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-bench/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/ecs-service-connect-zone-aware/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.220",
+        "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.11",
+        "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.10.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.10",
+        "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.9",
+        "https://docs.devin.ai/release-notes/overview#2026-07-24-redesigned-model-picker"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "openai"
+      ],
+      "sources": [
+        "scrape:devin_release_notes",
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-07-26__daily-digest.md"
+    },
     {
       "id": "2026-07-25__daily-digest",
       "date": "2026-07-25",
