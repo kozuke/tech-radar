@@ -1,6 +1,28 @@
 {
-  "generated_at": "2026-07-25T23:11:57.164240Z",
+  "generated_at": "2026-07-26T23:11:39.299731Z",
   "items": [
+    {
+      "id": "2026-07-27__daily-digest",
+      "date": "2026-07-27",
+      "title": "Tech Radar Daily Digest - 2026-07-27",
+      "type": "daily_digest",
+      "article_count": 5,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/lambdadf-dotnet/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-cloudwatch-logs/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-i8ge-additional-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/g7e-sagemaker-ai/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/g6-sagemaker-ai-inference/"
+      ],
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "sources": [
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-07-27__daily-digest.md"
+    },
     {
       "id": "2026-07-26__daily-digest",
       "date": "2026-07-26",
