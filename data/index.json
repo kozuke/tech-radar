@@ -1,6 +1,41 @@
 {
-  "generated_at": "2026-07-26T23:11:39.299731Z",
+  "generated_at": "2026-07-27T23:19:21.885664Z",
   "items": [
+    {
+      "id": "2026-07-28__daily-digest",
+      "date": "2026-07-28",
+      "title": "Tech Radar Daily Digest - 2026-07-28",
+      "type": "daily_digest",
+      "article_count": 8,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-gamelift-streams/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-security-hub-mcp-app/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/mediatail-configurable-ad-timeout-and-concurrency",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/rds-sql-server-supports-tde-for-maz/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-clean-rooms-32-vcpu-worker-types-sql",
+        "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.13",
+        "https://github.com/openai/codex/releases/tag/rust-v0.146.0-alpha.12",
+        "http://workspaceupdates.googleblog.com/2026/07/visual-screenshots-in-google-meet-meeting-notes-will-soon-be-generally-available-pre-configure-admin-settings-in-advance.html"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-07-28__daily-digest.md"
+    },
     {
       "id": "2026-07-27__daily-digest",
       "date": "2026-07-27",
