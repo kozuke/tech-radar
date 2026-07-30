@@ -1,0 +1,44 @@
+{
+  "id": "2026-07-31__daily-digest",
+  "date": "2026-07-31",
+  "title": "Tech Radar Daily Digest - 2026-07-31",
+  "type": "daily_digest",
+  "article_count": 10,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-direct-connect-bgp-visibility/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-redshift-rg-large-12xlarge-trailing-track",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/iam-policy-simulator-iam-console/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/openai-gpt-terra-luna-pricing-bedrock/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-transit-gateway-policy-based-routing/",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.2",
+    "https://developers.googleblog.com/how-to-use-google-microbenchmarks-for-evaluating-tpu-performance/",
+    "http://workspaceupdates.googleblog.com/2026/07/use-gemini-in-google-forms-to-quickly-create-a-new-quiz.html",
+    "https://docs.devin.ai/release-notes/overview#2026-07-29-word-level-diff-highlights",
+    "https://cli.devin.ai/docs/changelog/stable#2026-07-29-added"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cli",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases",
+    "scrape:devin_cli_changelog",
+    "rss:google_developers",
+    "scrape:devin_release_notes"
+  ],
+  "created_at": "2026-07-30T23:18:06.086555Z"
+}
