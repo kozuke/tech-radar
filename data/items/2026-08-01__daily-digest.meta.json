@@ -1,0 +1,40 @@
+{
+  "id": "2026-08-01__daily-digest",
+  "date": "2026-08-01",
+  "title": "Tech Radar Daily Digest - 2026-08-01",
+  "type": "daily_digest",
+  "article_count": 11,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-aurora-dsql-adds-multi-region-clusters-four-more-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-rds-oracle-r8i-m8i/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-lambda-java-amazon-linux/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/cloudwatch-managed-collectors/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-codedeploy-five-additional-regions",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.4",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.3",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.1.1",
+    "https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/",
+    "https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/",
+    "https://docs.devin.ai/release-notes/overview#2026-07-31-redesigned-changes-tab"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "gemini",
+    "google",
+    "openai"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases",
+    "scrape:devin_release_notes",
+    "rss:google_developers"
+  ],
+  "created_at": "2026-07-31T23:15:18.729239Z"
+}
