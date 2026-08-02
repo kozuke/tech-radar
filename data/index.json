@@ -1,6 +1,28 @@
 {
-  "generated_at": "2026-08-01T23:10:29.496502Z",
+  "generated_at": "2026-08-02T23:10:52.760787Z",
   "items": [
+    {
+      "id": "2026-08-03__daily-digest",
+      "date": "2026-08-03",
+      "title": "Tech Radar Daily Digest - 2026-08-03",
+      "type": "daily_digest",
+      "article_count": 5,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/aws-msk-streaming-tables-for-apache-iceberg",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/grok-4-3-bedrock-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/gemma-4-bedrock-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-microsoft-ad-edition-upgrade/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/amazon-opensearch-service/"
+      ],
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "sources": [
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-08-03__daily-digest.md"
+    },
     {
       "id": "2026-08-02__daily-digest",
       "date": "2026-08-02",
