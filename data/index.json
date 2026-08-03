@@ -1,6 +1,45 @@
 {
-  "generated_at": "2026-08-02T23:10:52.760787Z",
+  "generated_at": "2026-08-03T23:18:44.348028Z",
   "items": [
+    {
+      "id": "2026-08-04__daily-digest",
+      "date": "2026-08-04",
+      "title": "Tech Radar Daily Digest - 2026-08-04",
+      "type": "daily_digest",
+      "article_count": 10,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-gamelift-streams/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-resilience-hub/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-i7i-instances-in-additional-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-sagemaker-fft",
+        "https://aws.amazon.com/about-aws/whats-new/2026/7/aws-transform-windows-sql-schema-aurora",
+        "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.1.2",
+        "https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/",
+        "https://cursor.com/changelog#2026-08-03-cursor-can-now-read-write-and-act-across-your-google-workspace"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "rss:google_developers",
+        "rss:aws_whats_new",
+        "scrape:cursor_changelog",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-08-04__daily-digest.md"
+    },
     {
       "id": "2026-08-03__daily-digest",
       "date": "2026-08-03",
