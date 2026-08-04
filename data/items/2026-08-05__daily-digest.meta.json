@@ -1,0 +1,43 @@
+{
+  "id": "2026-08-05__daily-digest",
+  "date": "2026-08-05",
+  "title": "Tech Radar Daily Digest - 2026-08-05",
+  "type": "daily_digest",
+  "article_count": 13,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-export-cases/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-web/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-emr-ec2-spark-connect/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-security-hub-extended-adds-supply-chain-security",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-c8g-instances-additional-regions/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.222",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.8",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.7",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.6.4",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.6.3",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.6.2",
+    "https://developers.googleblog.com/a-unified-api-for-ai-model-routing/"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "openai"
+  ],
+  "sources": [
+    "rss:google_developers",
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-08-04T23:18:08.821253Z"
+}
