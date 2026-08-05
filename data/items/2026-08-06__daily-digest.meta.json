@@ -1,0 +1,37 @@
+{
+  "id": "2026-08-06__daily-digest",
+  "date": "2026-08-06",
+  "title": "Tech Radar Daily Digest - 2026-08-06",
+  "type": "daily_digest",
+  "article_count": 11,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-network-bandwidth/",
+    "https://aws.amazon.com/about-aws/whats-new/2025/11/amazon-keyspaces-apache-cassandra-canada-west/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-marketplace-ai-insights/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-dynamodb-vector-search",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-identity-center-accounts-optional/",
+    "https://github.com/openai/codex/releases/tag/rust-vrust-v0.147.0-alpha.9",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.12",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.11",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.10",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.9",
+    "https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "openai"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new",
+    "rss:google_developers"
+  ],
+  "created_at": "2026-08-05T23:17:22.759034Z"
+}
