@@ -1,0 +1,53 @@
+{
+  "id": "2026-08-07__daily-digest",
+  "date": "2026-08-07",
+  "title": "Tech Radar Daily Digest - 2026-08-07",
+  "type": "daily_digest",
+  "article_count": 17,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ecs-fractional-gpu/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-lambda-ide-kiro-cursor/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-g7-available-spain",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-bedrock-agentcore-runtime-instances-generally-available/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-elasticache-graviton4-m8g-r8g-c8gn/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.223",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.13",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.6.5",
+    "https://github.com/openai/codex/releases/tag/rust-v0.146.1",
+    "https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/",
+    "http://workspaceupdates.googleblog.com/2026/08/streamlining-rubric-generation-in-Google-Classroom-with-Gemini.html",
+    "http://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html",
+    "http://workspaceupdates.googleblog.com/2026/08/visual-screenshots-now-included-in-Google-Meet-meeting-notes.html",
+    "http://workspaceupdates.googleblog.com/2026/08/provide-more-clear-contextual-feedback-with-timestamped-comments-in-Google-Drive-videos.html",
+    "http://workspaceupdates.googleblog.com/2026/07/weekly-recap-07-31-2026.html",
+    "https://docs.devin.ai/release-notes/overview#2026-08-05-easier-recovery-from-failed-snapshot-builds"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:claude_code_releases",
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new",
+    "rss:google_developers",
+    "scrape:devin_release_notes"
+  ],
+  "created_at": "2026-08-07T01:33:54.927176Z"
+}
