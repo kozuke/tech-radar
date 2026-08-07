@@ -1,6 +1,49 @@
 {
-  "generated_at": "2026-08-07T01:33:54.928067Z",
+  "generated_at": "2026-08-07T22:55:22.075986Z",
   "items": [
+    {
+      "id": "2026-08-08__daily-digest",
+      "date": "2026-08-08",
+      "title": "Tech Radar Daily Digest - 2026-08-08",
+      "type": "daily_digest",
+      "article_count": 11,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-r8i-r8i-flex/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/07/timestream-influxdb-backup-restore/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-auth-agent-skill/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iam-identity-center-supports-one-click-multi-region-option-new-organization-instances",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/agentcore-memory-policy-harness-govcloud/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.224",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.1",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0",
+        "https://docs.devin.ai/release-notes/overview#2026-08-07-queueing-support-for-automations"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "openai"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:aws_whats_new",
+        "scrape:devin_release_notes"
+      ],
+      "summary_path": "data/items/2026-08-08__daily-digest.md"
+    },
     {
       "id": "2026-08-07__daily-digest",
       "date": "2026-08-07",
