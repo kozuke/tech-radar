@@ -1,0 +1,41 @@
+{
+  "id": "2026-08-09__daily-digest",
+  "date": "2026-08-09",
+  "title": "Tech Radar Daily Digest - 2026-08-09",
+  "type": "daily_digest",
+  "article_count": 10,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-vpc-ipam-bgp-rpki-byoip/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/gamelift-ec2-instance-expansion/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-opensearch-service-additional-upgrade-runway-support-dates",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ses-automated-email-interactions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-pcs-august/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.226",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.225",
+    "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.5",
+    "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.4",
+    "http://workspaceupdates.googleblog.com/2026/08/automatically-add-sources-to-your-Gemini-Notebooks-in-Workspace-Studio.html"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases",
+    "rss:claude_code_releases",
+    "rss:google_workspace_updates"
+  ],
+  "created_at": "2026-08-08T22:46:03.713628Z"
+}
