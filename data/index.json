@@ -1,6 +1,28 @@
 {
-  "generated_at": "2026-08-08T22:46:03.714638Z",
+  "generated_at": "2026-08-09T22:49:15.877915Z",
   "items": [
+    {
+      "id": "2026-08-10__daily-digest",
+      "date": "2026-08-10",
+      "title": "Tech Radar Daily Digest - 2026-08-10",
+      "type": "daily_digest",
+      "article_count": 5,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-waf-salt-security-managed-rules/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-gsr-10-more-regions",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/opensearch-ui-network-access-control",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-transform-for-migrations-automates-post-launch-actions",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-drill-down-metrics/"
+      ],
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "sources": [
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-08-10__daily-digest.md"
+    },
     {
       "id": "2026-08-09__daily-digest",
       "date": "2026-08-09",
