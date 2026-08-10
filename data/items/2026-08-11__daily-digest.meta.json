@@ -1,0 +1,30 @@
+{
+  "id": "2026-08-11__daily-digest",
+  "date": "2026-08-11",
+  "title": "Tech Radar Daily Digest - 2026-08-11",
+  "type": "daily_digest",
+  "article_count": 7,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/Amazon-GameLift-Streams-Shader-Caching/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-application-status-checks",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-opensearch-serverless-supports-10000-collections-per-collection-group/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-drs-linux-uefi",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-security-agent-mfa/",
+    "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.6",
+    "https://github.com/openai/codex/releases/tag/rust-v0.147.0-alpha.6.6"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "openai"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-08-10T22:55:52.584934Z"
+}
