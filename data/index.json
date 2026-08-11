@@ -1,6 +1,52 @@
 {
-  "generated_at": "2026-08-10T22:55:52.585753Z",
+  "generated_at": "2026-08-11T23:02:54.396020Z",
   "items": [
+    {
+      "id": "2026-08-12__daily-digest",
+      "date": "2026-08-12",
+      "title": "Tech Radar Daily Digest - 2026-08-12",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-expands-iam-principal-cost-allocation-bedrock-mantle/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/01/locateAnything-3B-qwen-agentworld-35B-A3B-qwen3.5-122B-A10B-on-sagemaker-jumpstart/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/01/nvidia-nemotron-3.5-lightning-on-sagemaker-jumpstart/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/smus-glue-access",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/secrets-manager-integration-jenkins-sonarqube/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.228",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.227",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.8",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.7",
+        "https://developers.googleblog.com/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/",
+        "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
+        "https://cli.devin.ai/docs/changelog/stable#2026-08-10-added"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "rss:google_developers",
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new",
+        "scrape:devin_cli_changelog"
+      ],
+      "summary_path": "data/items/2026-08-12__daily-digest.md"
+    },
     {
       "id": "2026-08-11__daily-digest",
       "date": "2026-08-11",
