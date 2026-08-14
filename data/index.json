@@ -1,6 +1,50 @@
 {
-  "generated_at": "2026-08-13T23:01:54.962942Z",
+  "generated_at": "2026-08-14T22:40:06.259404Z",
   "items": [
+    {
+      "id": "2026-08-15__daily-digest",
+      "date": "2026-08-15",
+      "title": "Tech Radar Daily Digest - 2026-08-15",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-rds-oracle-apex-26-1/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ses-supports-customurl-deeplinking",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-billing-and-cost-management-managed-dashboards/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-redshift-adds-rg-large-12xlarge-aws-govcloud-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/s3-additional-policy-details-access-denied-error-messages/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.18",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.17",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.16",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.15",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.14",
+        "https://cli.devin.ai/docs/changelog/stable#2026-08-13-changed"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "openai"
+      ],
+      "sources": [
+        "scrape:devin_cli_changelog",
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-08-15__daily-digest.md"
+    },
     {
       "id": "2026-08-14__daily-digest",
       "date": "2026-08-14",
