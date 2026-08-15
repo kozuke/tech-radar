@@ -1,6 +1,39 @@
 {
-  "generated_at": "2026-08-14T22:40:06.259404Z",
+  "generated_at": "2026-08-15T22:37:02.229705Z",
   "items": [
+    {
+      "id": "2026-08-16__daily-digest",
+      "date": "2026-08-16",
+      "title": "Tech Radar Daily Digest - 2026-08-16",
+      "type": "daily_digest",
+      "article_count": 7,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-clean-rooms-minimum-aggregation-custom-analysis-rules",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-global-view-map-view/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-iam-role-manager",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-nova-mme-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-clean-rooms-export-analysis-log-sql",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.19",
+        "https://docs.devin.ai/release-notes/overview#2026-08-14-devin-coach-suggestions-in-the-input-box"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases",
+        "scrape:devin_release_notes"
+      ],
+      "summary_path": "data/items/2026-08-16__daily-digest.md"
+    },
     {
       "id": "2026-08-15__daily-digest",
       "date": "2026-08-15",
