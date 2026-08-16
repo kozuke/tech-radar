@@ -1,0 +1,38 @@
+{
+  "id": "2026-08-17__daily-digest",
+  "date": "2026-08-17",
+  "title": "Tech Radar Daily Digest - 2026-08-17",
+  "type": "daily_digest",
+  "article_count": 11,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-rds-mariadb-1232-available/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/flux.2-small-decoder-gemma-4-12B-it-on-sagemaker-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/langcache-embed-v3-small-mellum2-12B-A2.5B-thinking-lightOnOCR-2-1B-on-sagemaker-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/glm-5.2-fp8-nemotron-nano-12b-v2-glm-ocr-on-sagemaker-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-high-memory-u7i-south-america",
+    "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.20",
+    "http://workspaceupdates.googleblog.com/2026/08/weekly-recap-08-14-2026.html",
+    "http://workspaceupdates.googleblog.com/2026/08/new-admin-controls-for-adding-invitations-to-Google-Calendar.html",
+    "http://workspaceupdates.googleblog.com/2026/08/take-notes-with-me-for-in-person-meetings-is-now-available.html",
+    "http://workspaceupdates.googleblog.com/2026/08/use-google-sheets-canvas-to-visualize-data.html",
+    "http://workspaceupdates.googleblog.com/2026/08/new-usability-features-connected-sheets-google.html"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new",
+    "rss:google_workspace_updates"
+  ],
+  "created_at": "2026-08-16T22:35:53.706146Z"
+}
