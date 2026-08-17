@@ -1,0 +1,50 @@
+{
+  "id": "2026-08-18__daily-digest",
+  "date": "2026-08-18",
+  "title": "Tech Radar Daily Digest - 2026-08-18",
+  "type": "daily_digest",
+  "article_count": 14,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-cross-region-openai-v2/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-auto-scaling-batch-termination",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-r8i-r8i-flex-calgary/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-routing-steps/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-network-firewall-stateful-rule-hit-counts/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+    "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.21",
+    "https://developers.googleblog.com/build-zero-trust-ai-agents-with-googles-agent-development-kit/",
+    "http://workspaceupdates.googleblog.com/2026/08/use-gemini-to-help-manage-google-Workspace-for-your-organization.html",
+    "http://workspaceupdates.googleblog.com/2026/08/make-copy-of-notebook-in-gemini-notebook.html",
+    "http://workspaceupdates.googleblog.com/2026/08/new-enterprise-security-controls-for-Workspace-Studio-enable-expanded-collaboration-use-cases.html",
+    "http://workspaceupdates.googleblog.com/2026/08/enhanced-external-sharing-insights-now-available-in-Drive-Inventory-Reporting.html",
+    "http://workspaceupdates.googleblog.com/2026/08/improved-file-import-google-sheets-tables.html",
+    "https://cursor.com/changelog#2026-08-17-cursor-can-now-host-your-code"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cursor",
+    "editor",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "rss:openai_codex_cli_releases",
+    "rss:google_developers",
+    "rss:claude_code_releases",
+    "rss:aws_whats_new",
+    "scrape:cursor_changelog"
+  ],
+  "created_at": "2026-08-17T22:39:55.132118Z"
+}
