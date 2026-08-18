@@ -1,6 +1,48 @@
 {
-  "generated_at": "2026-08-17T22:39:55.133176Z",
+  "generated_at": "2026-08-18T22:41:23.007264Z",
   "items": [
+    {
+      "id": "2026-08-19__daily-digest",
+      "date": "2026-08-19",
+      "title": "Tech Radar Daily Digest - 2026-08-19",
+      "type": "daily_digest",
+      "article_count": 11,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/bedrock-agentcore-payments-ga/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/05/smus-data-profiling",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/mwaa-serverless-pythonoperator-bashoperator/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-r8i-israel-tel-aviv/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/iam-policy-autopilot-now-supports-terraform-plan-files",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.235",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.23",
+        "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.22",
+        "https://github.com/openai/codex/releases/tag/python-v0.147.0",
+        "http://workspaceupdates.googleblog.com/2026/08/managing-unsolicited-event-invitations-with-user-blocking-in-Google-Calendar.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-08-19__daily-digest.md"
+    },
     {
       "id": "2026-08-18__daily-digest",
       "date": "2026-08-18",
