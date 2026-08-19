@@ -1,0 +1,49 @@
+{
+  "id": "2026-08-20__daily-digest",
+  "date": "2026-08-20",
+  "title": "Tech Radar Daily Digest - 2026-08-20",
+  "type": "daily_digest",
+  "article_count": 13,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-sagemaker/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-cost-anomaly-detection-bedrock-3P/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/opensearch-ingestion-available-govcloud-regions",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-new-availability-zone-europe/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-quick-deny-by-default/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+    "https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.2",
+    "https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.1",
+    "http://workspaceupdates.googleblog.com/2026/08/elevate-your-google-meet-experience-for-shared-meeting-spaces-with-Room-Display-mode.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.124.0",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.123.0",
+    "https://cursor.com/changelog#2026-08-19-we-re-continuing-to-improve-cloud-agents-and-the-cursor-harness-so-always-on-age"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cursor",
+    "editor",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "scrape:cursor_changelog",
+    "rss:anthropic_sdk_releases",
+    "rss:claude_code_releases",
+    "rss:openai_codex_cli_releases",
+    "rss:google_workspace_updates"
+  ],
+  "created_at": "2026-08-19T22:40:48.494233Z"
+}
