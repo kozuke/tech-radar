@@ -1,6 +1,44 @@
 {
-  "generated_at": "2026-08-20T22:44:17.694463Z",
+  "generated_at": "2026-08-21T22:41:02.518405Z",
   "items": [
+    {
+      "id": "2026-08-22__daily-digest",
+      "date": "2026-08-22",
+      "title": "Tech Radar Daily Digest - 2026-08-22",
+      "type": "daily_digest",
+      "article_count": 11,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-ai-data-analytics",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-deadline-cloud-auto-download-status-tracking/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-glue-6-0-price-reduction-iceberg-v3",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ses-adds-open-click-tracking-override/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-local-zones-las-vegas-nevada/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
+        "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.2"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-08-22__daily-digest.md"
+    },
     {
       "id": "2026-08-21__daily-digest",
       "date": "2026-08-21",
