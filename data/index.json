@@ -1,6 +1,59 @@
 {
-  "generated_at": "2026-08-21T22:41:02.518405Z",
+  "generated_at": "2026-08-22T22:37:37.684704Z",
   "items": [
+    {
+      "id": "2026-08-23__daily-digest",
+      "date": "2026-08-23",
+      "title": "Tech Radar Daily Digest - 2026-08-23",
+      "type": "daily_digest",
+      "article_count": 17,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/bedrock-openai-gpt-56-sol-reduced-pricing/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-eks-argo-cd-configuration",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-timestream-influxdb-cmk/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-c8gd-m8gd/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-ec2-p6-b300/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.240",
+        "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.7.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.7.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4.1",
+        "http://workspaceupdates.googleblog.com/2026/08/weekly-recap-08-21-2026.html",
+        "http://workspaceupdates.googleblog.com/2026/08/record-presentations-in-google-slides-with-Google-Vids.html",
+        "http://workspaceupdates.googleblog.com/2026/08/view-google-chat-usage-metrics-in-Gemini-reports-dashboard.html",
+        "http://workspaceupdates.googleblog.com/2026/08/allowlisted-domains-api-now-generally-available.html",
+        "http://workspaceupdates.googleblog.com/2026/08/granular-space-creation-restrictions-now-available-in-Google-Chat.html",
+        "https://docs.devin.ai/release-notes/overview#2026-08-21-redesigned-session-page-header",
+        "https://cli.devin.ai/docs/changelog/stable#2026-08-21-added"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "scrape:devin_cli_changelog",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:google_workspace_updates",
+        "rss:aws_whats_new",
+        "scrape:devin_release_notes"
+      ],
+      "summary_path": "data/items/2026-08-23__daily-digest.md"
+    },
     {
       "id": "2026-08-22__daily-digest",
       "date": "2026-08-22",
