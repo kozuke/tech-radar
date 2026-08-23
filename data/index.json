@@ -1,6 +1,41 @@
 {
-  "generated_at": "2026-08-22T22:37:37.684704Z",
+  "generated_at": "2026-08-23T22:37:04.102603Z",
   "items": [
+    {
+      "id": "2026-08-24__daily-digest",
+      "date": "2026-08-24",
+      "title": "Tech Radar Daily Digest - 2026-08-24",
+      "type": "daily_digest",
+      "article_count": 8,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/region-switch-rds-switchover-execution-block/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aurora-dsql-cloudwatch-database-insights/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/redshift-long-term-system-table-retention/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-marketplace/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-bedrock-web-access-web-search/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.241",
+        "https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.149.0-alpha.4.2"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-08-24__daily-digest.md"
+    },
     {
       "id": "2026-08-23__daily-digest",
       "date": "2026-08-23",
