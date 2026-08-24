@@ -1,0 +1,39 @@
+{
+  "id": "2026-08-25__daily-digest",
+  "date": "2026-08-25",
+  "title": "Tech Radar Daily Digest - 2026-08-25",
+  "type": "daily_digest",
+  "article_count": 10,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/sagemaker-mlflow-custom-keys",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-eks-multiple-oidc-providers",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-aurora-postgresql-18-4-17-10-16-14-15-18-14-23/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-sagemaker-hyperpod-ray",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-information/",
+    "https://github.com/openai/codex/releases/tag/rust-v0.150.0-alpha.8",
+    "https://github.com/openai/codex/releases/tag/rust-v0.149.1",
+    "https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk/",
+    "http://workspaceupdates.googleblog.com/2026/08/now-available-refreshed-user-interface-for-Google-Meet-hardware-touch-controllers-on-Neat-and-Poly-devices.html",
+    "http://workspaceupdates.googleblog.com/2026/08/ask-gemini-in-chat.html"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:google_developers",
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-08-24T22:43:35.107265Z"
+}
