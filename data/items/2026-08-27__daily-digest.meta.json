@@ -1,0 +1,45 @@
+{
+  "id": "2026-08-27__daily-digest",
+  "date": "2026-08-27",
+  "title": "Tech Radar Daily Digest - 2026-08-27",
+  "type": "daily_digest",
+  "article_count": 13,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-cognito-totp-reset/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-unplanned-shrinkage/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/mountpoint-for-S3-adds-memory-usage-controls",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-points-based-scoring-evaluations/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-glue-5-1-european-sovereign-cloud",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+    "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.4",
+    "https://github.com/openai/codex/releases/tag/rust-v0.150.1",
+    "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.3",
+    "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.2",
+    "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.1",
+    "https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu/",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.1.0"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "openai"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:claude_code_releases",
+    "rss:anthropic_sdk_releases",
+    "rss:aws_whats_new",
+    "rss:google_developers"
+  ],
+  "created_at": "2026-08-27T03:18:03.494629Z"
+}
