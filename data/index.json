@@ -1,6 +1,43 @@
 {
-  "generated_at": "2026-08-29T03:43:10.343078Z",
+  "generated_at": "2026-08-30T00:19:43.888396Z",
   "items": [
+    {
+      "id": "2026-08-30__daily-digest",
+      "date": "2026-08-30",
+      "title": "Tech Radar Daily Digest - 2026-08-30",
+      "type": "daily_digest",
+      "article_count": 10,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-cloudwatch-agent-journald/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-aurora-mysql-313-available/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/spacexai-grok-4-6-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/elastic-disaster-recovery-plans/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/bedrock-agentcore-two-new-regions/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.151.0-alpha.7.2",
+        "http://workspaceupdates.googleblog.com/2026/08/suppress-email-responses-to-calendar-invitations-and-updates.html"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_workspace_updates",
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-08-30__daily-digest.md"
+    },
     {
       "id": "2026-08-29__daily-digest",
       "date": "2026-08-29",
