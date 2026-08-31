@@ -1,6 +1,37 @@
 {
-  "generated_at": "2026-08-30T00:19:43.888396Z",
+  "generated_at": "2026-08-31T00:36:58.752275Z",
   "items": [
+    {
+      "id": "2026-08-31__daily-digest",
+      "date": "2026-08-31",
+      "title": "Tech Radar Daily Digest - 2026-08-31",
+      "type": "daily_digest",
+      "article_count": 8,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/connect-customer-analytics-cape-town/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-connect-customer-scheduling-metrics/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/fsx-ontap-cross-region-backup-copy/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-backup-amazon-fsx-netapp-cross-account-region/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-evs-i7i-48xl",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.3"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-08-31__daily-digest.md"
+    },
     {
       "id": "2026-08-30__daily-digest",
       "date": "2026-08-30",
