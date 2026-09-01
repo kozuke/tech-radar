@@ -1,6 +1,48 @@
 {
-  "generated_at": "2026-08-31T00:36:58.752275Z",
+  "generated_at": "2026-09-01T01:18:09.651908Z",
   "items": [
+    {
+      "id": "2026-09-01__daily-digest",
+      "date": "2026-09-01",
+      "title": "Tech Radar Daily Digest - 2026-09-01",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/documentdb-major-version-upgrade-8-0/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/partner-revenue-measurement-user-agent-expansion/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/aws-agent-registry-agents-mcp-servers-quick/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-redshift-supports-idc-evr",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/amazon-timestream-influxdb-regions/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.0-alpha.6",
+        "https://docs.devin.ai/release-notes/overview#2026-08-28-multi-select-tag-filters"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases",
+        "scrape:devin_release_notes",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-09-01__daily-digest.md"
+    },
     {
       "id": "2026-08-31__daily-digest",
       "date": "2026-08-31",
