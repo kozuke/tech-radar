@@ -1,6 +1,55 @@
 {
-  "generated_at": "2026-09-01T01:18:09.651908Z",
+  "generated_at": "2026-09-02T00:13:54.668540Z",
   "items": [
+    {
+      "id": "2026-09-02__daily-digest",
+      "date": "2026-09-02",
+      "title": "Tech Radar Daily Digest - 2026-09-02",
+      "type": "daily_digest",
+      "article_count": 16,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-quick-custom-apps-natural-language/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/deadline-cloud/job-bundle-sharing",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/database-insights-self-managed-postgresql/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-kinesis-data-streams-api/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-backup-more-than-1000-s3-buckets/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.258",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+        "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.153.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.152.1",
+        "http://workspaceupdates.googleblog.com/2026/09/google-pics-brings-pro-level-ai-image-creation-and-editing-to-Google-Workspace.html",
+        "http://workspaceupdates.googleblog.com/2026/09/transitioning-google-meet-room-hardware-to-focus-on-Android-AOSP-ongoing-ChromeOS-support-unchanged-and-up-to-September-2030.html",
+        "http://workspaceupdates.googleblog.com/2026/08/add-co-presenters-in-google-meet-with-one-click.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.3.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:google_workspace_updates",
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-09-02__daily-digest.md"
+    },
     {
       "id": "2026-09-01__daily-digest",
       "date": "2026-09-01",
