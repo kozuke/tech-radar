@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-09-04T00:06:00.330681Z",
+  "generated_at": "2026-09-05T00:05:32.730237Z",
   "items": [
+    {
+      "id": "2026-09-05__daily-digest",
+      "date": "2026-09-05",
+      "title": "Tech Radar Daily Digest - 2026-09-05",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/ec2-images-supported-instances",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ecs-deployments-early-success/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-mcp-server-serverless/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ec2-c8g-instances-additional-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/transfer-family-sftp-credential-rotation/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
+        "https://github.com/openai/codex/releases/tag/rust-v0.153.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.153.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
+        "https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/",
+        "http://workspaceupdates.googleblog.com/2026/09/weekly-recap-09-04-2026.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.4.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:google_workspace_updates",
+        "rss:aws_whats_new",
+        "rss:google_developers"
+      ],
+      "summary_path": "data/items/2026-09-05__daily-digest.md"
+    },
     {
       "id": "2026-09-04__daily-digest",
       "date": "2026-09-04",
