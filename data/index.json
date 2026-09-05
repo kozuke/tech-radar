@@ -1,6 +1,40 @@
 {
-  "generated_at": "2026-09-05T00:05:32.730237Z",
+  "generated_at": "2026-09-05T23:53:52.723479Z",
   "items": [
+    {
+      "id": "2026-09-06__daily-digest",
+      "date": "2026-09-06",
+      "title": "Tech Radar Daily Digest - 2026-09-06",
+      "type": "daily_digest",
+      "article_count": 7,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-managed-knowledge-base-user-managed-setup-sharepoint-onedrive-confluence/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-managed-knowledge-base-servicenow-native-data-source-connector/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-managed-knowledge-base-automatic-sync-scheduling-data-source-connectors/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/sagemaker-batch-transform-g6e-instances/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/ec2-c9g-c9gd-asia-pacific-tokyo/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.4",
+        "https://cli.devin.ai/docs/changelog/stable#2026-09-03-changed"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "openai"
+      ],
+      "sources": [
+        "scrape:devin_cli_changelog",
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-09-06__daily-digest.md"
+    },
     {
       "id": "2026-09-05__daily-digest",
       "date": "2026-09-05",
