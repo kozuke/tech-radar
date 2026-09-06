@@ -1,0 +1,28 @@
+{
+  "id": "2026-09-07__daily-digest",
+  "date": "2026-09-07",
+  "title": "Tech Radar Daily Digest - 2026-09-07",
+  "type": "daily_digest",
+  "article_count": 6,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/ec2-m9g-m9gd-four-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ec2-p6-b200-instances-available-asia-pacific-hyderabad",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ec2-p6-b300-instances-available-asia-pacific-jakarta",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/redshift-rg-large-single-node",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-aurora-mysql-848-available/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.263"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "claude",
+    "claude_code",
+    "cloud"
+  ],
+  "sources": [
+    "rss:claude_code_releases",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-09-06T23:53:39.810873Z"
+}
