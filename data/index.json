@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-09-06T23:53:39.812155Z",
+  "generated_at": "2026-09-08T00:25:04.377910Z",
   "items": [
+    {
+      "id": "2026-09-08__daily-digest",
+      "date": "2026-09-08",
+      "title": "Tech Radar Daily Digest - 2026-09-08",
+      "type": "daily_digest",
+      "article_count": 7,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-aurora-mysql-multisourcerep-delayedrep/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/sagemaker-workflows-python-bash/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-mwaa-cloudwatch-monitoring/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/announcing-amazon-linux-2027/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ses-supports-smime-signing",
+        "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.5"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-09-08__daily-digest.md"
+    },
     {
       "id": "2026-09-07__daily-digest",
       "date": "2026-09-07",
