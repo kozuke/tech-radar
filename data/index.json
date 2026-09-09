@@ -1,6 +1,50 @@
 {
-  "generated_at": "2026-09-08T00:25:04.377910Z",
+  "generated_at": "2026-09-09T00:14:11.511416Z",
   "items": [
+    {
+      "id": "2026-09-09__daily-digest",
+      "date": "2026-09-09",
+      "title": "Tech Radar Daily Digest - 2026-09-09",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-astra-on-amazon-bedrock/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/timestream-influxdb-custom-plugins/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/08/sgm-feature-store-update-record/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-transform-govcloud-us-west/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-api-gateway-mutual-tls-backend/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.266",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.265",
+        "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.8",
+        "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.7",
+        "http://workspaceupdates.googleblog.com/2026/09/pick-up-where-you-left-off-with-persistent-drafts-in-Google-Chat.html",
+        "http://workspaceupdates.googleblog.com/2026/09/context-aware-access-controls-are-available-for-Gemini-Enterprise-in-the-Admin-console.html",
+        "http://workspaceupdates.googleblog.com/2026/09/introducing-new-1password-app-for-Google-Chat.html",
+        "http://workspaceupdates.googleblog.com/2026/09/use-custom-web-fonts-in-google-sheets-charts.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:google_workspace_updates",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-09-09__daily-digest.md"
+    },
     {
       "id": "2026-09-08__daily-digest",
       "date": "2026-09-08",
