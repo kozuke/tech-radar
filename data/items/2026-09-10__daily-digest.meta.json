@@ -1,0 +1,53 @@
+{
+  "id": "2026-09-10__daily-digest",
+  "date": "2026-09-10",
+  "title": "Tech Radar Daily Digest - 2026-09-10",
+  "type": "daily_digest",
+  "article_count": 17,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-connect-capacity-limits/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-transform-dotnet-cli",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-lambda-graviton5-ec2/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-lambda-90-minute-function/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-knowledge-base-debugging-document-access-control/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.267",
+    "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
+    "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.11",
+    "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.10.2",
+    "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.10.1",
+    "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.10",
+    "https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/",
+    "https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/",
+    "http://workspaceupdates.googleblog.com/2026/09/create-and-edit-calculated-fields-in-Google-Sheets-pivot-tables-with-an-improved-editor.html",
+    "http://workspaceupdates.googleblog.com/2026/09/automatic-room-check-in-for-google-meet-available-on-mobile-devices.html",
+    "http://workspaceupdates.googleblog.com/2026/09/create-content-schedule-events-and-coordinate-tasks-across-Workspace-regardless-of-what-app-you-are-in.html",
+    "https://docs.devin.ai/release-notes/overview#2026-09-09-archiving-closes-child-sessions-prs"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:claude_code_releases",
+    "rss:google_workspace_updates",
+    "scrape:devin_release_notes",
+    "rss:aws_whats_new",
+    "rss:google_developers",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-09-10T00:14:37.699455Z"
+}
