@@ -1,6 +1,44 @@
 {
-  "generated_at": "2026-09-12T00:17:47.749159Z",
+  "generated_at": "2026-09-12T23:59:41.641729Z",
   "items": [
+    {
+      "id": "2026-09-13__daily-digest",
+      "date": "2026-09-13",
+      "title": "Tech Radar Daily Digest - 2026-09-13",
+      "type": "daily_digest",
+      "article_count": 11,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-devops-agent-bidirectional-slack-communication",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-rds-oracle-supports-spatial-patch-bundle-jul-2026-ru/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/single-rack-aws-outposts/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-opensearch-serverless-available-V0-vercel/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ecs-expands-condition-key-support/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.1"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-09-13__daily-digest.md"
+    },
     {
       "id": "2026-09-12__daily-digest",
       "date": "2026-09-12",
