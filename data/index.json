@@ -1,6 +1,54 @@
 {
-  "generated_at": "2026-09-11T00:10:20.625249Z",
+  "generated_at": "2026-09-12T00:17:47.749159Z",
   "items": [
+    {
+      "id": "2026-09-12__daily-digest",
+      "date": "2026-09-12",
+      "title": "Tech Radar Daily Digest - 2026-09-12",
+      "type": "daily_digest",
+      "article_count": 15,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/ec2-x2idn-asia-pacific-hong-kong/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/sgm-hyperpod-model-caching-inf/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-lambda-direct-read-s3files/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-managed-knowledge-base-multimodal-embeddings-twelvelabs-marengo/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-healthomics-realtime-run-metrics/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.269",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.10",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.9",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.8",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.3.6",
+        "https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/",
+        "http://workspaceupdates.googleblog.com/2026/09/weekly-recap-09-11-2026.html",
+        "http://workspaceupdates.googleblog.com/2026/09/seamlessly-import-your-team-and-data-from-Microsoft-to-Google-Workspace-during-setup.html",
+        "http://workspaceupdates.googleblog.com/2026/09/the-gemini-desktop-app-is-now-available-for-Windows.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:google_developers",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-09-12__daily-digest.md"
+    },
     {
       "id": "2026-09-11__daily-digest",
       "date": "2026-09-11",
