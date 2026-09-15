@@ -1,0 +1,36 @@
+{
+  "id": "2026-09-15__daily-digest",
+  "date": "2026-09-15",
+  "title": "Tech Radar Daily Digest - 2026-09-15",
+  "type": "daily_digest",
+  "article_count": 9,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/qwen3.6-35b-a3b-nvfp4-wan2.1-t2v-1.3B-diffusers-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/ministral-3-3b-instruct-2512-ministral-3-8B-Instruct-2512-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/gemma-4-31b-it-assistant-gemma-4-31b-it-nvfp4-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/granite-speech-4.1-2b-edge-kanana-2-30b-a3b-instruct-openfold3-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-end-user-messaging-whatsapp-dynamic-flows",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
+    "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.5",
+    "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.4",
+    "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.2.4"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "openai"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "rss:claude_code_releases",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-09-15T00:37:42.909675Z"
+}
