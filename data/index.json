@@ -1,6 +1,57 @@
 {
-  "generated_at": "2026-09-16T00:19:30.510895Z",
+  "generated_at": "2026-09-17T00:32:06.087061Z",
   "items": [
+    {
+      "id": "2026-09-17__daily-digest",
+      "date": "2026-09-17",
+      "title": "Tech Radar Daily Digest - 2026-09-17",
+      "type": "daily_digest",
+      "article_count": 14,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-sagemaker-ft-nemotron-3-5-lightning/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-client-vpn-macos-golden-gate/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/New-AWS-Builder-Experience",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-workspaces-nvidia-blackwell-gpu-instances/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/connect-customer-custom-metrics-tag/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
+        "https://github.com/openai/codex/releases/tag/rusty-v8-v152.2.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.14",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.13",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.12",
+        "https://github.com/openai/codex/releases/tag/rust-v0.155.0-alpha.11",
+        "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/",
+        "http://workspaceupdates.googleblog.com/2026/09/view-conference-room-and-meeting-location-details-directly-on-the-Google-Meet-homepage.html",
+        "https://cli.devin.ai/docs/changelog/stable#2026-09-16-fixed"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_developers",
+        "scrape:devin_cli_changelog",
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:google_workspace_updates",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-09-17__daily-digest.md"
+    },
     {
       "id": "2026-09-16__daily-digest",
       "date": "2026-09-16",
