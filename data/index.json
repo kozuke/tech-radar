@@ -1,6 +1,61 @@
 {
-  "generated_at": "2026-09-23T00:32:50.471004Z",
+  "generated_at": "2026-09-24T00:30:23.352297Z",
   "items": [
+    {
+      "id": "2026-09-24__daily-digest",
+      "date": "2026-09-24",
+      "title": "Tech Radar Daily Digest - 2026-09-24",
+      "type": "daily_digest",
+      "article_count": 15,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-bedrock-managed-knowledge-base-salesforce-zendesk-native-data-source-connectors/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-connect-routing-step-data/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-cloudwatch-omni-ai/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-emr-long-term-support-spark-4-1/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/route-53-resolver-gen2-outposts/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.281",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.2",
+        "https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/",
+        "http://workspaceupdates.googleblog.com/2026/09/new-manual-calculation-setting-in-Google-Sheets.html",
+        "https://cli.devin.ai/docs/changelog/stable#2026-09-22-fixed",
+        "https://cursor.com/changelog#2026-09-23-today-we-re-launching-two-cursor-bots-for-the-last-mile-of-shipping-code-rollout"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "cursor",
+        "devin",
+        "editor",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "scrape:cursor_changelog",
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates",
+        "rss:google_developers",
+        "scrape:devin_cli_changelog"
+      ],
+      "summary_path": "data/items/2026-09-24__daily-digest.md"
+    },
     {
       "id": "2026-09-23__daily-digest",
       "date": "2026-09-23",
