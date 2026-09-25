@@ -1,6 +1,61 @@
 {
-  "generated_at": "2026-09-24T00:30:23.352297Z",
+  "generated_at": "2026-09-25T00:33:15.273467Z",
   "items": [
+    {
+      "id": "2026-09-25__daily-digest",
+      "date": "2026-09-25",
+      "title": "Tech Radar Daily Digest - 2026-09-25",
+      "type": "daily_digest",
+      "article_count": 19,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/eventbridge-relaunches-custom-event-buses/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/durablefunctions-european-sovereign-cloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-rds-mysql-extended-support-minor-5744-8046-rds/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/postgresql-19-beta-4-amazon-rds-database-preview-environment/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/postgresql-post-quantum-tls-key-exchange/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.282",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.12",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.11",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.10",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.9",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.8",
+        "https://developers.googleblog.com/turn-your-rest-apis-into-mcp-tools-with-google-cloud-api-gateway/",
+        "https://developers.googleblog.com/reproducing-olmo-3-7b-pre-training-in-maxtext-case-study-of-large-scale-training-on-tpus/",
+        "http://workspaceupdates.googleblog.com/2026/09/now-in-beta-import-and-convert-your.html",
+        "http://workspaceupdates.googleblog.com/2026/09/assign-temporary-administrator-roles-in-the-Google-Admin-console.html",
+        "http://workspaceupdates.googleblog.com/2026/09/ground-ai-prompts-in-google-docs-on-existing-sources-from-Gemini-Notebook.html",
+        "http://workspaceupdates.googleblog.com/2026/09/occupancy-counting-now-available-for-Google-Meet-on-Logitech-room-hardware.html",
+        "http://workspaceupdates.googleblog.com/2026/09/manually-reorder-and-custom-sort-pivot.html",
+        "https://docs.devin.ai/release-notes/overview#2026-09-23-session-tree-from-parent-sessions"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:google_developers",
+        "rss:google_workspace_updates",
+        "scrape:devin_release_notes",
+        "rss:aws_whats_new",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-09-25__daily-digest.md"
+    },
     {
       "id": "2026-09-24__daily-digest",
       "date": "2026-09-24",
