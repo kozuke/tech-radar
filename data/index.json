@@ -1,6 +1,49 @@
 {
-  "generated_at": "2026-09-25T00:33:15.273467Z",
+  "generated_at": "2026-09-26T00:37:35.880233Z",
   "items": [
+    {
+      "id": "2026-09-26__daily-digest",
+      "date": "2026-09-26",
+      "title": "Tech Radar Daily Digest - 2026-09-26",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-transcribe/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-ec2-m8i-m8i-flex-thf/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/ec2-r8i-r8i-flex-thf/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/c8i-c8i-flex-thf-september-2026/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-sts-vpc-oidc/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
+        "https://github.com/openai/codex/releases/tag/rust-v0.159.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.159.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.159.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.15",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.14",
+        "http://workspaceupdates.googleblog.com/2026/09/seamlessly-import-your-emails-from-any-IMAP-server-to-Google-Workspace.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:google_workspace_updates",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-09-26__daily-digest.md"
+    },
     {
       "id": "2026-09-25__daily-digest",
       "date": "2026-09-25",
