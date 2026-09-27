@@ -1,6 +1,39 @@
 {
-  "generated_at": "2026-09-26T00:37:35.880233Z",
+  "generated_at": "2026-09-27T00:35:51.245305Z",
   "items": [
+    {
+      "id": "2026-09-27__daily-digest",
+      "date": "2026-09-27",
+      "title": "Tech Radar Daily Digest - 2026-09-27",
+      "type": "daily_digest",
+      "article_count": 10,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/datasync-monitoring-dashboard",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/elastic-disaster-recovery-graviton/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-messaging-ses-ai-skills-mcp-server/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-end-user-messaging-voice-calling-whatsapp",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-billing-and-cost-management-billing-context-api/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.159.0-alpha.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.159.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.159.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.159.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.158.0-alpha.15.2"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-09-27__daily-digest.md"
+    },
     {
       "id": "2026-09-26__daily-digest",
       "date": "2026-09-26",
