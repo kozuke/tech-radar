@@ -1,6 +1,55 @@
 {
-  "generated_at": "2026-09-30T01:17:40.438228Z",
+  "generated_at": "2026-10-01T01:17:46.169331Z",
   "items": [
+    {
+      "id": "2026-10-01__daily-digest",
+      "date": "2026-10-01",
+      "title": "Tech Radar Daily Digest - 2026-10-01",
+      "type": "daily_digest",
+      "article_count": 14,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-workspaces-cmi-g7/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-cli-agent-toolkit-update-skill/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/s3-vectors-introduces-metadata-pre-filtering/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-managed-grafana-now-supports-creating-grafana-13-2-workspaces",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/openai-gpt-6-astra-ultrafast-on-amazon-bedrock/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.286",
+        "https://github.com/openai/codex/releases/tag/rust-v0.161.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.161.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.161.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.160.0-alpha.6.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.159.3",
+        "https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/",
+        "http://workspaceupdates.googleblog.com/2026/09/programmatic-comment-and-suggestion.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.11.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_developers",
+        "rss:aws_whats_new",
+        "rss:anthropic_sdk_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-10-01__daily-digest.md"
+    },
     {
       "id": "2026-09-30__daily-digest",
       "date": "2026-09-30",
