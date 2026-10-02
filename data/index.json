@@ -1,6 +1,47 @@
 {
-  "generated_at": "2026-10-01T01:17:46.169331Z",
+  "generated_at": "2026-10-02T01:41:25.742946Z",
   "items": [
+    {
+      "id": "2026-10-02__daily-digest",
+      "date": "2026-10-02",
+      "title": "Tech Radar Daily Digest - 2026-10-02",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-well-architected-agent/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/redshift-cross-Region-queries-for-data-lake",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-dynamodb-introduces-filtered-export/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/amazon-dynamodb-accelerator/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/guardduty-org-enablement-policies/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.161.0-alpha.13",
+        "https://github.com/openai/codex/releases/tag/rust-v0.161.0-alpha.12",
+        "https://github.com/openai/codex/releases/tag/rust-v0.161.0-alpha.11",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.10.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:anthropic_sdk_releases",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-10-02__daily-digest.md"
+    },
     {
       "id": "2026-10-01__daily-digest",
       "date": "2026-10-01",
