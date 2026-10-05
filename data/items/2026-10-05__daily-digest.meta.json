@@ -1,0 +1,39 @@
+{
+  "id": "2026-10-05__daily-digest",
+  "date": "2026-10-05",
+  "title": "Tech Radar Daily Digest - 2026-10-05",
+  "type": "daily_digest",
+  "article_count": 12,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/s3-object-lock-variable-retention-event-holds-aws-govcloud/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-security-hub-remediation-plans/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/transfer-family-custom-cloudwatch-log-groups/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-glue-iceberg-v3-optimization/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-budgets/",
+    "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.13",
+    "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.12",
+    "http://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-02-2026.html",
+    "http://workspaceupdates.googleblog.com/2026/10/built-in-interoperability-between-Google-Meet-and-Microsoft-Teams-on-Android-AOSP-devices-now-generally-available.html",
+    "http://workspaceupdates.googleblog.com/2026/10/find-your-learning-tools-all-in-one-place-with-the-student-hub-in-Gemini.html",
+    "http://workspaceupdates.googleblog.com/2026/10/simple-setup-option-for-workspace-client-side-encryption.html",
+    "http://workspaceupdates.googleblog.com/2026/09/customize-style-of-your-captions-in-Google-Vids.html"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-10-05T00:55:13.202045Z"
+}
