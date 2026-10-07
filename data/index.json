@@ -1,6 +1,57 @@
 {
-  "generated_at": "2026-10-06T02:17:52.300938Z",
+  "generated_at": "2026-10-07T01:31:54.347694Z",
   "items": [
+    {
+      "id": "2026-10-07__daily-digest",
+      "date": "2026-10-07",
+      "title": "Tech Radar Daily Digest - 2026-10-07",
+      "type": "daily_digest",
+      "article_count": 15,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-batch-job-cloudwatch-metrics/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/AWS-Certificate-Manager-ACME-Privatelink",
+        "https://aws.amazon.com/about-aws/whats-new/2026/09/aws-control-tower-aft/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/ec2-ami-shared-tags",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-client-vpn-device-posture/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.291",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.18",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.17",
+        "https://github.com/openai/codex/releases/tag/rust-v0.161.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.161.0-alpha.13.1",
+        "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
+        "https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/",
+        "https://docs.devin.ai/release-notes/overview#2026-10-05-terminal-tab-in-the-session-workspace",
+        "https://cursor.com/changelog#2026-10-06-you-can-now-see-and-reply-to-the-local-agents-running-on-your-computer-from-the-"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "cursor",
+        "devin",
+        "editor",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "scrape:devin_release_notes",
+        "rss:google_developers",
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "scrape:cursor_changelog",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-10-07__daily-digest.md"
+    },
     {
       "id": "2026-10-06__daily-digest",
       "date": "2026-10-06",
