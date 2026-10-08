@@ -1,6 +1,54 @@
 {
-  "generated_at": "2026-10-07T01:31:54.347694Z",
+  "generated_at": "2026-10-08T01:55:20.102589Z",
   "items": [
+    {
+      "id": "2026-10-08__daily-digest",
+      "date": "2026-10-08",
+      "title": "Tech Radar Daily Digest - 2026-10-08",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/awscapabilities-enhancements/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-config-new-resource-types",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/claude-haiku-5-5-aws/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/claude-haiku-5-5-aws-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-ec2-hpc8a-asia-pacific/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.20",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.19",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.18.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.17.1",
+        "https://developers.googleblog.com/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.0",
+        "https://docs.devin.ai/release-notes/overview#2026-10-07-notification-inbox"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "scrape:devin_release_notes",
+        "rss:claude_code_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases",
+        "rss:google_developers"
+      ],
+      "summary_path": "data/items/2026-10-08__daily-digest.md"
+    },
     {
       "id": "2026-10-07__daily-digest",
       "date": "2026-10-07",
