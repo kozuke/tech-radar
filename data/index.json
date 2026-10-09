@@ -1,6 +1,52 @@
 {
-  "generated_at": "2026-10-08T01:55:20.102589Z",
+  "generated_at": "2026-10-09T02:09:17.096510Z",
   "items": [
+    {
+      "id": "2026-10-09__daily-digest",
+      "date": "2026-10-09",
+      "title": "Tech Radar Daily Digest - 2026-10-09",
+      "type": "daily_digest",
+      "article_count": 14,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/openai-gpt-sol-ultrafast-amazon/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-bedrock-attributes-in-cost-explorer/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-rds-oracle-minor-version-upgrade-precheck-new-patching-rds-event/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-network-firewall-container-attributes-wildcard",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-gamelift-servers-cpu-burstability",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.294",
+        "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.17.2",
+        "https://developers.googleblog.com/the-outer-loop-insights-first-an-ambient-quality-agent-that-diagnoses-your-production-agent/",
+        "https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.1"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "rss:anthropic_sdk_releases",
+        "rss:aws_whats_new",
+        "rss:google_developers",
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-10-09__daily-digest.md"
+    },
     {
       "id": "2026-10-08__daily-digest",
       "date": "2026-10-08",
