@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-10-10T01:45:17.669555Z",
+  "generated_at": "2026-10-11T01:00:22.935433Z",
   "items": [
+    {
+      "id": "2026-10-11__daily-digest",
+      "date": "2026-10-11",
+      "title": "Tech Radar Daily Digest - 2026-10-11",
+      "type": "daily_digest",
+      "article_count": 6,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-connect-customer-automated-checks-evaluation-forms/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/s3-vectors-metadata-pre-filtering-in-govcloud-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-Lambda-supports-oauth-kafka-esm/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-quick-brand-templates-on-brand-presentations-documents/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-custom-tooling-blueprints/",
+        "http://workspaceupdates.googleblog.com/2026/10/new-logic-and-search-steps-in-workspace-Studio-help-expand-automation-capabilities.html"
+      ],
+      "tags": [
+        "aws",
+        "cloud",
+        "google",
+        "notebooklm",
+        "workspace"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-10-11__daily-digest.md"
+    },
     {
       "id": "2026-10-10__daily-digest",
       "date": "2026-10-10",
