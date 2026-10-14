@@ -1,0 +1,41 @@
+{
+  "id": "2026-10-14__daily-digest",
+  "date": "2026-10-14",
+  "title": "Tech Radar Daily Digest - 2026-10-14",
+  "type": "daily_digest",
+  "article_count": 12,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/ecs-service-metrics/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-agent-registry-custom-metadata-registry-records",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-dcv-2026-0/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/deadline-cloud/resources",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-location-service-api-playground",
+    "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11",
+    "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.10",
+    "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.9",
+    "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.8",
+    "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+    "https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/",
+    "https://cursor.com/changelog#2026-10-13-origin-now-integrates-with-over-20-apps-for-deployments-ci-code-review-security-"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cursor",
+    "editor",
+    "gemini",
+    "google",
+    "openai"
+  ],
+  "sources": [
+    "rss:openai_codex_cli_releases",
+    "rss:google_developers",
+    "scrape:cursor_changelog",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-10-14T01:13:00.562990Z"
+}
