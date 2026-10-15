@@ -1,0 +1,44 @@
+{
+  "id": "2026-10-15__daily-digest",
+  "date": "2026-10-15",
+  "title": "Tech Radar Daily Digest - 2026-10-15",
+  "type": "daily_digest",
+  "article_count": 12,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/region-switch-target-health-ssm-lambda/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-license-manager-conversions-ubuntu-pro-marketplace/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-healthomics-resource-fallback-for-Nextflow/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-backup-fsx-asia-pacific-new-zealand/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
+    "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.13",
+    "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.12",
+    "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.10.1",
+    "https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "openai"
+  ],
+  "sources": [
+    "rss:claude_code_releases",
+    "rss:anthropic_sdk_releases",
+    "rss:openai_codex_cli_releases",
+    "rss:google_developers",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-10-15T00:31:09.600238Z"
+}
