@@ -1,6 +1,62 @@
 {
-  "generated_at": "2026-10-15T00:31:09.601669Z",
+  "generated_at": "2026-10-16T00:24:13.745589Z",
   "items": [
+    {
+      "id": "2026-10-16__daily-digest",
+      "date": "2026-10-16",
+      "title": "Tech Radar Daily Digest - 2026-10-16",
+      "type": "daily_digest",
+      "article_count": 16,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-bedrock-agentcore/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-new-sign-in-options/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/ec2-t8i-instances-south-america/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-dynamodb-streams-timestamp-processing",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-lambda-durable-go-sdk-support/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
+        "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.10.2",
+        "https://developers.googleblog.com/announcing-dpop-support-for-google-oauth-securing-refresh-tokens/",
+        "https://developers.googleblog.com/three-layers-one-repo-a-tour-of-googleadk-recipes/",
+        "https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/",
+        "http://workspaceupdates.googleblog.com/2026/10/gmails-ai-inbox-is-rolling-out-to-paid-Workspace-users.html",
+        "http://workspaceupdates.googleblog.com/2026/10/google-meet-now-uses-post-quantum-cryptography.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0",
+        "https://docs.devin.ai/release-notes/overview#2026-10-14-chat-width-preference",
+        "https://cli.devin.ai/docs/changelog/stable#2026-10-14-added"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:claude_code_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:google_developers",
+        "rss:aws_whats_new",
+        "scrape:devin_cli_changelog",
+        "rss:google_workspace_updates",
+        "scrape:devin_release_notes",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-10-16__daily-digest.md"
+    },
     {
       "id": "2026-10-15__daily-digest",
       "date": "2026-10-15",
