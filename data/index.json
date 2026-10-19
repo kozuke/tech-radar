@@ -1,6 +1,34 @@
 {
-  "generated_at": "2026-10-18T00:02:37.577621Z",
+  "generated_at": "2026-10-19T00:12:30.996292Z",
   "items": [
+    {
+      "id": "2026-10-19__daily-digest",
+      "date": "2026-10-19",
+      "title": "Tech Radar Daily Digest - 2026-10-19",
+      "type": "daily_digest",
+      "article_count": 6,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/braket-fedramp-class-c/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-outposts-racks-mexico-central/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-end-user-messaging-adds-registration-improvements-for-faster-higher-quality-submissions",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-end-user-messaging-now-supports-brand-profiles",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-end-user-messaging-adds-end-to-end-managed-OTP",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.303"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "claude",
+        "claude_code",
+        "cloud"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-10-19__daily-digest.md"
+    },
     {
       "id": "2026-10-18__daily-digest",
       "date": "2026-10-18",
