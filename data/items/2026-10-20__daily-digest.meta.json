@@ -1,0 +1,49 @@
+{
+  "id": "2026-10-20__daily-digest",
+  "date": "2026-10-20",
+  "title": "Tech Radar Daily Digest - 2026-10-20",
+  "type": "daily_digest",
+  "article_count": 16,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-connect-global-resiliency-readiness-overview",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-cloudwatch-omni-8-regions/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/ec2-image-builder-asg-faster-builds/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/guardduty-runtime-optional-detection-rules/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-bedrock-grok-4-7-govcloud/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+    "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.6",
+    "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.5",
+    "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.4",
+    "https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/",
+    "https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/",
+    "http://workspaceupdates.googleblog.com/2026/10/teacher-led-gemini-notebook-in-google-Classroom-now-offers-insight-summaries-for-educators-and-updated-sharing-settings-for-admins-including-trusted-domains.html",
+    "http://workspaceupdates.googleblog.com/2026/10/analyze-bigquery-data-using-natural-language-with-Gemini-in-Google-Sheets.html",
+    "http://workspaceupdates.googleblog.com/2026/10/publish-interactive-apps-from-gemini-app-to-Google-Sites.html",
+    "http://workspaceupdates.googleblog.com/2026/10/gemini-in-google-sheets-is-now-available-on-iOS-devices.html",
+    "http://workspaceupdates.googleblog.com/2026/10/follow-through-on-your-meeting-tasks-with-meeting-recaps-in-Google-Chat.html"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:claude_code_releases",
+    "rss:openai_codex_cli_releases",
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new",
+    "rss:google_developers"
+  ],
+  "created_at": "2026-10-20T01:05:22.988561Z"
+}
