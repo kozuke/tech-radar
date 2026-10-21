@@ -1,0 +1,50 @@
+{
+  "id": "2026-10-21__daily-digest",
+  "date": "2026-10-21",
+  "title": "Tech Radar Daily Digest - 2026-10-21",
+  "type": "daily_digest",
+  "article_count": 15,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/polly-generative/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-announce-native-pytorch-support-trainium",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/claude-structured-outputs-bedrock/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-clean-rooms-supports-databricks",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/iam-identity-center-chg-id-src-from-ad/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
+    "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.8",
+    "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.7",
+    "https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/",
+    "https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/",
+    "https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/",
+    "https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.16.0",
+    "https://docs.devin.ai/release-notes/overview#2026-10-19-clearer-work-log-while-devin-works"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "cognition",
+    "devin",
+    "gemini",
+    "google",
+    "openai"
+  ],
+  "sources": [
+    "rss:anthropic_sdk_releases",
+    "scrape:devin_release_notes",
+    "rss:google_developers",
+    "rss:openai_codex_cli_releases",
+    "rss:aws_whats_new",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-10-21T00:36:52.883706Z"
+}
