@@ -1,0 +1,50 @@
+{
+  "id": "2026-10-22__daily-digest",
+  "date": "2026-10-22",
+  "title": "Tech Radar Daily Digest - 2026-10-22",
+  "type": "daily_digest",
+  "article_count": 15,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/transform-assess-s3-ebs-efs-fsx/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-direct-connect-100g-manchester/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-aurora-rds-on-demand-capacity-reservations/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/cognito-multi-region-us-govcloud/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-announce-neuron-2-33-0",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.306",
+    "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.10",
+    "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.9",
+    "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11.1",
+    "https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/",
+    "http://workspaceupdates.googleblog.com/2026/10/gain-more-creative-control-over-slide-Decks-and-Video-Overviews-in-Gemini-Notebook.html",
+    "http://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-16-2026.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.0.0"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases",
+    "rss:google_developers",
+    "rss:anthropic_sdk_releases",
+    "rss:google_workspace_updates",
+    "rss:claude_code_releases"
+  ],
+  "created_at": "2026-10-22T00:41:25.309448Z"
+}
