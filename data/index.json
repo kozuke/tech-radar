@@ -1,6 +1,61 @@
 {
-  "generated_at": "2026-10-22T00:41:25.310729Z",
+  "generated_at": "2026-10-23T00:39:33.410692Z",
   "items": [
+    {
+      "id": "2026-10-23__daily-digest",
+      "date": "2026-10-23",
+      "title": "Tech Radar Daily Digest - 2026-10-23",
+      "type": "daily_digest",
+      "article_count": 19,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/connect-customer-customize-cp",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-continuum-for-code-vulnerabilities-is-now-generally-available",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-opensearch-serverless-supports-5-second-refresh-interval/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-cloudformation-cdk/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/training-session-apis-on-sagemaker-ai",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
+        "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.12",
+        "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11",
+        "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11.2",
+        "https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/",
+        "https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/",
+        "http://workspaceupdates.googleblog.com/2026/10/google-vault-now-supports-filtered-exports-for-Gemini-in-Workspace.html",
+        "http://workspaceupdates.googleblog.com/2026/10/real-time-speech-translation-in-google-Meet-expands-to-63-languages-with-automatic-language-detection.html",
+        "http://workspaceupdates.googleblog.com/2026/10/create-box-and-whisker-charts-in-google-sheets.html",
+        "http://workspaceupdates.googleblog.com/2026/10/create-structured-documents-using-just-your-voice-with-Docs-Live-in-Google-Docs-on-mobile.html",
+        "http://workspaceupdates.googleblog.com/2026/10/video-tile-pairing-is-now-available-on-Google-Meet-mobile-to-improve-accessibility-for-users-and-language-interpreters.html",
+        "https://docs.devin.ai/release-notes/overview#2026-10-21-received-feedback-rows-open-the-pr-comment"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "scrape:devin_release_notes",
+        "rss:aws_whats_new",
+        "rss:google_developers",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-10-23__daily-digest.md"
+    },
     {
       "id": "2026-10-22__daily-digest",
       "date": "2026-10-22",
