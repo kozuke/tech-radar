@@ -1,6 +1,59 @@
 {
-  "generated_at": "2026-10-23T00:39:33.410692Z",
+  "generated_at": "2026-10-24T00:41:35.442448Z",
   "items": [
+    {
+      "id": "2026-10-24__daily-digest",
+      "date": "2026-10-24",
+      "title": "Tech Radar Daily Digest - 2026-10-24",
+      "type": "daily_digest",
+      "article_count": 16,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/bedrock-web-search-domain-user-location/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-connect-global-resiliency-persistent-chat",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-transit-gateway-cloud-wan-1-1-nat/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-corretto-october-2026-quarterly-updates",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-mwaa-mexico-central/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
+        "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+        "http://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-23-2026.html",
+        "http://workspaceupdates.googleblog.com/2026/10/take-actions-on-your-notebooks-from-Gemini-Notebook-directly-in-the-Gemini-app.html",
+        "http://workspaceupdates.googleblog.com/2026/10/extract-audio-tracks-in-google-vids.html",
+        "http://workspaceupdates.googleblog.com/2026/10/adjust-video-clip-playback-speed-directly-in-Google-Vids.html",
+        "http://workspaceupdates.googleblog.com/2026/10/an-easier-way-to-customize-how-gemini-works-for-you.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.3.0",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.2.0",
+        "https://cli.devin.ai/docs/changelog/stable#2026-10-22-added"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_workspace_updates",
+        "scrape:devin_cli_changelog",
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-10-24__daily-digest.md"
+    },
     {
       "id": "2026-10-23__daily-digest",
       "date": "2026-10-23",
