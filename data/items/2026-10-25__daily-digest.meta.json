@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-25__daily-digest",
+  "date": "2026-10-25",
+  "title": "Tech Radar Daily Digest - 2026-10-25",
+  "type": "daily_digest",
+  "article_count": 5,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/emr-eks-reduces-emr-charge-30-percent/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-opensearch-intelligent-ingestion-logs-documents-s3",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-direct-connect-100g-bangalore/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-msk-connect-pause-resume",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-announces-AWS-interconnect-last-mile-megaport-preview/"
+  ],
+  "tags": [
+    "aws",
+    "cloud"
+  ],
+  "sources": [
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-10-25T00:19:56.860455Z"
+}
