@@ -1,6 +1,34 @@
 {
-  "generated_at": "2026-10-25T00:19:56.861477Z",
+  "generated_at": "2026-10-26T00:22:44.194521Z",
   "items": [
+    {
+      "id": "2026-10-26__daily-digest",
+      "date": "2026-10-26",
+      "title": "Tech Radar Daily Digest - 2026-10-26",
+      "type": "daily_digest",
+      "article_count": 7,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/agentcore-gateway-invokemodel-fallback/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/lambda-microvms-4-additional-regions",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-quick-now-available-in-the-aws-singapore-region/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-service-reference-information-global-condition-keys-service-names-data-plane/",
+        "https://docs.devin.ai/release-notes/overview#2026-10-23-choose-your-own-default-agent",
+        "https://docs.devin.ai/release-notes/overview#2026-10-24-sharepoint-support-in-the-microsoft-365-files-mcp"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "cloud",
+        "cognition",
+        "devin"
+      ],
+      "sources": [
+        "scrape:devin_release_notes",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-10-26__daily-digest.md"
+    },
     {
       "id": "2026-10-25__daily-digest",
       "date": "2026-10-25",
