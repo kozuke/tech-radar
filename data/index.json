@@ -1,6 +1,47 @@
 {
-  "generated_at": "2026-10-26T00:22:44.194521Z",
+  "generated_at": "2026-10-27T01:28:31.857333Z",
   "items": [
+    {
+      "id": "2026-10-27__daily-digest",
+      "date": "2026-10-27",
+      "title": "Tech Radar Daily Digest - 2026-10-27",
+      "type": "daily_digest",
+      "article_count": 11,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/openai-gpt-6-1-terra-on-amazon-bedrock/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-workspaces-cmi-modifyvolume/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/smus-light-mode",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/connect-customer-validate-flow-actions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/connect-customer-boma-segment/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
+        "https://github.com/openai/codex/releases/tag/rust-v0.166.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.1.1",
+        "https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive/"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:google_developers"
+      ],
+      "summary_path": "data/items/2026-10-27__daily-digest.md"
+    },
     {
       "id": "2026-10-26__daily-digest",
       "date": "2026-10-26",
