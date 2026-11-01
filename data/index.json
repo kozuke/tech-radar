@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-10-31T01:35:12.336551Z",
+  "generated_at": "2026-11-01T01:08:19.366702Z",
   "items": [
+    {
+      "id": "2026-11-01__daily-digest",
+      "date": "2026-11-01",
+      "title": "Tech Radar Daily Digest - 2026-11-01",
+      "type": "daily_digest",
+      "article_count": 6,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-msk-tls/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/oracle-jvm-spatial-locator-olap-options-amvu-optional/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-waf-automatic-sdk-integration-amazon-cloudfront/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/connect-flows-versioning-aliasing/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/prometheus-collectors-msk-metrics/",
+        "http://workspaceupdates.googleblog.com/2026/10/edit-entire-presentations-with-gemini-in-Google-Slides.html"
+      ],
+      "tags": [
+        "aws",
+        "cloud",
+        "google",
+        "notebooklm",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_workspace_updates",
+        "rss:aws_whats_new"
+      ],
+      "summary_path": "data/items/2026-11-01__daily-digest.md"
+    },
     {
       "id": "2026-10-31__daily-digest",
       "date": "2026-10-31",
