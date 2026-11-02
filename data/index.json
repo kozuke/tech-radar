@@ -1,6 +1,36 @@
 {
-  "generated_at": "2026-11-01T01:08:19.366702Z",
+  "generated_at": "2026-11-02T01:29:53.433741Z",
   "items": [
+    {
+      "id": "2026-11-02__daily-digest",
+      "date": "2026-11-02",
+      "title": "Tech Radar Daily Digest - 2026-11-02",
+      "type": "daily_digest",
+      "article_count": 7,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/glue-data-catalog-optimizers-us-west-1/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-gpu-partitioning/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/dax-additional-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/acm-acme-support-govcloud-us/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/datasync-enhanced-fsx-openshift/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.2"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-11-02__daily-digest.md"
+    },
     {
       "id": "2026-11-01__daily-digest",
       "date": "2026-11-01",
