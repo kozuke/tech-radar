@@ -1,6 +1,46 @@
 {
-  "generated_at": "2026-11-03T03:28:02.865869Z",
+  "generated_at": "2026-11-04T02:19:30.611363Z",
   "items": [
+    {
+      "id": "2026-11-04__daily-digest",
+      "date": "2026-11-04",
+      "title": "Tech Radar Daily Digest - 2026-11-04",
+      "type": "daily_digest",
+      "article_count": 10,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/connect-pause-resume-email/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-cases-email-addresses/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-config-new-resource-types",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-rds-supports-latest-cumulative-update-gdr-microsoft-sql-server/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-transform-mainframe-reimagine/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+        "https://github.com/openai/codex/releases/tag/rust-v0.168.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/libcap-v2.75",
+        "https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:google_developers"
+      ],
+      "summary_path": "data/items/2026-11-04__daily-digest.md"
+    },
     {
       "id": "2026-11-03__daily-digest",
       "date": "2026-11-03",
