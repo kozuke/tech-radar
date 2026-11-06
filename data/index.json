@@ -1,6 +1,56 @@
 {
-  "generated_at": "2026-11-05T02:27:08.223137Z",
+  "generated_at": "2026-11-06T02:24:30.769203Z",
   "items": [
+    {
+      "id": "2026-11-06__daily-digest",
+      "date": "2026-11-06",
+      "title": "Tech Radar Daily Digest - 2026-11-06",
+      "type": "daily_digest",
+      "article_count": 16,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/security-hub-sbom-inventory/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/interconnect-last-mile-northern-virginia/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/web-answer-amazon-bedrock/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-nlb-available-phx-local-zone/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-dynamodb-now-supports-bulk-put-items/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.168.0-alpha.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.168.0-alpha.6",
+        "https://github.com/openai/codex/releases/tag/rust-v0.168.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.168.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+        "http://workspaceupdates.googleblog.com/2026/11/gemini-omni-12-flash-now-in-vids-with-15second-generations-and-improved-quality.html",
+        "http://workspaceupdates.googleblog.com/2026/11/get-actionable-insights-with-gemini-in-Google-Forms.html",
+        "http://workspaceupdates.googleblog.com/2026/11/automatically-apply-client-side-encryption-to-confidential-Editors-and-Drive-files-now-available-in-Beta.html",
+        "http://workspaceupdates.googleblog.com/2026/11/educators-can-now-add-guided-learning-to-assignments-in-Google-Classroom-to-help-students-get-extra-support.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.6.0",
+        "https://cursor.com/changelog#2026-11-05-agents-have-lowered-the-cost-of-writing-code-but-most-apps-and-tools-that-users-"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cursor",
+        "editor",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates",
+        "scrape:cursor_changelog"
+      ],
+      "summary_path": "data/items/2026-11-06__daily-digest.md"
+    },
     {
       "id": "2026-11-05__daily-digest",
       "date": "2026-11-05",
