@@ -1,0 +1,52 @@
+{
+  "id": "2026-11-10__daily-digest",
+  "date": "2026-11-10",
+  "title": "Tech Radar Daily Digest - 2026-11-10",
+  "type": "daily_digest",
+  "article_count": 17,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-bedrock-agentcore-web-search-api/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-cloudwatch-log-retention/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-glue-adds-100-new-native-connectors/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-sts-cross-partition",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-quick-aws-quick/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+    "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.8",
+    "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.7",
+    "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.6",
+    "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.5",
+    "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.4",
+    "https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models/",
+    "https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio/",
+    "https://developers.googleblog.com/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/",
+    "http://workspaceupdates.googleblog.com/2026/11/quickly-confirm-system-applied-classification-labels-in-Google-Drive-Docs-Sheets-and-Slides.html",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.7.0"
+  ],
+  "tags": [
+    "ai",
+    "anthropic",
+    "api",
+    "aws",
+    "chatgpt",
+    "claude",
+    "claude_code",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:claude_code_releases",
+    "rss:google_developers",
+    "rss:anthropic_sdk_releases",
+    "rss:openai_codex_cli_releases",
+    "rss:google_workspace_updates",
+    "rss:aws_whats_new"
+  ],
+  "created_at": "2026-11-10T04:06:17.422703Z"
+}
