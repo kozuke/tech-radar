@@ -1,0 +1,42 @@
+{
+  "id": "2026-11-12__daily-digest",
+  "date": "2026-11-12",
+  "title": "Tech Radar Daily Digest - 2026-11-12",
+  "type": "daily_digest",
+  "article_count": 13,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/ornith-1-0-9b-ornith-1-0-35b-on-sagemaker-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/network-security-mgr-eu-sovereign-cloud/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-cloud-wan-flow-logs/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-provisioned-control-plane-larger-etcd-database/",
+    "https://github.com/openai/codex/releases/tag/rust-v0.170.0-alpha.2",
+    "https://github.com/openai/codex/releases/tag/rust-v0.170.0-alpha.1",
+    "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.11.1",
+    "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.11",
+    "https://github.com/openai/codex/releases/tag/rust-v0.167.2",
+    "https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/",
+    "http://workspaceupdates.googleblog.com/2026/11/publish-sheets-canvas-as-standalone-link.html",
+    "http://workspaceupdates.googleblog.com/2026/11/organize-and-communicate-complex-information-with-numbered-and-nested-lists-in-Google-Chat.html"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "chatgpt",
+    "cloud",
+    "codex",
+    "codex_cli",
+    "gemini",
+    "google",
+    "notebooklm",
+    "openai",
+    "workspace"
+  ],
+  "sources": [
+    "rss:google_workspace_updates",
+    "rss:google_developers",
+    "rss:aws_whats_new",
+    "rss:openai_codex_cli_releases"
+  ],
+  "created_at": "2026-11-12T02:58:25.295401Z"
+}
