@@ -1,6 +1,57 @@
 {
-  "generated_at": "2026-11-12T02:58:25.296924Z",
+  "generated_at": "2026-11-13T02:37:31.316706Z",
   "items": [
+    {
+      "id": "2026-11-13__daily-digest",
+      "date": "2026-11-13",
+      "title": "Tech Radar Daily Digest - 2026-11-13",
+      "type": "daily_digest",
+      "article_count": 16,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/cognito-token-exchange/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-aurora-rds-postgresql-mysql-mariadb-r9g-instances/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/mwaa-fine-grained-access-control/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-cases-merge-link/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-sns-push-four-regions/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+        "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.170.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.170.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.4.3",
+        "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/",
+        "https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/",
+        "https://docs.devin.ai/release-notes/overview#2026-11-12-sessions-workspace",
+        "https://docs.devin.ai/release-notes/overview#2026-11-11-customizable-sidebar-navigation-shortcuts",
+        "https://cli.devin.ai/docs/changelog/stable#2026-11-12-fixed"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "scrape:devin_release_notes",
+        "rss:aws_whats_new",
+        "scrape:devin_cli_changelog",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases",
+        "rss:google_developers"
+      ],
+      "summary_path": "data/items/2026-11-13__daily-digest.md"
+    },
     {
       "id": "2026-11-12__daily-digest",
       "date": "2026-11-12",
