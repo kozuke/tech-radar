@@ -1,6 +1,49 @@
 {
-  "generated_at": "2026-11-13T02:37:31.316706Z",
+  "generated_at": "2026-11-14T02:25:51.349184Z",
   "items": [
+    {
+      "id": "2026-11-14__daily-digest",
+      "date": "2026-11-14",
+      "title": "Tech Radar Daily Digest - 2026-11-14",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/aurora-postgresql-cloudformation/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/kiro-grok-4-7-aws-govcloud-us/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/rds-oracle-reduces-maintenance-downtime-for-amvu-scheduled-upgrades/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/security-hub-cspm-org-policies/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-agentcore-oauth2-discovery/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+        "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.2",
+        "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+        "http://workspaceupdates.googleblog.com/2026/11/weekly-recap-11-13-2026.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:claude_code_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-11-14__daily-digest.md"
+    },
     {
       "id": "2026-11-13__daily-digest",
       "date": "2026-11-13",
