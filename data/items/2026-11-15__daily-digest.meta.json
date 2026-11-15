@@ -1,0 +1,27 @@
+{
+  "id": "2026-11-15__daily-digest",
+  "date": "2026-11-15",
+  "title": "Tech Radar Daily Digest - 2026-11-15",
+  "type": "daily_digest",
+  "article_count": 6,
+  "urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/secrets-manager-cross-account/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/sagemaker-studio-layout-customization/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-batch-eks-security-context/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-marketplace-vat-credit-notes/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/systems-manager-google-cloud-support/",
+    "https://docs.devin.ai/release-notes/overview#2026-11-13-german-ui-language"
+  ],
+  "tags": [
+    "ai",
+    "aws",
+    "cloud",
+    "cognition",
+    "devin"
+  ],
+  "sources": [
+    "rss:aws_whats_new",
+    "scrape:devin_release_notes"
+  ],
+  "created_at": "2026-11-15T01:54:25.309851Z"
+}
