@@ -1,6 +1,50 @@
 {
-  "generated_at": "2026-11-18T03:42:48.151373Z",
+  "generated_at": "2026-11-19T03:26:11.099700Z",
   "items": [
+    {
+      "id": "2026-11-19__daily-digest",
+      "date": "2026-11-19",
+      "title": "Tech Radar Daily Digest - 2026-11-19",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-memory-generally-available/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/apache-spark-aws-glue-etl/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/sagemaker-cross-region-routing/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-extenddb-1-0/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-custom-cross-account-td/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+        "https://github.com/openai/codex/releases/tag/rust-v0.172.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.13",
+        "http://workspaceupdates.googleblog.com/2026/11/add-inline-captions-cross-references-and-tables-of-captions-in-Google-Docs.html",
+        "http://workspaceupdates.googleblog.com/2026/11/transform-your-notes-and-research-into-dynamic-tools-with-Gemini-Notebook.html",
+        "http://workspaceupdates.googleblog.com/2026/11/starter-prompts-and-descriptions-for-Google-Chat-apps-and-agents.html",
+        "http://workspaceupdates.googleblog.com/2026/11/schedule-more-easily-across-time-zones-with-time-zone-abbreviations-in-Google-Calendar-on-the-web.html",
+        "http://workspaceupdates.googleblog.com/2026/11/schedule-meetings-with-default-buffer-google-calendar.html"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:openai_codex_cli_releases",
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates",
+        "rss:claude_code_releases"
+      ],
+      "summary_path": "data/items/2026-11-19__daily-digest.md"
+    },
     {
       "id": "2026-11-18__daily-digest",
       "date": "2026-11-18",
