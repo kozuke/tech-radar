@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-11-22T02:13:40.809772Z",
+  "generated_at": "2026-11-23T02:44:24.928475Z",
   "items": [
+    {
+      "id": "2026-11-23__daily-digest",
+      "date": "2026-11-23",
+      "title": "Tech Radar Daily Digest - 2026-11-23",
+      "type": "daily_digest",
+      "article_count": 6,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/cognito-mrr-opt-in-regions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-neptune-serverless-r8g-generally-available",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/cloudwatch-promql-query-30days/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/account-mapping-and-planning/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/demand-center-partner-central/",
+        "http://workspaceupdates.googleblog.com/2026/11/email-meeting-guests-from-google-Calendar-with-the-full-capabilities-of-Gmail.html"
+      ],
+      "tags": [
+        "aws",
+        "cloud",
+        "google",
+        "notebooklm",
+        "workspace"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-11-23__daily-digest.md"
+    },
     {
       "id": "2026-11-22__daily-digest",
       "date": "2026-11-22",
