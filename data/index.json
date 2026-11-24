@@ -1,6 +1,60 @@
 {
-  "generated_at": "2026-11-23T02:44:24.928475Z",
+  "generated_at": "2026-11-24T06:01:13.684794Z",
   "items": [
+    {
+      "id": "2026-11-24__daily-digest",
+      "date": "2026-11-24",
+      "title": "Tech Radar Daily Digest - 2026-11-24",
+      "type": "daily_digest",
+      "article_count": 16,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-x8i-new-zealand/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/configurable-aws-sign-in-duration/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/sagemaker-hyperpod-extensions/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-waf-introduces-simplified-pricing/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+        "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+        "https://github.com/openai/codex/releases/tag/rust-v0.172.0-alpha.2.1",
+        "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.13.2",
+        "https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/",
+        "http://workspaceupdates.googleblog.com/2026/11/google-meet-on-web-now-supports-sending-1080p-video-for-all-users-enabled-by-default.html",
+        "http://workspaceupdates.googleblog.com/2026/11/make-messages-in-google-chat-from-apps-and-agents-easier-to-read-with-tables-and-headings.html",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.13.0",
+        "https://docs.devin.ai/release-notes/overview#2026-11-23-sessions-workspace"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "gemini",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "scrape:devin_release_notes",
+        "rss:claude_code_releases",
+        "rss:anthropic_sdk_releases",
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases",
+        "rss:google_developers",
+        "rss:google_workspace_updates"
+      ],
+      "summary_path": "data/items/2026-11-24__daily-digest.md"
+    },
     {
       "id": "2026-11-23__daily-digest",
       "date": "2026-11-23",
