@@ -1,6 +1,50 @@
 {
-  "generated_at": "2026-11-24T06:01:13.684794Z",
+  "generated_at": "2026-11-25T04:53:49.449907Z",
   "items": [
+    {
+      "id": "2026-11-25__daily-digest",
+      "date": "2026-11-25",
+      "title": "Tech Radar Daily Digest - 2026-11-25",
+      "type": "daily_digest",
+      "article_count": 12,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/gpt-daybreak-red-runtime-govcloud/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-serverless-available-cape-town-region/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/cloudformation-coverage-expansion/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-time-interval/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/rds-sqlserver-supports-500-databases-per-instance",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+        "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.5",
+        "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.4",
+        "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.3",
+        "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.2",
+        "https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/",
+        "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.14.0"
+      ],
+      "tags": [
+        "ai",
+        "anthropic",
+        "api",
+        "aws",
+        "chatgpt",
+        "claude",
+        "claude_code",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "gemini",
+        "google",
+        "openai"
+      ],
+      "sources": [
+        "rss:aws_whats_new",
+        "rss:google_developers",
+        "rss:anthropic_sdk_releases",
+        "rss:claude_code_releases",
+        "rss:openai_codex_cli_releases"
+      ],
+      "summary_path": "data/items/2026-11-25__daily-digest.md"
+    },
     {
       "id": "2026-11-24__daily-digest",
       "date": "2026-11-24",
