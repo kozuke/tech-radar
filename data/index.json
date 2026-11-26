@@ -1,6 +1,51 @@
 {
-  "generated_at": "2026-11-25T04:53:49.449907Z",
+  "generated_at": "2026-11-26T04:08:50.645801Z",
   "items": [
+    {
+      "id": "2026-11-26__daily-digest",
+      "date": "2026-11-26",
+      "title": "Tech Radar Daily Digest - 2026-11-26",
+      "type": "daily_digest",
+      "article_count": 13,
+      "urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/lambda-durable-microvm/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-cloudwatch-omni-pagerduty/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-m8g-instances-telaviv-region/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-m9gd-asiapacific-seoul/",
+        "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-c9gd-instances-additional-regions/",
+        "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.7",
+        "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.6",
+        "http://workspaceupdates.googleblog.com/2026/11/rooms-more-actions-panel-reordering.html",
+        "http://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+        "http://workspaceupdates.googleblog.com/2026/11/new-study-enhancements-for-flashcards-in-Gemini-Notebook.html",
+        "https://docs.devin.ai/release-notes/overview#2026-11-25-apps",
+        "https://docs.devin.ai/release-notes/overview#2026-11-24-sessions-workspace",
+        "https://cli.devin.ai/docs/changelog/stable#2026-11-25-added"
+      ],
+      "tags": [
+        "ai",
+        "aws",
+        "chatgpt",
+        "cli",
+        "cloud",
+        "codex",
+        "codex_cli",
+        "cognition",
+        "devin",
+        "google",
+        "notebooklm",
+        "openai",
+        "workspace"
+      ],
+      "sources": [
+        "rss:google_workspace_updates",
+        "scrape:devin_cli_changelog",
+        "rss:aws_whats_new",
+        "rss:openai_codex_cli_releases",
+        "scrape:devin_release_notes"
+      ],
+      "summary_path": "data/items/2026-11-26__daily-digest.md"
+    },
     {
       "id": "2026-11-25__daily-digest",
       "date": "2026-11-25",
